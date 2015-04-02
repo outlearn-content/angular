@@ -1,8 +1,4 @@
-<img class="diagram" src="http://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_00.png">
-
-<img class="diagram" src="http://www.outlearn.com/favicon.ico">
-
-<img class="diagram" src="https://www.outlearn.com/favicon.ico">
+<img class="diagram" src="//github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_00.png">
 
 <img class="diagram" src="//www.outlearn.com/favicon.ico">
 
