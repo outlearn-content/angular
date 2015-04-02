@@ -32,5 +32,12 @@
       "title": "Step 3",
       "location": "sections/step_03.md"
     }
+  ],
+  "assets" : [
+    {
+      "name" : "catalog_screen",
+      "contentType" : "image/pnd",
+      "location" : "assets/catalog_screen.png"
+    }
   ]
 }
