@@ -13,7 +13,7 @@
   },
   "sections" : [
     {
-      "title": "Overview",
+      "title": "PhoneCat Tutorial App",
       "location": "sections/index.md"
     },
     {
@@ -31,6 +31,42 @@
     {
       "title": "Step 3",
       "location": "sections/step_03.md"
+    },
+    {
+      "title": "Step 4",
+      "location": "sections/step_04.md"
+    },
+    {
+      "title": "Step 5",
+      "location": "sections/step_05.md"
+    },
+    {
+      "title": "Step 6",
+      "location": "sections/step_06.md"
+    },
+    {
+      "title": "Step 7",
+      "location": "sections/step_07.md"
+    },
+    {
+      "title": "Step 8",
+      "location": "sections/step_08.md"
+    },
+    {
+      "title": "Step 9",
+      "location": "sections/step_09.md"
+    },
+    {
+      "title": "Step 10",
+      "location": "sections/step_10.md"
+    },
+    {
+      "title": "Step 11",
+      "location": "sections/step_11.md"
+    },
+    {
+      "title": "Step 12",
+      "location": "sections/step_12.md"
     }
   ],
   "assets" : [
