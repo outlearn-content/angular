@@ -36,7 +36,7 @@
   "assets" : [
     {
       "name" : "catalog_screen",
-      "contentType" : "image/pnd",
+      "contentType" : "image/png",
       "location" : "assets/catalog_screen.png"
     }
   ]
