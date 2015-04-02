@@ -1,0 +1,36 @@
+{
+  "olpVersion" : "0.1",
+  "name" : "angular-tutorial",
+  "version" : "0.1",
+  "title" : "PhoneCat Tutorial App",
+  "description": "A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.",
+  "homepage" : "https://docs.angularjs.org/tutorial",
+  "authors" : ["Addison Berry"],
+  "license" : "Creative Commons Attribution 3.0",
+  "contact" : {
+    "url" : "https://angularjs.org",
+    "twitter": "angularjs"
+  },
+  "sections" : [
+    {
+      "title": "Overview",
+      "location": "sections/index.md"
+    },
+    {
+      "title": "Step 0",
+      "location": "sections/step_00.md"
+    },
+    {
+      "title": "Step 1",
+      "location": "sections/step_01.md"
+    },
+    {
+      "title": "Step 2",
+      "location": "sections/step_02.md"
+    },
+    {
+      "title": "Step 3",
+      "location": "sections/step_03.md"
+    }
+  ]
+}
