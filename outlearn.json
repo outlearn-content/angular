@@ -17,56 +17,60 @@
       "location": "sections/index.md"
     },
     {
-      "title": "Step 0",
+      "title": "0 - Bootstrapping",
       "location": "sections/step_00.md"
     },
     {
-      "title": "Step 1",
+      "title": "1 - Static Template",
       "location": "sections/step_01.md"
     },
     {
-      "title": "Step 2",
+      "title": "2 - Angular Templates",
       "location": "sections/step_02.md"
     },
     {
-      "title": "Step 3",
+      "title": "3 - Filtering Repeaters",
       "location": "sections/step_03.md"
     },
     {
-      "title": "Step 4",
+      "title": "4 - Two-way Data Binding",
       "location": "sections/step_04.md"
     },
     {
-      "title": "Step 5",
+      "title": "5 - XHRs & Dependency Injection",
       "location": "sections/step_05.md"
     },
     {
-      "title": "Step 6",
+      "title": "6 - Templating Links & Images",
       "location": "sections/step_06.md"
     },
     {
-      "title": "Step 7",
+      "title": "7 - Routing & Multiple Views",
       "location": "sections/step_07.md"
     },
     {
-      "title": "Step 8",
+      "title": "8 - More Templating",
       "location": "sections/step_08.md"
     },
     {
-      "title": "Step 9",
+      "title": "9 - Filters",
       "location": "sections/step_09.md"
     },
     {
-      "title": "Step 10",
+      "title": "10 - Event Handlers",
       "location": "sections/step_10.md"
     },
     {
-      "title": "Step 11",
+      "title": "11 - REST and Custom Services",
       "location": "sections/step_11.md"
     },
     {
-      "title": "Step 12",
+      "title": "12 - Applying Animations",
       "location": "sections/step_12.md"
+    },
+    {
+      "title": "The End",
+      "location": "sections/the_end.md"
     }
   ],
   "assets" : [
