@@ -60,7 +60,7 @@ URL of the thumbnail image.
 
 <div style="display: none">
 TODO!
-<img  class="diagram" src="tutorial_10-11_final.png">
+<img  class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_10-11_final.png">
 </div>
 
 ## Test

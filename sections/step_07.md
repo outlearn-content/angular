@@ -176,7 +176,7 @@ __`app/partials/phone-list.html`:__
 
 <div style="display:none">
 TODO!
-<img  class="diagram" src="tutorial_07_final.png">
+<img  class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_07_final.png">
 </div>
 
 We also added a placeholder template for the phone details view:

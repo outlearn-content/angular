@@ -127,7 +127,7 @@ in the view by updating all of the affected bindings.
 The structure of our application is currently very simple. The template contains just one directive
 and one static binding, and our model is empty. That will soon change!
 
-<img class="diagram" src="tutorial_00.png">
+<img class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_00.png">
 
 
 ## What are all these files in my working directory?

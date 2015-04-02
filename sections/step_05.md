@@ -79,7 +79,7 @@ Note that the names of arguments are significant, because the injector uses thes
 dependencies.
 
 
-<img  class="diagram" src="tutorial_05.png">
+<img  class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_05.png">
 
 
 ### `$` Prefix Naming Convention

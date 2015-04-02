@@ -63,7 +63,7 @@ Note: We have specified an Angular Module to load using `ng-app="phonecatApp"`,
 where `phonecatApp` is the name of our module.  This module will contain the `PhoneListCtrl`.
 </div>
 
-<img class="diagram" src="tutorial_02.png">
+<img class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_02.png">
 
 ## Model and Controller
 
