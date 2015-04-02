@@ -106,7 +106,7 @@ __`app/partials/phone-detail.html`:__
 
 <div style="display: none">
 TODO!
-<img  class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_08-09_final.png">
+<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_08-09_final.png">
 </div>
 
 ## Test

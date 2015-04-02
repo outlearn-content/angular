@@ -1,6 +1,4 @@
-<img class="diagram" src="//github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_00.png">
 
-<img class="diagram" src="//www.outlearn.com/favicon.ico">
 
 You are now ready to build the AngularJS phonecat app. In this step, you will become familiar
 with the most important source code files, learn how to start the development servers bundled with
@@ -129,8 +127,7 @@ in the view by updating all of the affected bindings.
 The structure of our application is currently very simple. The template contains just one directive
 and one static binding, and our model is empty. That will soon change!
 
-<img class="diagram" src="http://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_00.png">
-
+<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_00.png">
 
 
 ## What are all these files in my working directory?

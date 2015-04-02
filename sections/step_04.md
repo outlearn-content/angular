@@ -36,7 +36,7 @@ We made the following changes to the `index.html` template:
 * First, we added a `<select>` html element named `orderProp`, so that our users can pick from the
 two provided sorting options.
 
-<img class="diagram" src="https://github.com/outlearn-content/angular-tutorial/blob/master/assets/tutorial_04.png">
+<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_04.png">
 
 * We then chained the `filter` filter with `orderBy`
 filter to further process the input into the repeater. `orderBy` is a filter that takes an input
