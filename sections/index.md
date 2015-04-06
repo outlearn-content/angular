@@ -3,8 +3,7 @@ the construction of an AngularJS web app. The app you will build is a catalog th
 of Android devices, lets you filter the list to see only devices that interest you, and then view
 details for any device.
 
-<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/catalog_screen.png" width="488" height="413" alt="demo">
-application running in the browser">
+<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/catalog_screen.png" width="488" height="413" alt="demo application running in the browser">
 
 Follow the tutorial to see how Angular makes browsers smarter — without the use of native
 extensions or plug-ins:
