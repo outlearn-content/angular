@@ -32,7 +32,7 @@ suggestions for you to learn more about AngularJS and the application you are bu
 
 You can go through the whole tutorial in a couple of hours or you may want to spend a pleasant day
 really digging into it. If you're looking for a shorter introduction to AngularJS, check out the
-{@link misc/started Getting Started} document.
+Getting Started document.
 
 # Get Started
 
