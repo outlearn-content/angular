@@ -169,7 +169,7 @@ update the Karma config file with angular-resource so the new tests will pass.
 
 __`test/karma.conf.js`:__
 
-```js
+```JSON
     files : [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
