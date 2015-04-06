@@ -17,7 +17,7 @@ The animation functionality is provided by Angular in the `ngAnimate` module, wh
 separately from the core Angular framework.  In addition we will use `jQuery` in this project to do
 extra JavaScript animations.
 
-We are using [Bower][bower] to install client side dependencies.  This step updates the
+We are using Bower to install client side dependencies.  This step updates the
 `bower.json` configuration file to include the new dependency:
 
 ```

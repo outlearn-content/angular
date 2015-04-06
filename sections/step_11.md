@@ -2,7 +2,7 @@
 
 In this step, you will change the way our app fetches data.
 
-* We define a custom service that represents a [RESTful][restful] client. Using this client we
+* We define a custom service that represents a RESTful client. Using this client we
 can make requests to the server for data in an easier way, without having to deal with the
 lower-level $http API, HTTP methods and URLs.
 
@@ -13,7 +13,7 @@ lower-level $http API, HTTP methods and URLs.
 The RESTful functionality is provided by Angular in the `ngResource` module, which is distributed
 separately from the core Angular framework.
 
-We are using [Bower][bower] to install client side dependencies.  This step updates the
+We are using Bower to install client side dependencies.  This step updates the
 `bower.json` configuration file to include the new dependency:
 
 ```
@@ -93,7 +93,7 @@ controller's constructor in that both can declare dependencies to be injected vi
 arguments. The Phone service declared a dependency on the `$resource` service.
 
 The `$resource` service makes it easy to create a
-[RESTful][restful] client with just a few lines of code. This client can then be used in our
+RESTful client with just a few lines of code. This client can then be used in our
 application, instead of the lower-level $http service.
 
 __`app/js/app.js`.__
@@ -169,7 +169,7 @@ update the Karma config file with angular-resource so the new tests will pass.
 
 __`test/karma.conf.js`:__
 
-```JSON
+```js
     files : [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
@@ -187,7 +187,7 @@ service correctly.
 The $resource service augments the response object
 with methods for updating and deleting the resource. If we were to use the standard `toEqual`
 matcher, our tests would fail because the test values would not match the responses exactly. To
-solve the problem, we use a newly-defined `toEqualData` [Jasmine matcher][jasmine-matchers]. When
+solve the problem, we use a newly-defined `toEqualData` Jasmine matcher. When
 the `toEqualData` matcher compares two objects, it takes only object properties into account and
 ignores methods.
 

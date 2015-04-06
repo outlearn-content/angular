@@ -133,7 +133,7 @@ and one static binding, and our model is empty. That will soon change!
 ## What are all these files in my working directory?
 
 
-Most of the files in your working directory come from the [angular-seed project][angular-seed] which
+Most of the files in your working directory come from the angular-seed project which
 is typically used to bootstrap new Angular projects. The seed project is pre-configured to install
 the angular framework (via `bower` into the `app/bower_components/` folder) and tools for developing
 a typical web app (via `npm`).

@@ -3,7 +3,8 @@ the construction of an AngularJS web app. The app you will build is a catalog th
 of Android devices, lets you filter the list to see only devices that interest you, and then view
 details for any device.
 
-<!-- @asset, "name":"catalog_screen" -->
+<img class="diagram" src="img/tutorial/catalog_screen.png" width="488" height="413" alt="demo
+application running in the browser">
 
 Follow the tutorial to see how Angular makes browsers smarter — without the use of native
 extensions or plug-ins:
@@ -38,7 +39,7 @@ Getting Started document.
 
 The rest of this page explains how you can set up your local machine for development.
 If you just want to read the tutorial then you can just go straight to the first step:
-Step 0 - Bootstrapping].
+Step 0 - Bootstrapping.
 
 # Working with the code
 

@@ -14,7 +14,7 @@ multiple views by adding routing, using an Angular module called 'ngRoute'.
 The routing functionality added by this step is provided by angular in the `ngRoute` module, which
 is distributed separately from the core Angular framework.
 
-We are using [Bower][bower] to install client-side dependencies.  This step updates the
+We are using Bower to install client-side dependencies.  This step updates the
 `bower.json` configuration file to include the new dependency:
 
 ```json

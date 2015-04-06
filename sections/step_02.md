@@ -179,10 +179,10 @@ describe('PhoneListCtrl', function(){
 
 Angular developers prefer the syntax of Jasmine's Behavior-driven Development  (BDD) framework when
 writing tests. Although Angular does not require you to use Jasmine, we wrote all of the tests in
-this tutorial in Jasmine v1.3. You can learn about Jasmine on the [Jasmine home page][jasmine] and
-at the [Jasmine docs][jasmine-docs].
+this tutorial in Jasmine v1.3. You can learn about Jasmine on the Jasmine home page and
+at the Jasmine docs.
 
-The angular-seed project is pre-configured to run unit tests using [Karma][karma] but you will need
+The angular-seed project is pre-configured to run unit tests using Karma but you will need
 to ensure that Karma and its necessary plugins are installed. You can do this by running
 `npm install`.
 
