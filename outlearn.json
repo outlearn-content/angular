@@ -1,78 +1,84 @@
 {
-  "olpVersion" : "0.1",
-  "name" : "angular-tutorial",
-  "version" : "0.1",
-  "title" : "PhoneCat Tutorial App",
-  "description": "A great way to get introduced to AngularJS is to work through this tutorial, which walks you through the construction of an AngularJS web app. The app you will build is a catalog that displays a list of Android devices, lets you filter the list to see only devices that interest you, and then view details for any device.",
-  "homepage" : "https://docs.angularjs.org/tutorial",
-  "authors" : ["Addison Berry"],
-  "license" : "Creative Commons Attribution 3.0",
-  "contact" : {
-    "url" : "https://angularjs.org",
-    "twitter": "angularjs"
-  },
-  "sections" : [
+  "olpVersion" : "0.5",
+
+  "paths" : [
+
+  ],
+
+  "modules" : [
     {
-      "title": "Welcome",
-      "location": "sections/index.md"
-    },
-    {
-      "title": "0 - Bootstrapping",
-      "location": "sections/step_00.md"
-    },
-    {
-      "title": "1 - Static Template",
-      "location": "sections/step_01.md"
-    },
-    {
-      "title": "2 - Angular Templates",
-      "location": "sections/step_02.md"
-    },
-    {
-      "title": "3 - Filtering Repeaters",
-      "location": "sections/step_03.md"
-    },
-    {
-      "title": "4 - Two-way Data Binding",
-      "location": "sections/step_04.md"
-    },
-    {
-      "title": "5 - XHRs & Dependency Injection",
-      "location": "sections/step_05.md"
-    },
-    {
-      "title": "6 - Templating Links & Images",
-      "location": "sections/step_06.md"
-    },
-    {
-      "title": "7 - Routing & Multiple Views",
-      "location": "sections/step_07.md"
-    },
-    {
-      "title": "8 - More Templating",
-      "location": "sections/step_08.md"
-    },
-    {
-      "title": "9 - Filters",
-      "location": "sections/step_09.md"
-    },
-    {
-      "title": "10 - Event Handlers",
-      "location": "sections/step_10.md"
-    },
-    {
-      "title": "11 - REST and Custom Services",
-      "location": "sections/step_11.md"
-    },
-    {
-      "title": "12 - Applying Animations",
-      "location": "sections/step_12.md"
-    },
-    {
-      "title": "The End",
-      "location": "sections/the_end.md"
+      "name" : "angular-tutorial",
+      "version" : "0.1",
+      "title" : "PhoneCat Tutorial App",
+      "description": "You get to build an AngularJS web app.",
+      "homepage" : "https://docs.angularjs.org/tutorial",
+      "freshnessDate" : 2015-06-02,
+      "license" : "CC BY",
+      "sections" : [
+        {
+          "title": "Welcome",
+          "location": "sections/index.md"
+        },
+        {
+          "title": "0 - Bootstrapping",
+          "location": "sections/step_00.md"
+        },
+        {
+          "title": "1 - Static Template",
+          "location": "sections/step_01.md"
+        },
+        {
+          "title": "2 - Angular Templates",
+          "location": "sections/step_02.md"
+        },
+        {
+          "title": "3 - Filtering Repeaters",
+          "location": "sections/step_03.md"
+        },
+        {
+          "title": "4 - Two-way Data Binding",
+          "location": "sections/step_04.md"
+        },
+        {
+          "title": "5 - XHRs & Dependency Injection",
+          "location": "sections/step_05.md"
+        },
+        {
+          "title": "6 - Templating Links & Images",
+          "location": "sections/step_06.md"
+        },
+        {
+          "title": "7 - Routing & Multiple Views",
+          "location": "sections/step_07.md"
+        },
+        {
+          "title": "8 - More Templating",
+          "location": "sections/step_08.md"
+        },
+        {
+          "title": "9 - Filters",
+          "location": "sections/step_09.md"
+        },
+        {
+          "title": "10 - Event Handlers",
+          "location": "sections/step_10.md"
+        },
+        {
+          "title": "11 - REST and Custom Services",
+          "location": "sections/step_11.md"
+        },
+        {
+          "title": "12 - Applying Animations",
+          "location": "sections/step_12.md"
+        },
+        {
+          "title": "The End",
+          "location": "sections/the_end.md"
+        }
+      ]
     }
   ],
+
   "assets" : [
     {
       "name" : "catalog_screen",
