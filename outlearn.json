@@ -83,7 +83,7 @@
     {
       "name" : "catalog_screen",
       "contentType" : "image/png",
-      "content" : "assets/catalog_screen.png"
+      "location" : "assets/catalog_screen.png"
     }
   ]
 }
