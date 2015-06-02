@@ -17,63 +17,63 @@
       "sections" : [
         {
           "title": "Welcome",
-          "location": "sections/index.md"
+          "content": "sections/index.md"
         },
         {
           "title": "0 - Bootstrapping",
-          "location": "sections/step_00.md"
+          "content": "sections/step_00.md"
         },
         {
           "title": "1 - Static Template",
-          "location": "sections/step_01.md"
+          "content": "sections/step_01.md"
         },
         {
           "title": "2 - Angular Templates",
-          "location": "sections/step_02.md"
+          "content": "sections/step_02.md"
         },
         {
           "title": "3 - Filtering Repeaters",
-          "location": "sections/step_03.md"
+          "content": "sections/step_03.md"
         },
         {
           "title": "4 - Two-way Data Binding",
-          "location": "sections/step_04.md"
+          "content": "sections/step_04.md"
         },
         {
           "title": "5 - XHRs & Dependency Injection",
-          "location": "sections/step_05.md"
+          "content": "sections/step_05.md"
         },
         {
           "title": "6 - Templating Links & Images",
-          "location": "sections/step_06.md"
+          "content": "sections/step_06.md"
         },
         {
           "title": "7 - Routing & Multiple Views",
-          "location": "sections/step_07.md"
+          "content": "sections/step_07.md"
         },
         {
           "title": "8 - More Templating",
-          "location": "sections/step_08.md"
+          "content": "sections/step_08.md"
         },
         {
           "title": "9 - Filters",
-          "location": "sections/step_09.md"
+          "content": "sections/step_09.md"
         },
         {
           "title": "10 - Event Handlers",
-          "location": "sections/step_10.md"
+          "content": "sections/step_10.md"
         },
         {
           "title": "11 - REST and Custom Services",
-          "location": "sections/step_11.md"
+          "content": "sections/step_11.md"
         },
         {
           "title": "12 - Applying Animations",
-          "location": "sections/step_12.md"
+          "content": "sections/step_12.md"
         },
         {
           "title": "The End",
-          "location": "sections/the_end.md"
+          "content": "sections/the_end.md"
         }
       ]
     }
@@ -83,7 +83,7 @@
     {
       "name" : "catalog_screen",
       "contentType" : "image/png",
-      "location" : "assets/catalog_screen.png"
+      "content" : "assets/catalog_screen.png"
     }
   ]
 }
