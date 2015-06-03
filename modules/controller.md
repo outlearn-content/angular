@@ -137,7 +137,8 @@ string "very". Depending on which button is clicked, the `spice` model is set to
 `jalapeño`, and the message is automatically updated by data-binding.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="SpicyController">
  <button ng-click="chiliSpicy()">Chili</button>
@@ -145,8 +146,10 @@ _Example file_: index.html
  <p>The food is {{spice}} spicy!</p>
 </div>
 ```
+
   
-_Example file_: app.js
+_Example file_: `app.js`
+
 ```javascript
 var myApp = angular.module('spicyApp1', []);
 
@@ -162,6 +165,7 @@ myApp.controller('SpicyController', ['$scope', function($scope) {
     };
 }]);
 ```
+
 
 Things to notice in the example above:
 
@@ -180,7 +184,8 @@ Controller methods can also take arguments, as demonstrated in the following var
 previous example.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="SpicyController">
  <input ng-model="customSpice">
@@ -189,8 +194,10 @@ _Example file_: index.html
  <p>The food is {{spice}} spicy!</p>
 </div>
 ```
+
   
-_Example file_: app.js
+_Example file_: `app.js`
+
 ```javascript
 var myApp = angular.module('spicyApp2', []);
 
@@ -203,6 +210,7 @@ myApp.controller('SpicyController', ['$scope', function($scope) {
     };
 }]);
 ```
+
 
 Notice that the `SpicyController` Controller now defines just one method called `spicy`, which takes one
 argument called `spice`. The template then refers to this Controller method and passes in a string
@@ -219,7 +227,8 @@ See [Understanding Scopes](https://github.com/angular/angular.js/wiki/Understand
 more information about scope inheritance.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div class="spicy">
   <div ng-controller="MainController">
@@ -235,16 +244,20 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
   
-_Example file_: app.css
+_Example file_: `app.css`
+
 ```javascript
 div.spicy div {
   padding: 10px;
   border: solid 2px blue;
 }
 ```
+
   
-_Example file_: app.js
+_Example file_: `app.js`
+
 ```javascript
 var myApp = angular.module('scopeInheritance', []);
 myApp.controller('MainController', ['$scope', function($scope) {
@@ -259,6 +272,7 @@ myApp.controller('GrandChildController', ['$scope', function($scope) {
   $scope.name = 'Gingerbread Baby';
 }]);
 ```
+
 
 Notice how we nested three `ng-controller` directives in our template. This will result in four
 scopes being created for our view:

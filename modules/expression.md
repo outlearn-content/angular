@@ -53,12 +53,14 @@ the method from your view. If you want to `eval()` an Angular expression yoursel
 
 ## Example
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <span>
   1+2={{1+2}}
 </span>
 ```
+
 
   <file name="protractor.js" type="protractor">
     it('should calculate expression in binding', function() {
@@ -69,7 +71,8 @@ _Example file_: index.html
 You can try evaluating different expressions here:
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController" class="expressions">
   Expression:
@@ -84,8 +87,10 @@ _Example file_: index.html
 </div>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('expressionExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
@@ -100,6 +105,7 @@ angular.module('expressionExample', [])
     };
   }]);
 ```
+
 
   <file name="protractor.js" type="protractor">
     it('should allow user expression testing', function() {
@@ -123,7 +129,8 @@ Instead use services like `$window` and `$location` in functions called from exp
 provide mockable access to globals.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div class="example2" ng-controller="ExampleController">
   Name: <input ng-model="name" type="text"/>
@@ -132,8 +139,10 @@ _Example file_: index.html
 </div>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('expressionExample', [])
   .controller('ExampleController', ['$window', '$scope', function($window, $scope) {
@@ -144,6 +153,7 @@ angular.module('expressionExample', [])
     };
   }]);
 ```
+
 
   <file name="protractor.js" type="protractor">
     it('should calculate expression in binding', function() {
@@ -197,7 +207,8 @@ Event Object](http://api.jquery.com/category/events/event-object/) when jQuery i
 similar jqLite object.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="EventController">
   <button ng-click="clickMe($event)">Event</button>
@@ -206,8 +217,10 @@ _Example file_: index.html
 </div>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('eventExampleApp', []).
   controller('EventController', ['$scope', function($scope) {
@@ -232,6 +245,7 @@ angular.module('eventExampleApp', []).
   }]);
 ```
 
+
 Note in the example above how we can pass in `$event` to `clickMe`, but how it does not show up
 in `{{$event}}`. This is because `$event` is outside the scope of that binding.
 
@@ -243,7 +257,8 @@ will stop recalculating once they are stable, which happens after the first dige
 result is a non-undefined value (see value stabilization algorithm below).
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="EventController">
   <button ng-click="clickMe($event)">Click Me</button>
@@ -251,8 +266,10 @@ _Example file_: index.html
   <p id="normal-binding-example">Normal binding: {{name}}</p>
 </div>
 ```
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('oneTimeBidingExampleApp', []).
   controller('EventController', ['$scope', function($scope) {
@@ -267,6 +284,7 @@ angular.module('oneTimeBidingExampleApp', []).
     };
   }]);
 ```
+
   <file name="protractor.js" type="protractor">
     it('should freeze binding after its value has stabilized', function() {
       var oneTimeBiding = element(by.id('one-time-binding-example'));

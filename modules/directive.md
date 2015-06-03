@@ -78,7 +78,8 @@ The **normalization** process is as follows:
 For example, the following forms are all equivalent and match the {@link ngBind} directive:
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   Hello <input ng-model='name'> <hr/>
@@ -89,14 +90,17 @@ _Example file_: index.html
   <span x-ng-bind="name"></span> <br/>
 </div>
 ```
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsBindExample', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name = 'Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)';
   }]);
 ```
+
   <file name="protractor.js" type="protractor">
     it('should show off bindings', function() {
       expect(element(by.css('div[ng-controller="Controller"] span[ng-bind]')).getText())
@@ -241,7 +245,8 @@ several others. This is a good opportunity to use a directive to simplify your t
 Let's create a directive that simply replaces its contents with a static template:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsSimpleDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -256,13 +261,16 @@ angular.module('docsSimpleDirective', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <div my-customer></div>
 </div>
 ```
+
 
 Notice that we have bindings in this directive. After `$compile` compiles and links
 `<div my-customer></div>`, it will try to match directives on the element's children. This means you
@@ -282,7 +290,8 @@ If you are familiar with `ngInclude`, `templateUrl` works just like it. Here's t
 using `templateUrl` instead:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTemplateUrlDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -297,18 +306,23 @@ angular.module('docsTemplateUrlDirective', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <div my-customer></div>
 </div>
 ```
+
   
-_Example file_: my-customer.html
+_Example file_: `my-customer.html`
+
 ```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
+
 
 `templateUrl` can also be a function which returns the URL of an HTML template to be loaded and
 used for the directive. Angular will call the `templateUrl` function with two parameters: the
@@ -320,7 +334,8 @@ function, since the template is requested before the scope is initialized.
 </div>
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTemplateUrlDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -337,24 +352,31 @@ angular.module('docsTemplateUrlDirective', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <div my-customer type="name"></div>
   <div my-customer type="address"></div>
 </div>
 ```
+
   
-_Example file_: customer-name.html
+_Example file_: `customer-name.html`
+
 ```javascript
 Name: {{customer.name}}
 ```
+
   
-_Example file_: customer-address.html
+_Example file_: `customer-address.html`
+
 ```javascript
 Address: {{customer.address}}
 ```
+
 
 <div class="alert alert-warning">
 **Note:** When you create a directive, it is restricted to attribute and elements only by default. In order to
@@ -374,7 +396,8 @@ These restrictions can all be combined as needed:
 Let's change our directive to use `restrict: 'E'`:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsRestrictDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -391,19 +414,24 @@ angular.module('docsRestrictDirective', [])
   });
 ```
 
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <my-customer></my-customer>
 </div>
 ```
 
+
   
-_Example file_: my-customer.html
+_Example file_: `my-customer.html`
+
 ```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
+
 
 For more on the
 `restrict`
@@ -434,7 +462,8 @@ In its current implementation, we'd need to create a different controller each t
 re-use such a directive:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsScopeProblemExample', [])
   .controller('NaomiController', ['$scope', function($scope) {
@@ -456,8 +485,10 @@ angular.module('docsScopeProblemExample', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="NaomiController">
   <my-customer></my-customer>
@@ -467,11 +498,14 @@ _Example file_: index.html
   <my-customer></my-customer>
 </div>
 ```
+
   
-_Example file_: my-customer.html
+_Example file_: `my-customer.html`
+
 ```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
+
 
 This is clearly not a great solution.
 
@@ -480,7 +514,8 @@ outside, and then map the outer scope to a directive's inner scope. We can do th
 we call an **isolate scope**. To do this, we can use a directive's `scope` option:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsIsolateScopeDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -497,8 +532,10 @@ angular.module('docsIsolateScopeDirective', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <my-customer info="naomi"></my-customer>
@@ -506,11 +543,14 @@ _Example file_: index.html
   <my-customer info="igor"></my-customer>
 </div>
 ```
+
   
-_Example file_: my-customer-iso.html
+_Example file_: `my-customer-iso.html`
+
 ```javascript
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
 ```
+
 
 Looking at `index.html`, the first `<my-customer>` element binds the `info` attribute to `naomi`,
 which we have exposed on our controller's scope. The second binds `info` to `igor`.
@@ -557,7 +597,8 @@ We can show this by adding another property, `vojta`, to our scope and trying to
 within our directive's template:
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsIsolationExample', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -574,20 +615,25 @@ angular.module('docsIsolationExample', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <my-customer info="naomi"></my-customer>
 </div>
 ```
+
   
-_Example file_: my-customer-plus-vojta.html
+_Example file_: `my-customer-plus-vojta.html`
+
 ```javascript
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
 <hr>
 Name: {{vojta.name}} Address: {{vojta.address}}
 ```
+
 
 Notice that `{{vojta.name}}` and `{{vojta.address}}` are empty, meaning they are undefined.
 Although we defined `vojta` in the controller, it's not available within the directive.
@@ -630,7 +676,8 @@ end-to-end testing, where we want to ensure that all `$timeout`s have completed 
 We also want to remove the `$interval` if the directive is deleted so we don't introduce a memory leak.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTimeDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -666,14 +713,17 @@ angular.module('docsTimeDirective', [])
     };
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   Date format: <input ng-model="format"> <hr/>
   Current time is: <span my-current-time="format"></span>
 </div>
 ```
+
 
 There are a couple of things to note here.
 Just like the `module.controller` API, the function argument in `module.directive` is dependency
@@ -708,7 +758,8 @@ wrap any arbitrary content.
 To do this, we need to use the `transclude` option.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTransclusionDirective', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -722,19 +773,24 @@ angular.module('docsTransclusionDirective', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <my-dialog>Check out the contents, {{name}}!</my-dialog>
 </div>
 ```
+
   
-_Example file_: my-dialog.html
+_Example file_: `my-dialog.html`
+
 ```javascript
 <div class="alert" ng-transclude>
 </div>
 ```
+
 
 What does this `transclude` option do, exactly? `transclude` makes the contents of a directive with
 this option have access to the scope **outside** of the directive rather than inside.
@@ -743,7 +799,8 @@ To illustrate this, see the example below. Notice that we've added a `link` func
 that redefines `name` as `Jeff`. What do you think the `{{name}}` binding will resolve to now?
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTransclusionExample', [])
   .controller('Controller', ['$scope', function($scope) {
@@ -761,19 +818,24 @@ angular.module('docsTransclusionExample', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   <my-dialog>Check out the contents, {{name}}!</my-dialog>
 </div>
 ```
+
   
-_Example file_: my-dialog.html
+_Example file_: `my-dialog.html`
+
 ```javascript
 <div class="alert" ng-transclude>
 </div>
 ```
+
 
 Ordinarily, we would expect that `{{name}}` would be `Jeff`. However, we see in this example that
 the `{{name}}` binding is still `Tobias`.
@@ -798,7 +860,8 @@ Next, we want to add buttons to this dialog box, and allow someone using the dir
 own behavior to it.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsIsoFnBindExample', [])
   .controller('Controller', ['$scope', '$timeout', function($scope, $timeout) {
@@ -824,8 +887,10 @@ angular.module('docsIsoFnBindExample', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="Controller">
   {{message}}
@@ -834,14 +899,17 @@ _Example file_: index.html
   </my-dialog>
 </div>
 ```
+
   
-_Example file_: my-dialog-close.html
+_Example file_: `my-dialog-close.html`
+
 ```javascript
 <div class="alert">
   <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
   <div ng-transclude></div>
 </div>
 ```
+
 
 We want to run the function we pass by invoking it from the directive's scope, but have it run
 in the context of the scope where it's registered.
@@ -879,7 +947,8 @@ For instance, what if we wanted to create a directive that lets a user drag an
 element?
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('dragModule', [])
   .directive('myDraggable', ['$document', function($document) {
@@ -920,11 +989,14 @@ angular.module('dragModule', [])
     };
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <span my-draggable>Drag ME</span>
 ```
+
 
 
 
@@ -938,7 +1010,8 @@ Imagine you want to have a container with tabs in which the contents of the cont
 to which tab is active.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('docsTabsExample', [])
   .directive('myTabs', function() {
@@ -981,8 +1054,10 @@ angular.module('docsTabsExample', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <my-tabs>
   <my-pane title="Hello">
@@ -996,8 +1071,10 @@ _Example file_: index.html
   </my-pane>
 </my-tabs>
 ```
+
   
-_Example file_: my-tabs.html
+_Example file_: `my-tabs.html`
+
 ```javascript
 <div class="tabbable">
   <ul class="nav nav-tabs">
@@ -1008,12 +1085,15 @@ _Example file_: my-tabs.html
   <div class="tab-content" ng-transclude></div>
 </div>
 ```
+
   
-_Example file_: my-pane.html
+_Example file_: `my-pane.html`
+
 ```javascript
 <div class="tab-pane" ng-show="selected" ng-transclude>
 </div>
 ```
+
 
 The `myPane` directive has a `require` option with value `^myTabs`. When a directive uses this
 option, `$compile` will throw an error unless the specified controller is found. The `^` prefix

@@ -375,7 +375,8 @@ In these examples we use `<base href="/base/index.html" />`
 
 #### Browser in HTML5 mode
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="LocationController">
   <div ng-address-bar></div><br><br>
@@ -394,8 +395,10 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
   
-_Example file_: app.js
+_Example file_: `app.js`
+
 ```javascript
 angular.module('html5-mode', ['fake-browser', 'address-bar'])
 
@@ -422,8 +425,10 @@ angular.module('html5-mode', ['fake-browser', 'address-bar'])
 });
 ```
 
+
   
-_Example file_: fakeBrowser.js
+_Example file_: `fakeBrowser.js`
+
 ```javascript
 angular.module('fake-browser', [])
 
@@ -451,8 +456,10 @@ angular.module('fake-browser', [])
 });
 ```
 
+
   
-_Example file_: addressBar.js
+_Example file_: `addressBar.js`
+
 ```javascript
 angular.module('address-bar', [])
 .directive('ngAddressBar', function($browser, $timeout) {
@@ -479,6 +486,7 @@ angular.module('address-bar', [])
    };
  });
 ```
+
 
   <file name="protractor.js" type="protractor">
 
@@ -530,7 +538,8 @@ angular.module('address-bar', [])
 
 ####Browser in HTML5 Fallback mode (Hashbang mode)
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="LocationController">
   <div ng-address-bar></div><br><br>
@@ -549,8 +558,10 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
   
-_Example file_: app.js
+_Example file_: `app.js`
+
 ```javascript
 angular.module('hashbang-mode', ['fake-browser', 'address-bar'])
 
@@ -580,8 +591,10 @@ angular.module('hashbang-mode', ['fake-browser', 'address-bar'])
 
 ```
 
+
   
-_Example file_: fakeBrowser.js
+_Example file_: `fakeBrowser.js`
+
 ```javascript
 angular.module('fake-browser', [])
 
@@ -610,8 +623,10 @@ angular.module('fake-browser', [])
 ```
 
 
+
   
-_Example file_: addressBar.js
+_Example file_: `addressBar.js`
+
 ```javascript
 angular.module('address-bar', [])
 .directive('ngAddressBar', function($browser, $timeout) {
@@ -638,6 +653,7 @@ angular.module('address-bar', [])
    };
  });
 ```
+
 
   <file name="protractor.js" type="protractor">
 
@@ -837,14 +853,17 @@ Because `$location` uses getters/setters, you can use `ng-model-options="{ gette
 to bind it to `ngModel`:
 
 
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="LocationController">
   <input type="text" ng-model="locationPath" ng-model-options="{ getterSetter: true }" />
 </div>
 ```
 
-_Example file_: script.js
+
+_Example file_: `script.js`
+
 ```javascript
 angular.module('locationExample', [])
   .controller('LocationController', ['$scope', '$location', function($scope, $location) {
@@ -853,6 +872,7 @@ angular.module('locationExample', [])
     };
   }]);
 ```
+
 
 # Related API
 

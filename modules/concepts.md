@@ -41,7 +41,8 @@ Let's start with input fields for quantity and cost whose values are multiplied 
 
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-app ng-init="qty=1;cost=2">
   <b>Invoice:</b>
@@ -56,6 +57,7 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
 
 Let's walk through the example and describe what's going on.
 
@@ -108,7 +110,8 @@ Let's add some more logic to the example that allows us to enter and calculate t
 different currencies and also pay the invoice.
 
   
-_Example file_: invoice1.js
+_Example file_: `invoice1.js`
+
 ```javascript
 angular.module('invoice1', [])
   .controller('InvoiceController', function() {
@@ -133,8 +136,10 @@ angular.module('invoice1', [])
     };
   });
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
@@ -156,6 +161,7 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
 
 What changed?
 
@@ -199,7 +205,8 @@ from the web, e.g. by calling the Yahoo Finance API, without changing the contro
 Let's refactor our example and move the currency conversion into a service in another file:
 
   
-_Example file_: finance2.js
+_Example file_: `finance2.js`
+
 ```javascript
 angular.module('finance2', [])
   .factory('currencyConverter', function() {
@@ -219,8 +226,10 @@ angular.module('finance2', [])
     };
   });
 ```
+
   
-_Example file_: invoice2.js
+_Example file_: `invoice2.js`
+
 ```javascript
 angular.module('invoice2', ['finance2'])
   .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
@@ -237,8 +246,10 @@ angular.module('invoice2', ['finance2'])
     };
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
@@ -260,6 +271,7 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-module-service.png">
 
@@ -314,7 +326,8 @@ Let's finish our example by fetching the exchange rates from the Yahoo Finance A
 The following example shows how this is done with Angular:
 
   
-_Example file_: invoice3.js
+_Example file_: `invoice3.js`
+
 ```javascript
 angular.module('invoice3', ['finance3'])
   .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
@@ -331,8 +344,10 @@ angular.module('invoice3', ['finance3'])
     };
   }]);
 ```
+
   
-_Example file_: finance3.js
+_Example file_: `finance3.js`
+
 ```javascript
 angular.module('finance3', [])
   .factory('currencyConverter', ['$http', function($http) {
@@ -369,8 +384,10 @@ angular.module('finance3', [])
     };
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
@@ -392,6 +409,7 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
 
 What changed?
 Our `currencyConverter` service of the `finance` module now uses the `$http`, a

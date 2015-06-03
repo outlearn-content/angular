@@ -38,7 +38,8 @@ filter or directive) that depends on the service. Angular's dependency injection
 subsystem takes care of the rest.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div id="simple" ng-controller="MyController">
   <p>Let's try this simple notify service, injected into the controller...</p>
@@ -48,8 +49,10 @@ _Example file_: index.html
 </div>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.
  module('myServiceModule', []).
@@ -69,6 +72,7 @@ angular.
     };
   }]);
 ```
+
 
   <file name="protractor.js" type="protractor">
     it('should test service', function() {

@@ -30,7 +30,8 @@ as well as view to the model. In addition it provides an API
 for other directives to augment its behavior.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="simple-form">
@@ -64,6 +65,7 @@ _Example file_: index.html
 ```
 
 
+
 Note that `novalidate` is used to disable browser's native form validation.
 
 The value of `ngModel` won't be set unless it passes validation for the input field.
@@ -92,7 +94,8 @@ This ensures that the user is not distracted with an error until after interacti
 and failing to satisfy its validity.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="css-form">
@@ -135,6 +138,7 @@ _Example file_: index.html
 
 
 
+
 ## Binding to form and control state
 
 A form is an instance of FormController.
@@ -156,7 +160,8 @@ didn't interact with a control
 
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController">
   <form name="form" class="css-form" novalidate>
@@ -194,8 +199,10 @@ _Example file_: index.html
 </div>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('formExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
@@ -219,6 +226,7 @@ angular.module('formExample', [])
 
 
 
+
 ## Custom model update triggers
 
 By default, any change to the content will trigger a model update and form validation. You can
@@ -238,7 +246,8 @@ The following example shows how to override immediate updates. Changes on the in
 will update the model only when the control loses focus (blur event).
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController">
   <form>
@@ -251,14 +260,17 @@ _Example file_: index.html
   <pre>userdata = "{{user.data}}"</pre>
 </div>
 ```
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('customTriggerExample', [])
  .controller('ExampleController', ['$scope', function($scope) {
    $scope.user = {};
  }]);
 ```
+
 
 
 
@@ -286,7 +298,8 @@ This example shows how to debounce model changes. Model will be updated only 250
 after last change.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="ExampleController">
   <form>
@@ -296,14 +309,17 @@ _Example file_: index.html
   <pre>username = "{{user.name}}"</pre>
 </div>
 ```
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('debounceExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
     $scope.user = {};
   }]);
 ```
+
 
 ## Custom Validation
 
@@ -341,7 +357,8 @@ In the following example we create two directives:
  We mock the server request with a `$q` deferred.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <form name="form" class="css-form" novalidate>
   <div>
@@ -363,8 +380,10 @@ _Example file_: index.html
 </form>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 var app = angular.module('form-example1', []);
 
@@ -424,6 +443,7 @@ app.directive('username', function($q, $timeout) {
 });
 ```
 
+
 ## Modifying built-in validators
 
 Since Angular itself uses `$validators`, you can easily replace or remove built-in validators,
@@ -433,7 +453,8 @@ in `input[email]` from a custom directive so that it requires a specific top-lev
 Note that you can alternatively use `ng-pattern` to further restrict the validation.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <form name="form" class="css-form" novalidate>
   <div>
@@ -445,8 +466,10 @@ _Example file_: index.html
 </form>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 var app = angular.module('form-example-modify-validators', []);
 
@@ -471,6 +494,7 @@ app.directive('overwriteEmail', function() {
 ```
 
 
+
 ## Implementing custom form controls (using `ngModel`)
 Angular implements all of the basic HTML form controls (input,
 select}, {@link ng.directive:textarea textarea),
@@ -489,7 +513,8 @@ See `$compileProvider.directive` for more info.
 The following example shows how to add two-way data-binding to contentEditable elements.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div contentEditable="true" ng-model="content" title="Click to edit">Some</div>
 <pre>model = {{content}}</pre>
@@ -502,8 +527,10 @@ _Example file_: index.html
 </style>
 ```
 
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('form-example2', []).directive('contenteditable', function() {
   return {
@@ -527,3 +554,4 @@ angular.module('form-example2', []).directive('contenteditable', function() {
   };
 });
 ```
+

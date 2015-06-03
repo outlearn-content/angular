@@ -51,7 +51,8 @@ point since it makes the controllers view agnostic, which greatly improves the t
 the applications.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('scopeExample', [])
   .controller('MyController', ['$scope', function($scope) {
@@ -62,8 +63,10 @@ angular.module('scopeExample', [])
     };
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="MyController">
   Your name:
@@ -73,6 +76,7 @@ _Example file_: index.html
   {{greeting}}
 </div>
 ```
+
 
 In the above example notice that the `MyController` assigns `World` to the `username` property of
 the scope. The scope then notifies the `input` of the assignment, which then renders the input
@@ -134,7 +138,8 @@ This example illustrates scopes in application, and prototypical inheritance of 
 a diagram depicting the scope boundaries.
 
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div class="show-scope-demo">
   <div ng-controller="GreetController">
@@ -147,8 +152,10 @@ _Example file_: index.html
   </div>
 </div>
 ```
+
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('scopeExample', [])
   .controller('GreetController', ['$scope', '$rootScope', function($scope, $rootScope) {
@@ -159,8 +166,10 @@ angular.module('scopeExample', [])
     $scope.names = ['Igor', 'Misko', 'Vojta'];
   }]);
 ```
+
   
-_Example file_: style.css
+_Example file_: `style.css`
+
 ```javascript
 .show-scope-demo.ng-scope,
 .show-scope-demo .ng-scope  {
@@ -168,6 +177,7 @@ _Example file_: style.css
   margin: 3px;
 }
 ```
+
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-scope.png">
 
@@ -206,7 +216,8 @@ ng.$rootScope.Scope#$broadcast broadcasted} to the scope children or {@link
 ng.$rootScope.Scope#$emit emitted} to scope parents.
 
   
-_Example file_: script.js
+_Example file_: `script.js`
+
 ```javascript
 angular.module('eventExample', [])
   .controller('EventController', ['$scope', function($scope) {
@@ -216,8 +227,10 @@ angular.module('eventExample', [])
     });
   }]);
 ```
+
   
-_Example file_: index.html
+_Example file_: `index.html`
+
 ```javascript
 <div ng-controller="EventController">
   Root scope <tt>MyEvent</tt> count: {{count}}
@@ -236,6 +249,7 @@ _Example file_: index.html
   </ul>
 </div>
 ```
+
 
 
 
