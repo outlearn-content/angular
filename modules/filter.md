@@ -57,7 +57,7 @@ or the filter expression is changed).
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="FilterController as ctrl">
   <div>
     All entries:
@@ -72,7 +72,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('FilterInControllerModule', []).
   controller('FilterController', ['filterFilter', function(filterFilter) {
     this.array = [
@@ -112,7 +112,7 @@ text upper-case.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="MyController">
   <input ng-model="greeting" type="text"><br>
   No filter: {{greeting}}<br>
@@ -123,7 +123,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('myReverseFilterApp', [])
   .filter('reverse', function() {
     return function(input, uppercase) {
@@ -157,7 +157,7 @@ means that it will be executed one or more times during the each `$digest` cycle
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="MyController">
   Input: <input ng-model="greeting" type="text"><br>
   Decoration: <input ng-model="decoration.symbol" type="text"><br>
@@ -168,7 +168,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('myStatefulFilterApp', [])
   .filter('decorate', ['decoration', function(decoration) {
 

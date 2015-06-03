@@ -52,7 +52,7 @@ the applications.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('scopeExample', [])
   .controller('MyController', ['$scope', function($scope) {
     $scope.username = 'World';
@@ -64,7 +64,7 @@ angular.module('scopeExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="MyController">
   Your name:
     <input type="text" ng-model="username">
@@ -135,7 +135,7 @@ a diagram depicting the scope boundaries.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div class="show-scope-demo">
   <div ng-controller="GreetController">
     Hello {{name}}!
@@ -149,7 +149,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('scopeExample', [])
   .controller('GreetController', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.name = 'World';
@@ -161,7 +161,7 @@ angular.module('scopeExample', [])
 ```
   
 _Example file_: `style.css`
-```js
+```javascript
 .show-scope-demo.ng-scope,
 .show-scope-demo .ng-scope  {
   border: 1px solid red;
@@ -207,7 +207,7 @@ ng.$rootScope.Scope#$emit emitted} to scope parents.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('eventExample', [])
   .controller('EventController', ['$scope', function($scope) {
     $scope.count = 0;
@@ -218,7 +218,7 @@ angular.module('eventExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="EventController">
   Root scope <tt>MyEvent</tt> count: {{count}}
   <ul>

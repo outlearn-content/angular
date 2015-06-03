@@ -31,7 +31,7 @@ for other directives to augment its behavior.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="simple-form">
     Name: <input type="text" ng-model="user.name" /><br />
@@ -93,7 +93,7 @@ and failing to satisfy its validity.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="css-form">
     Name: <input type="text" ng-model="user.name" required /><br />
@@ -157,7 +157,7 @@ didn't interact with a control
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController">
   <form name="form" class="css-form" novalidate>
     Name:
@@ -196,7 +196,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('formExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
     $scope.master = {};
@@ -239,7 +239,7 @@ will update the model only when the control loses focus (blur event).
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController">
   <form>
     Name:
@@ -253,7 +253,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('customTriggerExample', [])
  .controller('ExampleController', ['$scope', function($scope) {
    $scope.user = {};
@@ -287,7 +287,7 @@ after last change.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController">
   <form>
     Name:
@@ -298,7 +298,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('debounceExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
     $scope.user = {};
@@ -342,7 +342,7 @@ In the following example we create two directives:
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <form name="form" class="css-form" novalidate>
   <div>
     Size (integer 0 - 10):
@@ -365,7 +365,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 var app = angular.module('form-example1', []);
 
 var INTEGER_REGEXP = /^\-?\d+$/;
@@ -434,7 +434,7 @@ Note that you can alternatively use `ng-pattern` to further restrict the validat
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <form name="form" class="css-form" novalidate>
   <div>
     Overwritten Email:
@@ -447,7 +447,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 var app = angular.module('form-example-modify-validators', []);
 
 app.directive('overwriteEmail', function() {
@@ -490,7 +490,7 @@ The following example shows how to add two-way data-binding to contentEditable e
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div contentEditable="true" ng-model="content" title="Click to edit">Some</div>
 <pre>model = {{content}}</pre>
 
@@ -504,7 +504,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('form-example2', []).directive('contenteditable', function() {
   return {
     require: 'ngModel',

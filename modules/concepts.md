@@ -42,7 +42,7 @@ Let's start with input fields for quantity and cost whose values are multiplied 
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-app ng-init="qty=1;cost=2">
   <b>Invoice:</b>
   <div>
@@ -109,7 +109,7 @@ different currencies and also pay the invoice.
 
   
 _Example file_: `invoice1.js`
-```js
+```javascript
 angular.module('invoice1', [])
   .controller('InvoiceController', function() {
     this.qty = 1;
@@ -135,7 +135,7 @@ angular.module('invoice1', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>
@@ -200,7 +200,7 @@ Let's refactor our example and move the currency conversion into a service in an
 
   
 _Example file_: `finance2.js`
-```js
+```javascript
 angular.module('finance2', [])
   .factory('currencyConverter', function() {
     var currencies = ['USD', 'EUR', 'CNY'];
@@ -221,7 +221,7 @@ angular.module('finance2', [])
 ```
   
 _Example file_: `invoice2.js`
-```js
+```javascript
 angular.module('invoice2', ['finance2'])
   .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
     this.qty = 1;
@@ -239,7 +239,7 @@ angular.module('invoice2', ['finance2'])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>
@@ -315,7 +315,7 @@ The following example shows how this is done with Angular:
 
   
 _Example file_: `invoice3.js`
-```js
+```javascript
 angular.module('invoice3', ['finance3'])
   .controller('InvoiceController', ['currencyConverter', function(currencyConverter) {
     this.qty = 1;
@@ -333,7 +333,7 @@ angular.module('invoice3', ['finance3'])
 ```
   
 _Example file_: `finance3.js`
-```js
+```javascript
 angular.module('finance3', [])
   .factory('currencyConverter', ['$http', function($http) {
     var YAHOO_FINANCE_URL_PATTERN =
@@ -371,7 +371,7 @@ angular.module('finance3', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
   <b>Invoice:</b>
   <div>

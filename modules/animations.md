@@ -25,7 +25,7 @@ Below is a quick example of animations being enabled for `ngShow` and `ngHide`:
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-init="checked=true">
   <label>
     <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
@@ -37,7 +37,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `animations.css`
-```js
+```javascript
 .sample-show-hide {
   padding:10px;
   border:1px solid black;
@@ -217,7 +217,7 @@ The example below shows how to perform animations during class changes:
 
  
 _Example file_: `index.html`
-```js
+```javascript
 <p>
   <input type="button" value="set" ng-click="myCssVar='css-class'">
   <input type="button" value="clear" ng-click="myCssVar=''">
@@ -227,7 +227,7 @@ _Example file_: `index.html`
 ```
  
 _Example file_: `style.css`
-```js
+```javascript
 .css-class-add, .css-class-remove {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;

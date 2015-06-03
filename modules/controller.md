@@ -138,7 +138,7 @@ string "very". Depending on which button is clicked, the `spice` model is set to
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="SpicyController">
  <button ng-click="chiliSpicy()">Chili</button>
  <button ng-click="jalapenoSpicy()">Jalapeño</button>
@@ -147,7 +147,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `app.js`
-```js
+```javascript
 var myApp = angular.module('spicyApp1', []);
 
 myApp.controller('SpicyController', ['$scope', function($scope) {
@@ -181,7 +181,7 @@ previous example.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="SpicyController">
  <input ng-model="customSpice">
  <button ng-click="spicy('chili')">Chili</button>
@@ -191,7 +191,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `app.js`
-```js
+```javascript
 var myApp = angular.module('spicyApp2', []);
 
 myApp.controller('SpicyController', ['$scope', function($scope) {
@@ -220,7 +220,7 @@ more information about scope inheritance.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div class="spicy">
   <div ng-controller="MainController">
     <p>Good {{timeOfDay}}, {{name}}!</p>
@@ -237,7 +237,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `app.css`
-```js
+```javascript
 div.spicy div {
   padding: 10px;
   border: solid 2px blue;
@@ -245,7 +245,7 @@ div.spicy div {
 ```
   
 _Example file_: `app.js`
-```js
+```javascript
 var myApp = angular.module('scopeInheritance', []);
 myApp.controller('MainController', ['$scope', function($scope) {
   $scope.timeOfDay = 'morning';

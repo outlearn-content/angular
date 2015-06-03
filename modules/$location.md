@@ -376,7 +376,7 @@ In these examples we use `<base href="/base/index.html" />`
 #### Browser in HTML5 mode
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="LocationController">
   <div ng-address-bar></div><br><br>
   <div>
@@ -396,7 +396,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `app.js`
-```js
+```javascript
 angular.module('html5-mode', ['fake-browser', 'address-bar'])
 
 .constant('initUrl', 'http://www.example.com/base/path?a=b#h')
@@ -424,7 +424,7 @@ angular.module('html5-mode', ['fake-browser', 'address-bar'])
 
   
 _Example file_: `fakeBrowser.js`
-```js
+```javascript
 angular.module('fake-browser', [])
 
 .config(function($provide) {
@@ -453,7 +453,7 @@ angular.module('fake-browser', [])
 
   
 _Example file_: `addressBar.js`
-```js
+```javascript
 angular.module('address-bar', [])
 .directive('ngAddressBar', function($browser, $timeout) {
    return {
@@ -531,7 +531,7 @@ angular.module('address-bar', [])
 ####Browser in HTML5 Fallback mode (Hashbang mode)
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="LocationController">
   <div ng-address-bar></div><br><br>
   <div>
@@ -551,7 +551,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `app.js`
-```js
+```javascript
 angular.module('hashbang-mode', ['fake-browser', 'address-bar'])
 
 .constant('initUrl', 'http://www.example.com/base/index.html#!/path?a=b#h')
@@ -582,7 +582,7 @@ angular.module('hashbang-mode', ['fake-browser', 'address-bar'])
 
   
 _Example file_: `fakeBrowser.js`
-```js
+```javascript
 angular.module('fake-browser', [])
 
 .config(function($provide) {
@@ -612,7 +612,7 @@ angular.module('fake-browser', [])
 
   
 _Example file_: `addressBar.js`
-```js
+```javascript
 angular.module('address-bar', [])
 .directive('ngAddressBar', function($browser, $timeout) {
    return {
@@ -838,14 +838,14 @@ to bind it to `ngModel`:
 
 
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="LocationController">
   <input type="text" ng-model="locationPath" ng-model-options="{ getterSetter: true }" />
 </div>
 ```
 
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('locationExample', [])
   .controller('LocationController', ['$scope', '$location', function($scope, $location) {
     $scope.locationPath = function (newLocation) {

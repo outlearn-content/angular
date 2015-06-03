@@ -86,7 +86,7 @@ Here is a directive which makes any element draggable. Notice the `draggable` at
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('drag', []).
   directive('draggable', function($document) {
     return function(scope, element, attr) {
@@ -126,7 +126,7 @@ angular.module('drag', []).
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <span draggable>Drag ME</span>
 ```
 

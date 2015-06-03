@@ -39,7 +39,7 @@ subsystem takes care of the rest.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div id="simple" ng-controller="MyController">
   <p>Let's try this simple notify service, injected into the controller...</p>
   <input ng-init="message='test'" ng-model="message" >
@@ -50,7 +50,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.
  module('myServiceModule', []).
   controller('MyController', ['$scope','notify', function ($scope, notify) {

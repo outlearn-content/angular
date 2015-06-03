@@ -54,7 +54,7 @@ the method from your view. If you want to `eval()` an Angular expression yoursel
 ## Example
   
 _Example file_: `index.html`
-```js
+```javascript
 <span>
   1+2={{1+2}}
 </span>
@@ -70,7 +70,7 @@ You can try evaluating different expressions here:
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="ExampleController" class="expressions">
   Expression:
   <input type='text' ng-model="expr" size="80"/>
@@ -86,7 +86,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('expressionExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
     var exprs = $scope.exprs = [];
@@ -124,7 +124,7 @@ provide mockable access to globals.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div class="example2" ng-controller="ExampleController">
   Name: <input ng-model="name" type="text"/>
   <button ng-click="greet()">Greet</button>
@@ -134,7 +134,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('expressionExample', [])
   .controller('ExampleController', ['$window', '$scope', function($window, $scope) {
     $scope.name = 'World';
@@ -198,7 +198,7 @@ similar jqLite object.
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="EventController">
   <button ng-click="clickMe($event)">Event</button>
   <p><code>$event</code>: <pre> {{$event | json}}</pre></p>
@@ -208,7 +208,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('eventExampleApp', []).
   controller('EventController', ['$scope', function($scope) {
     /*
@@ -244,7 +244,7 @@ result is a non-undefined value (see value stabilization algorithm below).
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="EventController">
   <button ng-click="clickMe($event)">Click Me</button>
   <p id="one-time-binding-example">One time binding: {{::name}}</p>
@@ -253,7 +253,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('oneTimeBidingExampleApp', []).
   controller('EventController', ['$scope', function($scope) {
     var counter = 0;

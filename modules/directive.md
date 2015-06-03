@@ -79,7 +79,7 @@ For example, the following forms are all equivalent and match the {@link ngBind}
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   Hello <input ng-model='name'> <hr/>
   <span ng-bind="name"></span> <br/>
@@ -91,7 +91,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsBindExample', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name = 'Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)';
@@ -242,7 +242,7 @@ Let's create a directive that simply replaces its contents with a static templat
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsSimpleDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.customer = {
@@ -258,7 +258,7 @@ angular.module('docsSimpleDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <div my-customer></div>
 </div>
@@ -283,7 +283,7 @@ using `templateUrl` instead:
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTemplateUrlDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.customer = {
@@ -299,14 +299,14 @@ angular.module('docsTemplateUrlDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <div my-customer></div>
 </div>
 ```
   
 _Example file_: `my-customer.html`
-```js
+```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
 
@@ -321,7 +321,7 @@ function, since the template is requested before the scope is initialized.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTemplateUrlDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.customer = {
@@ -339,7 +339,7 @@ angular.module('docsTemplateUrlDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <div my-customer type="name"></div>
   <div my-customer type="address"></div>
@@ -347,12 +347,12 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `customer-name.html`
-```js
+```javascript
 Name: {{customer.name}}
 ```
   
 _Example file_: `customer-address.html`
-```js
+```javascript
 Address: {{customer.address}}
 ```
 
@@ -375,7 +375,7 @@ Let's change our directive to use `restrict: 'E'`:
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsRestrictDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.customer = {
@@ -393,7 +393,7 @@ angular.module('docsRestrictDirective', [])
 
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <my-customer></my-customer>
 </div>
@@ -401,7 +401,7 @@ _Example file_: `index.html`
 
   
 _Example file_: `my-customer.html`
-```js
+```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
 
@@ -435,7 +435,7 @@ re-use such a directive:
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsScopeProblemExample', [])
   .controller('NaomiController', ['$scope', function($scope) {
     $scope.customer = {
@@ -458,7 +458,7 @@ angular.module('docsScopeProblemExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="NaomiController">
   <my-customer></my-customer>
 </div>
@@ -469,7 +469,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `my-customer.html`
-```js
+```javascript
 Name: {{customer.name}} Address: {{customer.address}}
 ```
 
@@ -481,7 +481,7 @@ we call an **isolate scope**. To do this, we can use a directive's `scope` optio
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsIsolateScopeDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
@@ -499,7 +499,7 @@ angular.module('docsIsolateScopeDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <my-customer info="naomi"></my-customer>
   <hr>
@@ -508,7 +508,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `my-customer-iso.html`
-```js
+```javascript
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
 ```
 
@@ -558,7 +558,7 @@ within our directive's template:
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsIsolationExample', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.naomi = { name: 'Naomi', address: '1600 Amphitheatre' };
@@ -576,14 +576,14 @@ angular.module('docsIsolationExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <my-customer info="naomi"></my-customer>
 </div>
 ```
   
 _Example file_: `my-customer-plus-vojta.html`
-```js
+```javascript
 Name: {{customerInfo.name}} Address: {{customerInfo.address}}
 <hr>
 Name: {{vojta.name}} Address: {{vojta.address}}
@@ -631,7 +631,7 @@ We also want to remove the `$interval` if the directive is deleted so we don't i
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTimeDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.format = 'M/d/yy h:mm:ss a';
@@ -668,7 +668,7 @@ angular.module('docsTimeDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   Date format: <input ng-model="format"> <hr/>
   Current time is: <span my-current-time="format"></span>
@@ -709,7 +709,7 @@ To do this, we need to use the `transclude` option.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTransclusionDirective', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name = 'Tobias';
@@ -724,14 +724,14 @@ angular.module('docsTransclusionDirective', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <my-dialog>Check out the contents, {{name}}!</my-dialog>
 </div>
 ```
   
 _Example file_: `my-dialog.html`
-```js
+```javascript
 <div class="alert" ng-transclude>
 </div>
 ```
@@ -744,7 +744,7 @@ that redefines `name` as `Jeff`. What do you think the `{{name}}` binding will r
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTransclusionExample', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name = 'Tobias';
@@ -763,14 +763,14 @@ angular.module('docsTransclusionExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   <my-dialog>Check out the contents, {{name}}!</my-dialog>
 </div>
 ```
   
 _Example file_: `my-dialog.html`
-```js
+```javascript
 <div class="alert" ng-transclude>
 </div>
 ```
@@ -799,7 +799,7 @@ own behavior to it.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsIsoFnBindExample', [])
   .controller('Controller', ['$scope', '$timeout', function($scope, $timeout) {
     $scope.name = 'Tobias';
@@ -826,7 +826,7 @@ angular.module('docsIsoFnBindExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <div ng-controller="Controller">
   {{message}}
   <my-dialog ng-hide="dialogIsHidden" on-close="hideDialog(message)">
@@ -836,7 +836,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `my-dialog-close.html`
-```js
+```javascript
 <div class="alert">
   <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
   <div ng-transclude></div>
@@ -880,7 +880,7 @@ element?
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('dragModule', [])
   .directive('myDraggable', ['$document', function($document) {
     return {
@@ -922,7 +922,7 @@ angular.module('dragModule', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <span my-draggable>Drag ME</span>
 ```
 
@@ -939,7 +939,7 @@ to which tab is active.
 
   
 _Example file_: `script.js`
-```js
+```javascript
 angular.module('docsTabsExample', [])
   .directive('myTabs', function() {
     return {
@@ -983,7 +983,7 @@ angular.module('docsTabsExample', [])
 ```
   
 _Example file_: `index.html`
-```js
+```javascript
 <my-tabs>
   <my-pane title="Hello">
     <h4>Hello</h4>
@@ -998,7 +998,7 @@ _Example file_: `index.html`
 ```
   
 _Example file_: `my-tabs.html`
-```js
+```javascript
 <div class="tabbable">
   <ul class="nav nav-tabs">
     <li ng-repeat="pane in panes" ng-class="{active:pane.selected}">
@@ -1010,7 +1010,7 @@ _Example file_: `my-tabs.html`
 ```
   
 _Example file_: `my-pane.html`
-```js
+```javascript
 <div class="tab-pane" ng-show="selected" ng-transclude>
 </div>
 ```
