@@ -29,7 +29,7 @@ In the following example we will build a form to calculate the costs of an invoi
 Let's start with input fields for quantity and cost whose values are multiplied to produce the total of the invoice:
 
 
-  
+
 _Example file_: `index.html`
 ```js
 <div ng-app ng-init="qty=1;cost=2">
@@ -48,7 +48,7 @@ _Example file_: `index.html`
 
 Let's walk through the example and describe what's going on.
 
-<img class="pull-right" style="padding-left: 3em; padding-bottom: 1em;" src="img/guide/concepts-databinding1.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-databinding1.png">
 
 This looks like normal HTML, with some new markup. In Angular, a file like this is called a
 <a name="template">template</a>. When Angular starts your application, it parses and
@@ -96,7 +96,7 @@ The concept behind this is <a name="databinding">two-way data binding</a>.
 Let's add some more logic to the example that allows us to enter and calculate the costs in
 different currencies and also pay the invoice.
 
-  
+
 _Example file_: `invoice1.js`
 ```js
 angular.module('invoice1', [])
@@ -122,7 +122,7 @@ angular.module('invoice1', [])
     };
   });
 ```
-  
+
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
@@ -175,7 +175,7 @@ at which we register the controller. We will talk about modules in the next sect
 
 The following graphic shows how everything works together after we introduced the controller:
 
-<img style="padding-left: 3em; padding-bottom: 1em;" src="img/guide/concepts-databinding2.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-databinding2.png">
 
 ## View-independent business logic: Services
 
@@ -187,7 +187,7 @@ from the web, e.g. by calling the Yahoo Finance API, without changing the contro
 
 Let's refactor our example and move the currency conversion into a service in another file:
 
-  
+
 _Example file_: `finance2.js`
 ```js
 angular.module('finance2', [])
@@ -208,7 +208,7 @@ angular.module('finance2', [])
     };
   });
 ```
-  
+
 _Example file_: `invoice2.js`
 ```js
 angular.module('invoice2', ['finance2'])
@@ -226,7 +226,7 @@ angular.module('invoice2', ['finance2'])
     };
   }]);
 ```
-  
+
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
@@ -250,7 +250,7 @@ _Example file_: `index.html`
 </div>
 ```
 
-<img class="pull-right" style="padding-left: 3em; padding-bottom: 1em;" src="img/guide/concepts-module-service.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-module-service.png">
 
 What changed?
 We moved the `convertCurrency` function and the definition of the existing currencies
@@ -302,7 +302,7 @@ to something shorter like `a`.
 Let's finish our example by fetching the exchange rates from the Yahoo Finance API.
 The following example shows how this is done with Angular:
 
-  
+
 _Example file_: `invoice3.js`
 ```js
 angular.module('invoice3', ['finance3'])
@@ -320,7 +320,7 @@ angular.module('invoice3', ['finance3'])
     };
   }]);
 ```
-  
+
 _Example file_: `finance3.js`
 ```js
 angular.module('finance3', [])
@@ -358,7 +358,7 @@ angular.module('finance3', [])
     };
   }]);
 ```
-  
+
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice3" ng-controller="InvoiceController as invoice">
