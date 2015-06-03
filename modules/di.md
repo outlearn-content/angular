@@ -165,10 +165,8 @@ the parameters in the function declaration.
 
 ### Implicit Annotation
 
-<div class="alert alert-danger">
-**Careful:** If you plan to [minify](http://en.wikipedia.org/wiki/Minification_(programming&#41;)
-your code, your service names will get renamed and break your app.
-</div>
+> **Careful:** If you plan to [minify](http://en.wikipedia.org/wiki/Minification_(programming&#41;)
+>your code, your service names will get renamed and break your app.
 
 The simplest way to get hold of the dependencies is to assume that the function parameter names
 are the names of the dependencies.
@@ -353,7 +351,5 @@ controller ever knowing about the injector.
 This is the best outcome. The application code simply declares the dependencies it needs, without
 having to deal with the injector. This setup does not break the Law of Demeter.
 
-<div class="alert alert-info">
-**Note:** Angular uses
-[**constructor injection**](http://misko.hevery.com/2009/02/19/constructor-injection-vs-setter-injection/).
-</div>
+> **Note:** Angular uses
+>[**constructor injection**](http://misko.hevery.com/2009/02/19/constructor-injection-vs-setter-injection/).

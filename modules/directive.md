@@ -15,11 +15,9 @@
 
 # Creating Custom Directives
 
-<div class="alert alert-warning">
-**Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
-If you're just getting started, we recommend the tutorial first.
-If you're looking for the **directives API**, we recently moved it to `$compile`.
-</div>
+> **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
+>If you're just getting started, we recommend the tutorial first.
+>If you're looking for the **directives API**, we recently moved it to `$compile`.
 
 
 This document explains when you'd want to create your own directives in your AngularJS app, and
@@ -40,14 +38,12 @@ Much like you create controllers and services, you can create your own directive
 When Angular bootstraps your application, the
 HTML compiler traverses the DOM matching directives against the DOM elements.
 
-<div class="alert alert-info">
-**What does it mean to "compile" an HTML template?**
-
-For AngularJS, "compilation" means attaching event listeners to the HTML to make it interactive.
-The reason we use the term "compile" is that the recursive process of attaching directives
-mirrors the process of compiling source code in
-[compiled programming languages](http://en.wikipedia.org/wiki/Compiled_languages).
-</div>
+> **What does it mean to "compile" an HTML template?**
+>
+>For AngularJS, "compilation" means attaching event listeners to the HTML to make it interactive.
+>The reason we use the term "compile" is that the recursive process of attaching directives
+>mirrors the process of compiling source code in
+>[compiled programming languages](http://en.wikipedia.org/wiki/Compiled_languages).
 
 
 

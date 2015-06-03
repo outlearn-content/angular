@@ -151,11 +151,9 @@ In the code above, we see how the `apiToken` service is defined via the Factory 
 on the `clientId` service. The factory service then uses NSA-proof encryption to produce an authentication
 token.
 
-<div class="alert alert-success">
-**Best Practice:** name the factory functions as `<serviceId>Factory`
-(e.g., apiTokenFactory). While this naming convention is not required, it helps when navigating the codebase
-or looking at stack traces in the debugger.
-</div>
+> **Best Practice:** name the factory functions as `<serviceId>Factory`
+>(e.g., apiTokenFactory). While this naming convention is not required, it helps when navigating the codebase
+>or looking at stack traces in the debugger.
 
 Just like with the Value recipe, the Factory recipe can create a service of any type, whether it be a
 primitive, object literal, function, or even an instance of a custom type.

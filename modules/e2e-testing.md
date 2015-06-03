@@ -15,11 +15,9 @@
 
 # E2E Testing
 
-<div class="alert alert-danger">
-**Note:** In the past, end-to-end testing could be done with a deprecated tool called
-[Angular Scenario Runner](http://code.angularjs.org/1.2.16/docs/guide/e2e-testing). That tool
-is now in maintenance mode.
-</div>
+> **Note:** In the past, end-to-end testing could be done with a deprecated tool called
+>[Angular Scenario Runner](http://code.angularjs.org/1.2.16/docs/guide/e2e-testing). That tool
+>is now in maintenance mode.
 
 As applications grow in size and complexity, it becomes unrealistic to rely on manual testing to
 verify the correctness of new features, catch bugs and notice regressions. Unit tests

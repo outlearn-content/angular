@@ -16,7 +16,7 @@
 # Conceptual Overview
 
 This section briefly touches on all of the important parts of AngularJS using a simple example.
-For a more in-depth explanation, see the tutorial.
+For a more in-depth explanation, see the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial/).
 
 | Concept          | Description                     |
 |------------------|------------------------------------------|
@@ -81,12 +81,10 @@ initializes our application. Angular also defines a directive for the `input`
 element that adds extra behavior to the element. The `ng-model` directive
 stores/updates the value of the input field into/from a variable.
 
-<div class="alert alert-info">
-**Custom directives to access the DOM**: In Angular, the only place where an application should access the DOM is
- within directives. This is important because artifacts that access the DOM are hard to test.
- If you need to access the DOM directly you should write a custom directive for this. The
- directives guide explains how to do this.
-</div>
+> **Custom directives to access the DOM**: In Angular, the only place where an application should access the DOM is
+> within directives. This is important because artifacts that access the DOM are hard to test.
+> If you need to access the DOM directly you should write a custom directive for this. The
+> directives guide explains how to do this.
 
 The second kind of new markup are the double curly braces `{{ expression | filter }}`:
 When the compiler encounters this markup, it will replace it with the evaluated value of the markup.

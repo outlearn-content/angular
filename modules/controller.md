@@ -66,11 +66,9 @@ We create an Angular Module, `myApp`, for our application. Then we add the contr
 constructor function to the module using the `.controller()` method. This keeps the controller's
 constructor function out of the global scope.
 
-<div class="alert alert-info">
-We have used an **inline injection annotation** to explicitly specify the dependency
-of the Controller on the `$scope` service provided by Angular. See the guide on
-Dependency Injection for more information.
-</div>
+> We have used an **inline injection annotation** to explicitly specify the dependency
+>of the Controller on the `$scope` service provided by Angular. See the guide on
+>Dependency Injection for more information.
 
 We attach our controller to the DOM using the `ng-controller` directive. The `greeting` property can
 now be data-bound to the template:

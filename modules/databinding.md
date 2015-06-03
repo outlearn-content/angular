@@ -20,10 +20,7 @@ components.  The way that Angular implements data-binding lets you treat the mod
 single-source-of-truth in your application.  The view is a projection of the model at all times.
 When the model changes, the view reflects the change, and vice versa.
 
-
-<!-- @section -->
-
-## Data Binding in Classical Template Systems
+### Data Binding in Classical Template Systems
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/One_Way_Data_Binding.png"><br />
 Most templating systems bind data in only one direction: they merge template and model components
@@ -32,10 +29,7 @@ or related sections of the view are NOT automatically reflected in the view. Wor
 that the user makes to the view are not reflected in the model. This means that the developer has
 to write code that constantly syncs the view with the model and the model with the view.
 
-
-<!-- @section -->
-
-## Data Binding in Angular Templates
+### Data Binding in Angular Templates
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/Two_Way_Data_Binding.png"><br />
 Angular templates work differently. First the template (which is the uncompiled HTML along with
@@ -48,12 +42,3 @@ the view as simply an instant projection of your model.
 Because the view is just a projection of the model, the controller is completely separated from the
 view and unaware of it. This makes testing a snap because it is easy to test your controller in
 isolation without the view and the related DOM/browser dependency.
-
-
-
-<!-- @section -->
-
-## Related Topics
-
-* Angular Scopes
-* Angular Templates

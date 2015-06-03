@@ -28,10 +28,8 @@ Angular services are:
 Angular offers several useful services (like `$http`), but for most applications
 you'll also want to create your own.
 
-<div class="alert alert-info">
-**Note:** Like other core Angular identifiers, built-in services always start with `$`
-(e.g. `$http`).
-</div>
+> **Note:** Like other core Angular identifiers, built-in services always start with `$`
+>(e.g. `$http`).
 
 
 

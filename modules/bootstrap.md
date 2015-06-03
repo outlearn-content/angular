@@ -149,9 +149,7 @@ on the fly. You must create any custom modules before you pass them as a paramet
 You should call `angular.bootstrap()` *after* you've loaded or defined your modules.
 You cannot add controllers, services, directives, etc after an application bootstraps.
 
-<div class="alert alert-warning">
-**Note:** You should not use the ng-app directive when manually bootstrapping your app.
-</div>
+> **Note:** You should not use the ng-app directive when manually bootstrapping your app.
 
 This is the sequence that your code should follow:
 

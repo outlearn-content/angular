@@ -15,13 +15,11 @@
 
 # HTML Compiler
 
-<div class="alert alert-warning">
-**Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
-
-If you're just getting started, we recommend the tutorial first.
-If you just want to create custom directives, we recommend the directives guide.
-If you want a deeper look into Angular's compilation process, you're in the right place.
-</div>
+> **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
+>
+>If you're just getting started, we recommend the tutorial first.
+>If you just want to create custom directives, we recommend the directives guide.
+>If you want a deeper look into Angular's compilation process, you're in the right place.
 
 
 
@@ -252,10 +250,8 @@ Directives often have a **link function**. A link function allows the directive 
 listeners to the specific cloned DOM element instance as well as to copy content into the DOM
 from the scope.
 
-<div class="alert alert-success">
-**Best Practice:** Any operation which can be shared among the instance of directives should be
-moved to the compile function for performance reasons.
-</div>
+> **Best Practice:** Any operation which can be shared among the instance of directives should be
+>moved to the compile function for performance reasons.
 
 #### An Example of "Compile" Versus "Link"
 
