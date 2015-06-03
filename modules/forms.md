@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Forms
 
 Controls (`input`, `select`, `textarea`) are ways for a user to enter data.
@@ -22,6 +25,9 @@ client-side validation plays an important role in providing good user experience
 be circumvented and thus can not be trusted. Server-side validation is still necessary for a
 secure application.
 
+
+
+<!-- @section -->
 
 ## Simple form
 The key directive in understanding two-way data-binding is ngModel.
@@ -72,6 +78,9 @@ The value of `ngModel` won't be set unless it passes validation for the input fi
 For example: inputs of type `email` must have a value in the form of `user@domain`.
 
 
+
+
+<!-- @section -->
 
 ## Using CSS classes
 
@@ -138,6 +147,9 @@ _Example file_: `index.html`
 
 
 
+
+
+<!-- @section -->
 
 ## Binding to form and control state
 
@@ -227,6 +239,9 @@ angular.module('formExample', [])
 
 
 
+
+<!-- @section -->
+
 ## Custom model update triggers
 
 By default, any change to the content will trigger a model update and form validation. You can
@@ -274,6 +289,9 @@ angular.module('customTriggerExample', [])
 
 
 
+
+<!-- @section -->
+
 ## Non-immediate (debounced) model updates
 
 You can delay the model update/validation by using the `debounce` key with the
@@ -320,6 +338,9 @@ angular.module('debounceExample', [])
   }]);
 ```
 
+
+
+<!-- @section -->
 
 ## Custom Validation
 
@@ -444,6 +465,9 @@ app.directive('username', function($q, $timeout) {
 ```
 
 
+
+<!-- @section -->
+
 ## Modifying built-in validators
 
 Since Angular itself uses `$validators`, you can easily replace or remove built-in validators,
@@ -494,6 +518,9 @@ app.directive('overwriteEmail', function() {
 ```
 
 
+
+
+<!-- @section -->
 
 ## Implementing custom form controls (using `ngModel`)
 Angular implements all of the basic HTML form controls (input,

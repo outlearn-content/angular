@@ -13,6 +13,9 @@
 
 Angular sets these CSS classes. It is up to your application to provide useful styling.
 
+
+<!-- @section -->
+
 # CSS classes used by angular
 
 * `ng-scope`
@@ -41,6 +44,9 @@ Angular sets these CSS classes. It is up to your application to provide useful s
     to a new form control widget which has not been blurred. Once the user blurs the form control,
     the class is changed to `ng-touched`.
 
+
+
+<!-- @section -->
 
 ## Related Topics
 

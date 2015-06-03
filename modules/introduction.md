@@ -11,6 +11,9 @@
 -->
 
 
+
+<!-- @section -->
+
 # What Is Angular?
 
 AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template
@@ -45,6 +48,9 @@ browser new syntax through a construct we call *directives*. Examples include:
 
 
 
+
+<!-- @section -->
+
 ## A complete client-side solution
 
 Angular is not a single piece in the overall puzzle of building the client-side of a web
@@ -59,6 +65,9 @@ is just a starting point you can easily change. Angular comes with the following
   * Seed application with directory layout and test scripts as a starting point.
 
 
+
+<!-- @section -->
+
 ## Angular's sweet spot
 
 Angular simplifies application development by presenting a higher level of abstraction to the
@@ -70,6 +79,9 @@ good at, though, it helps to understand when an app is not a good fit for Angula
 Games and GUI editors are examples of applications with intensive and tricky DOM manipulation.
 These kinds of apps are different from CRUD apps, and as a result are probably not a good fit for Angular.
 In these cases it may be better to use a library with a lower level of abstraction, such as `jQuery`.
+
+
+<!-- @section -->
 
 # The Zen of Angular
 

@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Creating Custom Directives
 
 <div class="alert alert-warning">
@@ -22,6 +25,9 @@ If you're looking for the **directives API**, we recently moved it to `$compile`
 This document explains when you'd want to create your own directives in your AngularJS app, and
 how to implement them.
 
+
+
+<!-- @section -->
 
 ## What are Directives?
 
@@ -44,6 +50,9 @@ mirrors the process of compiling source code in
 </div>
 
 
+
+<!-- @section -->
+
 ## Matching Directives
 
 Before we can write a directive, we need to know how Angular's HTML compiler
@@ -58,7 +67,7 @@ In the following example, we say that the `<input>` element **matches** the `ngM
 The following also **matches** `ngModel`:
 
 ```html
-<input data-ng:model="foo">
+<input data-ng-model="foo">
 ```
 
 ### Normalization
@@ -200,6 +209,9 @@ For example, to bind to `viewBox`, we can write:
 </svg>
 ```
 
+
+
+<!-- @section -->
 
 ## Creating Directives
 

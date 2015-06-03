@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Conceptual Overview
 
 This section briefly touches on all of the important parts of AngularJS using a simple example.
@@ -32,6 +35,9 @@ For a more in-depth explanation, see the tutorial.
 |Module            | a container for the different parts of an app including controllers, services, filters, directives which configures the Injector |
 |Service           | reusable business logic independent of views |
 
+
+
+<!-- @section -->
 
 ## A first example: Data binding
 
@@ -103,6 +109,9 @@ Whenever the input values change, the value of the expressions are automatically
 recalculated and the DOM is updated with their values.
 The concept behind this is <a name="databinding">two-way data binding</a>.
 
+
+
+<!-- @section -->
 
 ## Adding UI logic: Controllers
 
@@ -193,6 +202,9 @@ at which we register the controller. We will talk about modules in the next sect
 The following graphic shows how everything works together after we introduced the controller:
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-databinding2.png">
+
+
+<!-- @section -->
 
 ## View-independent business logic: Services
 
@@ -319,6 +331,9 @@ in the array is the controller constructor function.
 Angular uses this array syntax to define the dependencies so that the DI also works after minifying
 the code, which will most probably rename the argument name of the controller constructor function
 to something shorter like `a`.
+
+
+<!-- @section -->
 
 ## Accessing the backend
 

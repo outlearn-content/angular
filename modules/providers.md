@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Providers
 
 Each web application you build is composed of objects that collaborate to get stuff done. These
@@ -36,6 +39,9 @@ types. We'll start with the simplest case possible where various places in your 
 string and we'll accomplish this via Value recipe.
 
 
+
+<!-- @section -->
+
 ## Note:  A Word on Modules
 
 In order for the injector to know how to create and wire together all of these objects, it needs
@@ -51,6 +57,9 @@ of injector, which in turn creates a registry of recipes as a union of all recip
 core "ng" module, application module and its dependencies. The injector then consults the recipe
 registry when it needs to create an object for your application.
 
+
+
+<!-- @section -->
 
 ## Value Recipe
 
@@ -87,6 +96,9 @@ asks for the service with id "clientId".
 
 On to more complex examples!
 
+
+
+<!-- @section -->
 
 ## Factory Recipe
 
@@ -149,6 +161,9 @@ Just like with the Value recipe, the Factory recipe can create a service of any 
 primitive, object literal, function, or even an instance of a custom type.
 
 
+
+<!-- @section -->
+
 ## Service Recipe
 
 JavaScript developers often use custom types to write object-oriented code. Let's explore how we
@@ -199,6 +214,9 @@ Note: Yes, we have called one of our service recipes 'Service'. We regret this a
 be somehow punished for our misdeed. It's like we named one of our offspring 'Child'. Boy,
 that would mess with the teachers.
 
+
+
+<!-- @section -->
 
 ## Provider Recipe
 
@@ -261,6 +279,9 @@ Once the configuration phase is over, interaction with providers is disallowed a
 creating services starts. We call this part of the application life-cycle the run phase.
 
 
+
+<!-- @section -->
+
 ## Constant Recipe
 
 We've just learned how Angular splits the life-cycle into configuration phase and run phase and how
@@ -310,6 +331,9 @@ myApp.controller('DemoController', ["clientId", "planetName", function DemoContr
 </html>
 ```
 
+
+
+<!-- @section -->
 
 ## Special Purpose Objects
 
@@ -363,6 +387,9 @@ DemoController (in our simple app it's just once). So unlike services, controlle
 singletons. The constructor is called with all the requested services, in our case the `clientId`
 service.
 
+
+
+<!-- @section -->
 
 ## Conclusion
 

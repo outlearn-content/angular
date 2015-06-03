@@ -15,6 +15,9 @@ controllers or services and it is easy to define your own filter.
 
 The underlying API is the `filterProvider`.
 
+
+<!-- @section -->
+
 ## Using filters in view templates
 
 Filters can be applied to expressions in view templates using the following syntax:
@@ -36,6 +39,9 @@ Filters may have arguments. The syntax for this is
 E.g. the markup `{{ 1234 | number:2 }}` formats the number 1234 with 2 decimal points using the
 `number` filter. The resulting value is `1,234.00`.
 
+
+
+<!-- @section -->
 
 ## Using filters in controllers, services, and directives
 
@@ -91,6 +97,9 @@ angular.module('FilterInControllerModule', []).
 ```
 
 
+
+
+<!-- @section -->
 
 ## Creating custom filters
 
@@ -153,6 +162,9 @@ angular.module('myReverseFilterApp', [])
 
 
 
+
+<!-- @section -->
+
 ## Stateful filters
 
 It is strongly discouraged to write filters that are stateful, because the execution of those can't
@@ -198,6 +210,9 @@ angular.module('myStatefulFilterApp', [])
 ```
 
 
+
+
+<!-- @section -->
 
 ## Testing custom filters
 

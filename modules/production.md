@@ -10,10 +10,16 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Running an AngularJS App in Production
 
 There are a few things you might consider when running your AngularJS application in production.
 
+
+
+<!-- @section -->
 
 ## Disabling Debug Data
 
@@ -48,6 +54,9 @@ The page should reload and the debug information should now be available.
 
 For more see the docs pages on `$compileProvider`
 and `angular.reloadWithDebugInfo`.
+
+
+<!-- @section -->
 
 ## Strict DI Mode
 

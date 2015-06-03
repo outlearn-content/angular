@@ -10,11 +10,17 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Bootstrap
 
 This page explains the Angular initialization process and how you can manually initialize Angular
 if necessary.
 
+
+
+<!-- @section -->
 
 ## Angular `<script>` Tag
 
@@ -53,6 +59,9 @@ initialization.
         <html xmlns:ng="http://angularjs.org">
 
 
+
+
+<!-- @section -->
 
 ## Automatic Initialization
 
@@ -98,6 +107,9 @@ This will ensure that all services in your application are properly annotated.
 See the dependency injection strict mode docs
 for more.
 
+
+
+<!-- @section -->
 
 ## Manual Initialization
 
@@ -149,6 +161,9 @@ This is the sequence that your code should follow:
   2. Call to {@link compiler compile the element into an
   executable, bi-directionally bound application.
 
+
+
+<!-- @section -->
 
 ## Deferred Bootstrap
 

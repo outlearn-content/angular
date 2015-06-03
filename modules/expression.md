@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Angular Expressions
 
 Angular expressions are JavaScript-like code snippets that are usually placed in bindings such as
@@ -23,6 +26,9 @@ For example, these are valid expressions in Angular:
   * `items[index]`
 
 
+
+<!-- @section -->
+
 ## Angular Expressions vs. JavaScript Expressions
 
 Angular expressions are like JavaScript expressions with the following differences:
@@ -35,13 +41,13 @@ Angular expressions are like JavaScript expressions with the following differenc
 
   * **No Control Flow Statements:** You cannot use the following in an Angular expression:
     conditionals, loops, or exceptions.
-	
+
   * **No Function Declarations:** You cannot declare functions in an Angular expression,
     even inside `ng-init` directive.
-	
-  * **No RegExp Creation With Literal Notation:** You cannot create regular expressions 
+
+  * **No RegExp Creation With Literal Notation:** You cannot create regular expressions
     in an Angular expression.
-	
+
   * **No Comma And Void Operators:** You cannot use `,` or `void` in an Angular expression.
 
   * **Filters:** You can use filters within expressions to format data before
@@ -50,6 +56,9 @@ Angular expressions are like JavaScript expressions with the following differenc
 If you want to run more complex JavaScript code, you should make it a controller method and call
 the method from your view. If you want to `eval()` an Angular expression yourself, use the
 `$eval()` method.
+
+
+<!-- @section -->
 
 ## Example
   
@@ -117,6 +126,9 @@ angular.module('expressionExample', [])
   </file>
 
 
+
+<!-- @section -->
+
 ## Context
 
 Angular does not use JavaScript's `eval()` to evaluate expressions. Instead Angular's
@@ -171,6 +183,9 @@ angular.module('expressionExample', [])
     });
   </file>
 
+
+<!-- @section -->
+
 ## Forgiving
 
 Expression evaluation is forgiving to undefined and null. In JavaScript, evaluating `a.b.c` throws
@@ -186,6 +201,9 @@ forgiving we'd have to write bindings that clutter the code, for example: `{{((a
 Similarly, invoking a function `a.b.c()` on `undefined` or `null` simply returns `undefined`.
 
 
+
+<!-- @section -->
+
 ## No Control Flow Statements
 
 Apart from the ternary operator (`a ? b : c`), you cannot write a control flow statement in an
@@ -193,11 +211,17 @@ expression. The reason behind this is core to the Angular philosophy that applic
 be in controllers, not the views. If you need a real conditional, loop, or to throw from a view
 expression, delegate to a JavaScript method instead.
 
+
+<!-- @section -->
+
 ## No function declarations or RegExp creation with literal notation
 
 You can't declare functions or create regular expressions from within AngularJS expressions. This is
-to avoid complex model transformation logic inside templates. Such logic is better placed in a 
+to avoid complex model transformation logic inside templates. Such logic is better placed in a
 controller or in a dedicated filter where it can be tested properly.
+
+
+<!-- @section -->
 
 ## `$event`
 
@@ -249,6 +273,9 @@ angular.module('eventExampleApp', []).
 Note in the example above how we can pass in `$event` to `clickMe`, but how it does not show up
 in `{{$event}}`. This is because `$event` is outside the scope of that binding.
 
+
+
+<!-- @section -->
 
 ## One-time binding
 
@@ -336,10 +363,14 @@ then the expression is not fulfilled and will remain watched.
      keep dirty-checking the watch in the future digest loops by following the same
      algorithm starting from step 1
 
+#### Special case for object literals
+
+Unlike simple values, object-literals are watched until every key is defined.
+See http://www.bennadel.com/blog/2760-one-time-data-bindings-for-object-literal-expressions-in-angularjs-1-3.htm
 
 ### How to benefit from one-time binding
 
-If the expression will not change once set, it is a candidate for one-time binding. 
+If the expression will not change once set, it is a candidate for one-time binding.
 Here are three example cases.
 
 When interpolating text or attributes:

@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # HTML Compiler
 
 <div class="alert alert-warning">
@@ -20,6 +23,9 @@ If you just want to create custom directives, we recommend the directives guide.
 If you want a deeper look into Angular's compilation process, you're in the right place.
 </div>
 
+
+
+<!-- @section -->
 
 ## Overview
 
@@ -46,6 +52,9 @@ All of this compilation takes place in the web browser; no server side or pre-co
 involved.
 
 
+
+<!-- @section -->
+
 ## Compiler
 
 Compiler is an Angular service which traverses the DOM looking for attributes. The compilation
@@ -62,6 +71,9 @@ Some directives such as `ng-repeat` clone DOM elements once
 for each item in a collection. Having a compile and link phase improves performance since the
 cloned template only needs to be compiled once, and then linked once for each clone instance.
 
+
+
+<!-- @section -->
 
 ## Directive
 
@@ -139,6 +151,9 @@ The presence of the `draggable` attribute on any element gives the element new b
 We extended the vocabulary of the browser in a way which is natural to anyone who is familiar with the principles of HTML.
 
 
+
+<!-- @section -->
+
 ## Understanding View
 
 Most other templating systems consume a static string template and
@@ -170,6 +185,9 @@ hold of the elements and register event handlers and know that the reference wil
 by template data merge.
 
 
+
+
+<!-- @section -->
 
 ## How directives are compiled
 

@@ -10,12 +10,18 @@
 }
 -->
 
+
+<!-- @section -->
+
 # What are Scopes?
 
-scope is an object that refers to the application
+Scope is an object that refers to the application
 model. It is an execution context for expressions. Scopes are
 arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can
 watch expressions and propagate events.
+
+
+<!-- @section -->
 
 ## Scope characteristics
 
@@ -36,6 +42,9 @@ watch expressions and propagate events.
   - Scopes provide context against which expressions are evaluated. For
     example `{{username}}` expression is meaningless, unless it is evaluated against a specific
     scope which defines the `username` property.
+
+
+<!-- @section -->
 
 ## Scope as Data-Model
 
@@ -119,6 +128,9 @@ to test the behavior without being distracted by the rendering details.
 ```
 
 
+
+<!-- @section -->
+
 ## Scope Hierarchies
 
 Each Angular application has exactly one root scope, but
@@ -189,6 +201,9 @@ evaluation of `{{department}}` prototypically inherits from root scope, as it is
 where the `department` property is defined.
 
 
+
+<!-- @section -->
+
 ## Retrieving Scopes from the DOM.
 
 Scopes are attached to the DOM as `$scope` data property, and can be retrieved for debugging
@@ -208,6 +223,9 @@ To examine the scope in the debugger:
 
   3. To retrieve the associated scope in console execute: `angular.element($0).scope()` or just type $scope
 
+
+
+<!-- @section -->
 
 ## Scope Events Propagation
 
@@ -253,6 +271,9 @@ _Example file_: `index.html`
 
 
 
+
+<!-- @section -->
+
 ## Scope Life Cycle
 
 The normal flow of a browser receiving an event is that it executes a corresponding JavaScript
@@ -293,7 +314,7 @@ the `$digest` phase. This delay is desirable, since it coalesces multiple model 
   3. **Model mutation**
 
      For mutations to be properly observed, you should make them only within the {@link
-     ng.$rootScope.Scope#$apply scope.$apply()}. (Angular APIs do this
+     ng.$rootScope.Scope#$apply scope.$apply()}. Angular APIs do this
      implicitly, so no extra `$apply` call is needed when doing synchronous work in controllers,
      or asynchronous work with $http}, {@link ng.$timeout $timeout
      or $interval services.
@@ -379,6 +400,9 @@ Dirty checking can be done with three strategies: By reference, by collection co
       ng.$rootScope.Scope#$watchCollection scope.$watchCollection} `(watchExpression, listener)`) detects changes that occur inside an array or an object: When items are added, removed, or reordered. The detection is shallow - it does not reach into nested collections. Watching collection contents is more expensive than watching by reference, because copies of the collection contents need to be maintained. However, the strategy attempts to minimize the amount of copying required.
    - Watching *by value* ({@link
       ng.$rootScope.Scope#$watch scope.$watch} `(watchExpression, listener, true)`) detects any change in an arbitrarily nested data structure. It is the most powerful change detection strategy, but also the most expensive. A full traversal of the nested data structure is needed on each digest, and a full copy of it needs to be held in memory.
+
+
+<!-- @section -->
 
 ## Integration with the browser event loop
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-runtime.png">

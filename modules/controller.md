@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Understanding Controllers
 
 In Angular, a Controller is a JavaScript **constructor function** that is used to augment the
@@ -36,6 +39,9 @@ Do not use controllers to:
 - Share code or state across controllers — Use {@link services angular
 services} instead.
 - Manage the life-cycle of other components (for example, to create service instances).
+
+
+<!-- @section -->
 
 ## Setting up the initial state of a `$scope` object
 
@@ -76,6 +82,9 @@ now be data-bound to the template:
 ```
 
 
+
+<!-- @section -->
+
 ## Adding Behavior to a Scope Object
 
 In order to react to events or execute computation in the view we must provide behavior to the
@@ -106,6 +115,9 @@ objects (or primitives) assigned to the scope become model properties. Any metho
 the scope are available in the template/view, and can be invoked via angular expressions
 and `ng` event handler directives (e.g. ngClick).
 
+
+<!-- @section -->
+
 ## Using Controllers Correctly
 
 In general, a Controller shouldn't try to do too much. It should contain only the business logic
@@ -117,11 +129,17 @@ This is discussed in the Dependency Injection {@link services
 Services} sections of this guide.
 
 
+
+<!-- @section -->
+
 # Associating Controllers with Angular Scope Objects
 
 You can associate Controllers with scope objects implicitly via the {@link ng.directive:ngController ngController
 directive} or $route service.
 
+
+
+<!-- @section -->
 
 ## Simple Spicy Controller Example
 
@@ -178,6 +196,9 @@ starts with capital letter and ends with "Controller".
 - The Controller methods and properties are available in the template (for the `<div>` element and
 its children).
 
+
+<!-- @section -->
+
 ## Spicy Arguments Example
 
 Controller methods can also take arguments, as demonstrated in the following variation of the
@@ -216,6 +237,9 @@ Notice that the `SpicyController` Controller now defines just one method called 
 argument called `spice`. The template then refers to this Controller method and passes in a string
 constant `'chili'` in the binding for the first button and a model property `customSpice` (bound to an
 input box) in the second button.
+
+
+<!-- @section -->
 
 ## Scope Inheritance Example
 
@@ -287,6 +311,9 @@ and the `name` property defined in `ChildController`
 Inheritance works with methods in the same way as it does with properties. So in our previous
 examples, all of the properties could be replaced with methods that return string values.
 
+
+
+<!-- @section -->
 
 # Testing Controllers
 

@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # E2E Testing
 
 <div class="alert alert-danger">
@@ -27,6 +30,9 @@ these problems.
 We have built [Protractor](https://github.com/angular/protractor), an end
 to end test runner which simulates user interactions that will help you verify the health of your
 Angular application.
+
+
+<!-- @section -->
 
 ## Using Protractor
 
@@ -81,10 +87,16 @@ describe('TODO list', function() {
 This test describes the requirements of a ToDo list, specifically, that it should be able to
 filter the list of items.
 
+
+<!-- @section -->
+
 ## Example
 See the [angular-seed](https://github.com/angular/angular-seed) project for more examples, or look
 at the embedded examples in the Angular documentation (For example, $http
 has an end-to-end test in the example under the `protractor.js` tag).
+
+
+<!-- @section -->
 
 ## Caveats
 

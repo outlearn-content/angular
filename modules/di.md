@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Dependency Injection
 
 Dependency Injection (DI) is a software design pattern that deals with how components get hold of
@@ -18,6 +21,9 @@ their dependencies.
 The Angular injector subsystem is in charge of creating components, resolving their dependencies,
 and providing them to other components as requested.
 
+
+
+<!-- @section -->
 
 ## Using Dependency Injection
 
@@ -105,6 +111,9 @@ Moreover, additional dependencies are made available to Controllers:
   controller.
 
 
+
+<!-- @section -->
+
 ## Dependency Annotation
 
 Angular invokes certain functions (like service factories and controllers) via the injector.
@@ -187,6 +196,9 @@ If you decide to take this approach, you probably want to use `ng-strict-di`.
 Because of these caveats, we recommend avoiding this style of annotation.
 
 
+
+<!-- @section -->
+
 ## Using Strict Dependency Injection
 
 You can add an `ng-strict-di` directive on the same element as `ng-app` to opt into strict DI mode:
@@ -229,6 +241,9 @@ angular.bootstrap(document, ['myApp'], {
 ```
 
 
+
+
+<!-- @section -->
 
 ## Why Dependency Injection?
 

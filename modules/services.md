@@ -10,6 +10,9 @@
 }
 -->
 
+
+<!-- @section -->
+
 # Services
 
 Angular services are substitutable objects that are wired together using {@link di dependency
@@ -30,6 +33,9 @@ you'll also want to create your own.
 (e.g. `$http`).
 </div>
 
+
+
+<!-- @section -->
 
 ## Using a Service
 
@@ -81,6 +87,9 @@ angular.
     });
   </file>
 
+
+
+<!-- @section -->
 
 ## Creating Services
 
@@ -186,6 +195,9 @@ angular.module('myModule', []).config(['$provide', function($provide) {
 This technique is often used in unit tests to mock out a service's dependencies.
 
 
+
+<!-- @section -->
+
 ## Unit Testing
 
 The following is a unit test for the `notify` service from the {@link services#creating-services
@@ -236,9 +248,15 @@ it('should clear messages after alert', function() {
 ```
 
 
+
+<!-- @section -->
+
 ## Related Topics
 
 * Dependency Injection in AngularJS
+
+
+<!-- @section -->
 
 ## Related API
 

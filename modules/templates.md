@@ -50,10 +50,16 @@ to the $route} service. The {@link tutorial/ angular tutorial shows this
 technique in steps seven and eight.
 
 
+
+<!-- @section -->
+
 ## Related Topics
 
 * Filters
 * Forms
+
+
+<!-- @section -->
 
 ## Related API
 

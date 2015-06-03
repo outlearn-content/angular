@@ -11,6 +11,9 @@
 -->
 
 
+
+<!-- @section -->
+
 # Animations
 
 AngularJS 1.3 provides animation hooks for common directives such as `ngRepeat`, `ngSwitch`, and `ngView`, as well as custom directives
@@ -58,11 +61,17 @@ _Example file_: `animations.css`
 ```
 
 
+
+<!-- @section -->
+
 ## Installation
 
 See the API docs for `ngAnimate` for instructions on installing the module.
 
 You may also want to setup a separate CSS file for defining CSS-based animations.
+
+
+<!-- @section -->
 
 ## How they work
 
@@ -210,6 +219,9 @@ With these generated CSS class names present on the element at the time, Angular
 figures out whether to perform a CSS and/or JavaScript animation. If both CSS and JavaScript animation
 code is present, and match the CSS class name on the element, then AngularJS will run both animations at the same time.
 
+
+<!-- @section -->
+
 ## Class and ngClass animation hooks
 
 AngularJS also pays attention to CSS class changes on elements by triggering the **add** and **remove** hooks.
@@ -257,6 +269,9 @@ _Example file_: `style.css`
 
 Although the CSS is a little different than what we saw before, the idea is the same.
 
+
+<!-- @section -->
+
 ## Which directives support animations?
 
 A handful of common AngularJS directives support and trigger animation hooks whenever any major event occurs during its life cycle.
@@ -273,6 +288,9 @@ The table below explains in detail which animation events are triggered
 | ngShow & ngHide                              | add and remove (the ng-hide class value) |
 
 For a full breakdown of the steps involved during each animation event, refer to the API docs.
+
+
+<!-- @section -->
 
 ## How do I use animations in my own directives?
 
@@ -292,6 +310,9 @@ myModule.directive('my-directive', ['$animate', function($animate) {
   };
 }]);
 ```
+
+
+<!-- @section -->
 
 ## More about animations
 

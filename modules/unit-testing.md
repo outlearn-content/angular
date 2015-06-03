@@ -15,6 +15,9 @@ comes with almost no help from the compiler. For this reason we feel very strong
 written in JavaScript needs to come with a strong set of tests. We have built many features into
 Angular which makes testing your Angular applications easy. So there is no excuse for not testing.
 
+
+<!-- @section -->
+
 ## Separation of Concerns
 
 Unit testing, as the name implies, is about testing individual units of code. Unit tests try to
@@ -36,11 +39,17 @@ allow you to test your model without having to resort to manipulating the DOM. T
 assert that the data has been sorted without having to create or look at the state of the DOM or
 wait for any XHR requests to return data. The individual sort function can be tested in isolation.
 
+
+<!-- @section -->
+
 ## With great power comes great responsibility
 
 Angular is written with testability in mind, but it still requires that you do the right thing.
 We tried to make the right thing easy, but if you ignore these guidelines you may end up with an
 untestable application.
+
+
+<!-- @section -->
 
 ## Dependency Injection
 
@@ -50,6 +59,9 @@ easier, because you can pass in a component's dependencies and stub or mock them
 Components that have their dependencies injected allow them to be easily mocked on a test by
 test basis, without having to mess with any global variables that could inadvertently affect
 another test.
+
+
+<!-- @section -->
 
 ## Additional tools for testing Angular applications
 
@@ -119,6 +131,9 @@ to inject and mock Angular services within unit tests. In addition, it is able t
 modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work
 with. One of the most useful parts of ngMock is {@link ngMock.$httpBackend}, which lets us mock XHR
 requests in tests, and return sample data instead.
+
+
+<!-- @section -->
 
 ## Testing a Controller
 
@@ -254,6 +269,9 @@ expand your tests, keep an eye out for locations where you can use `beforeEach` 
 `beforeEach` isn't the only function of this sort that Jasmine provides, and the [documentation
 lists the others](http://jasmine.github.io/1.3/introduction.html#section-Setup_and_Teardown).
 
+
+<!-- @section -->
+
 ## Testing Filters
 Filters are functions which transform the data into a user readable
 format. They are important because they remove the formatting responsibility from the application
@@ -267,6 +285,11 @@ myModule.filter('length', function() {
 });
 
 describe('length filter', function() {
+
+  beforeEach(inject(function(_$filter_){
+    $filter= _$filter_;
+  }));
+
   it('returns 0 when given null', function() {
     var length = $filter('length');
     expect(length(null)).toEqual(0);
@@ -278,6 +301,9 @@ describe('length filter', function() {
   });
 });
 ```
+
+
+<!-- @section -->
 
 ## Testing Directives
 Directives in angular are responsible for encapsulating complex functionality within custom HTML tags,
@@ -429,6 +455,9 @@ If your directive uses `templateUrl`, consider using
 [karma-ng-html2js-preprocessor](https://github.com/karma-runner/karma-ng-html2js-preprocessor)
 to pre-compile HTML templates and thus avoid having to load them over HTTP during test execution.
 Otherwise you may run into issues if the test directory hierarchy differs from the application's.
+
+
+<!-- @section -->
 
 ## Sample project
 See the [angular-seed](https://github.com/angular/angular-seed) project for an example.
