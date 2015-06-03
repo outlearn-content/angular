@@ -70,11 +70,11 @@ Let's walk through the example and describe what's going on.
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-databinding1.png">
 
 This looks like normal HTML, with some new markup. In Angular, a file like this is called a
-<a name="template">template</a>. When Angular starts your application, it parses and
-processes this new markup from the template using the <a name="compiler">compiler</a>.
-The loaded, transformed and rendered DOM is then called the <a name="view">view</a>.
+template. When Angular starts your application, it parses and
+processes this new markup from the template using the compiler.
+The loaded, transformed and rendered DOM is then called the view.
 
-The first kind of new markup are the <a name="directive">directives</a>.
+The first kind of new markup are the directives.
 They apply special behavior to attributes or elements in the HTML. In the example above we use the
 `ng-app` attribute, which is linked to a directive that automatically
 initializes our application. Angular also defines a directive for the `input`
@@ -90,16 +90,16 @@ stores/updates the value of the input field into/from a variable.
 
 The second kind of new markup are the double curly braces `{{ expression | filter }}`:
 When the compiler encounters this markup, it will replace it with the evaluated value of the markup.
-An <a name="expression">expression</a> in a template is a JavaScript-like code snippet that allows
+An expression in a template is a JavaScript-like code snippet that allows
 to read and write variables. Note that those variables are not global variables.
 Just like variables in a JavaScript function live in a scope,
-Angular provides a <a name="scope">scope</a> for the variables accessible to expressions.
-The values that are stored in variables on the scope are referred to as the <a name="model">model</a>
+Angular provides a scope for the variables accessible to expressions.
+The values that are stored in variables on the scope are referred to as the model
 in the rest of the documentation.
 Applied to the example above, the markup directs Angular to "take the data we got from the input widgets
 and multiply them together".
 
-The example above also contains a <a name="filter">filter</a>.
+The example above also contains a filter.
 A filter formats the value of an expression for display to the user.
 In the example above, the filter `currency` formats a number
 into an output that looks like money.
@@ -107,7 +107,7 @@ into an output that looks like money.
 The important thing in the example is that Angular provides _live_ bindings:
 Whenever the input values change, the value of the expressions are automatically
 recalculated and the DOM is updated with their values.
-The concept behind this is <a name="databinding">two-way data binding</a>.
+The concept behind this is two-way data binding.
 
 
 
@@ -174,7 +174,7 @@ _Example file_: `index.html`
 
 What changed?
 
-First, there is a new JavaScript file that contains a <a name="controller">controller</a>.
+First, there is a new JavaScript file that contains a controller.
 More exactly, the file contains a constructor function that creates the actual controller instance.
 The purpose of controllers is to expose variables and functionality to expressions and directives.
 
@@ -210,7 +210,7 @@ The following graphic shows how everything works together after we introduced th
 
 Right now, the `InvoiceController` contains all logic of our example. When the application grows it
 is a good practice to move view-independent logic from the controller into a
-<a name="service">service</a>, so it can be reused by other parts
+service, so it can be reused by other parts
 of the application as well. Later on, we could also change that service to load the exchange rates
 from the web, e.g. by calling the Yahoo Finance API, without changing the controller.
 
@@ -292,15 +292,15 @@ We moved the `convertCurrency` function and the definition of the existing curre
 into the new file `finance2.js`. But how does the controller
 get a hold of the now separated function?
 
-This is where <a name="di">Dependency Injection</a> comes into play.
+This is where Dependency Injection comes into play.
 Dependency Injection (DI) is a software design pattern that
 deals with how objects and functions get created and how they get a hold of their dependencies.
 Everything within Angular (directives, filters, controllers,
 services, ...) is created and wired using dependency injection. Within Angular,
-the DI container is called the <a name="injector">injector</a>.
+the DI container is called the injector.
 
 To use DI, there needs to be a place where all the things that should work together are registered.
-In Angular, this is the purpose of the <a name="module">modules</a>.
+In Angular, this is the purpose of the modules.
 When Angular starts, it will use the configuration of the module with the name defined by the `ng-app` directive,
 including the configuration of all modules that this module depends on.
 
