@@ -137,7 +137,7 @@ string "very". Depending on which button is clicked, the `spice` model is set to
 `jalapeño`, and the message is automatically updated by data-binding.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="SpicyController">
  <button ng-click="chiliSpicy()">Chili</button>
@@ -146,7 +146,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `app.js`
+_Example file_: app.js
 ```javascript
 var myApp = angular.module('spicyApp1', []);
 
@@ -180,7 +180,7 @@ Controller methods can also take arguments, as demonstrated in the following var
 previous example.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="SpicyController">
  <input ng-model="customSpice">
@@ -190,7 +190,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `app.js`
+_Example file_: app.js
 ```javascript
 var myApp = angular.module('spicyApp2', []);
 
@@ -219,7 +219,7 @@ See [Understanding Scopes](https://github.com/angular/angular.js/wiki/Understand
 more information about scope inheritance.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div class="spicy">
   <div ng-controller="MainController">
@@ -236,7 +236,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `app.css`
+_Example file_: app.css
 ```javascript
 div.spicy div {
   padding: 10px;
@@ -244,7 +244,7 @@ div.spicy div {
 }
 ```
   
-_Example file_: `app.js`
+_Example file_: app.js
 ```javascript
 var myApp = angular.module('scopeInheritance', []);
 myApp.controller('MainController', ['$scope', function($scope) {

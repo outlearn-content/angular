@@ -51,7 +51,7 @@ point since it makes the controllers view agnostic, which greatly improves the t
 the applications.
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('scopeExample', [])
   .controller('MyController', ['$scope', function($scope) {
@@ -63,7 +63,7 @@ angular.module('scopeExample', [])
   }]);
 ```
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="MyController">
   Your name:
@@ -134,7 +134,7 @@ This example illustrates scopes in application, and prototypical inheritance of 
 a diagram depicting the scope boundaries.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div class="show-scope-demo">
   <div ng-controller="GreetController">
@@ -148,7 +148,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('scopeExample', [])
   .controller('GreetController', ['$scope', '$rootScope', function($scope, $rootScope) {
@@ -160,7 +160,7 @@ angular.module('scopeExample', [])
   }]);
 ```
   
-_Example file_: `style.css`
+_Example file_: style.css
 ```javascript
 .show-scope-demo.ng-scope,
 .show-scope-demo .ng-scope  {
@@ -206,7 +206,7 @@ ng.$rootScope.Scope#$broadcast broadcasted} to the scope children or {@link
 ng.$rootScope.Scope#$emit emitted} to scope parents.
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('eventExample', [])
   .controller('EventController', ['$scope', function($scope) {
@@ -217,7 +217,7 @@ angular.module('eventExample', [])
   }]);
 ```
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="EventController">
   Root scope <tt>MyEvent</tt> count: {{count}}

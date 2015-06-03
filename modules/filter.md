@@ -56,7 +56,7 @@ By this, the controller is able to call the filter only when needed (e.g. when t
 or the filter expression is changed).
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="FilterController as ctrl">
   <div>
@@ -71,7 +71,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('FilterInControllerModule', []).
   controller('FilterController', ['filterFilter', function(filterFilter) {
@@ -111,7 +111,7 @@ The following sample filter reverses a text string. In addition, it conditionall
 text upper-case.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="MyController">
   <input ng-model="greeting" type="text"><br>
@@ -122,7 +122,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('myReverseFilterApp', [])
   .filter('reverse', function() {
@@ -156,7 +156,7 @@ If you however do need to write a stateful filter, you have to mark the filter a
 means that it will be executed one or more times during the each `$digest` cycle.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="MyController">
   Input: <input ng-model="greeting" type="text"><br>
@@ -167,7 +167,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('myStatefulFilterApp', [])
   .filter('decorate', ['decoration', function(decoration) {

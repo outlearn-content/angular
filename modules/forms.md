@@ -30,7 +30,7 @@ as well as view to the model. In addition it provides an API
 for other directives to augment its behavior.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="simple-form">
@@ -92,7 +92,7 @@ This ensures that the user is not distracted with an error until after interacti
 and failing to satisfy its validity.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="ExampleController">
   <form novalidate class="css-form">
@@ -156,7 +156,7 @@ didn't interact with a control
 
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="ExampleController">
   <form name="form" class="css-form" novalidate>
@@ -195,7 +195,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('formExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
@@ -238,7 +238,7 @@ The following example shows how to override immediate updates. Changes on the in
 will update the model only when the control loses focus (blur event).
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="ExampleController">
   <form>
@@ -252,7 +252,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('customTriggerExample', [])
  .controller('ExampleController', ['$scope', function($scope) {
@@ -286,7 +286,7 @@ This example shows how to debounce model changes. Model will be updated only 250
 after last change.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-controller="ExampleController">
   <form>
@@ -297,7 +297,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('debounceExample', [])
   .controller('ExampleController', ['$scope', function($scope) {
@@ -341,7 +341,7 @@ In the following example we create two directives:
  We mock the server request with a `$q` deferred.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <form name="form" class="css-form" novalidate>
   <div>
@@ -364,7 +364,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 var app = angular.module('form-example1', []);
 
@@ -433,7 +433,7 @@ in `input[email]` from a custom directive so that it requires a specific top-lev
 Note that you can alternatively use `ng-pattern` to further restrict the validation.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <form name="form" class="css-form" novalidate>
   <div>
@@ -446,7 +446,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 var app = angular.module('form-example-modify-validators', []);
 
@@ -489,7 +489,7 @@ See `$compileProvider.directive` for more info.
 The following example shows how to add two-way data-binding to contentEditable elements.
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div contentEditable="true" ng-model="content" title="Click to edit">Some</div>
 <pre>model = {{content}}</pre>
@@ -503,7 +503,7 @@ _Example file_: `index.html`
 ```
 
   
-_Example file_: `script.js`
+_Example file_: script.js
 ```javascript
 angular.module('form-example2', []).directive('contenteditable', function() {
   return {

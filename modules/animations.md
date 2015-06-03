@@ -24,7 +24,7 @@ Animations are not available unless you include the `ngAnimate` module as a depe
 Below is a quick example of animations being enabled for `ngShow` and `ngHide`:
 
   
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <div ng-init="checked=true">
   <label>
@@ -36,7 +36,7 @@ _Example file_: `index.html`
 </div>
 ```
   
-_Example file_: `animations.css`
+_Example file_: animations.css
 ```javascript
 .sample-show-hide {
   padding:10px;
@@ -216,7 +216,7 @@ able to capture class changes if an **expression** or the **ng-class** directive
 The example below shows how to perform animations during class changes:
 
  
-_Example file_: `index.html`
+_Example file_: index.html
 ```javascript
 <p>
   <input type="button" value="set" ng-click="myCssVar='css-class'">
@@ -226,7 +226,7 @@ _Example file_: `index.html`
 </p>
 ```
  
-_Example file_: `style.css`
+_Example file_: style.css
 ```javascript
 .css-class-add, .css-class-remove {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
