@@ -1,3 +1,14 @@
+<!--
+{
+"name" : "concepts",
+"version" : "0.1",
+"title" : "Conceptual Overview",
+"description" : "Brief overview of all the important parts of AngularJS.",
+"homepage" : "https://docs.angularjs.org/guide",
+"freshnessDate" : 2015-06-02,
+"license" : "CC BY 3.0"
+}
+-->
 
 # Conceptual Overview
 
@@ -29,7 +40,7 @@ In the following example we will build a form to calculate the costs of an invoi
 Let's start with input fields for quantity and cost whose values are multiplied to produce the total of the invoice:
 
 
-
+  
 _Example file_: `index.html`
 ```js
 <div ng-app ng-init="qty=1;cost=2">
@@ -96,7 +107,7 @@ The concept behind this is <a name="databinding">two-way data binding</a>.
 Let's add some more logic to the example that allows us to enter and calculate the costs in
 different currencies and also pay the invoice.
 
-
+  
 _Example file_: `invoice1.js`
 ```js
 angular.module('invoice1', [])
@@ -122,7 +133,7 @@ angular.module('invoice1', [])
     };
   });
 ```
-
+  
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
@@ -187,7 +198,7 @@ from the web, e.g. by calling the Yahoo Finance API, without changing the contro
 
 Let's refactor our example and move the currency conversion into a service in another file:
 
-
+  
 _Example file_: `finance2.js`
 ```js
 angular.module('finance2', [])
@@ -208,7 +219,7 @@ angular.module('finance2', [])
     };
   });
 ```
-
+  
 _Example file_: `invoice2.js`
 ```js
 angular.module('invoice2', ['finance2'])
@@ -226,7 +237,7 @@ angular.module('invoice2', ['finance2'])
     };
   }]);
 ```
-
+  
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice2" ng-controller="InvoiceController as invoice">
@@ -302,7 +313,7 @@ to something shorter like `a`.
 Let's finish our example by fetching the exchange rates from the Yahoo Finance API.
 The following example shows how this is done with Angular:
 
-
+  
 _Example file_: `invoice3.js`
 ```js
 angular.module('invoice3', ['finance3'])
@@ -320,7 +331,7 @@ angular.module('invoice3', ['finance3'])
     };
   }]);
 ```
-
+  
 _Example file_: `finance3.js`
 ```js
 angular.module('finance3', [])
@@ -358,7 +369,7 @@ angular.module('finance3', [])
     };
   }]);
 ```
-
+  
 _Example file_: `index.html`
 ```js
 <div ng-app="invoice3" ng-controller="InvoiceController as invoice">

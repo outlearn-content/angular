@@ -1,3 +1,14 @@
+<!--
+{
+"name" : "introduction",
+"version" : "0.1",
+"title" : "Introduction",
+"description" : "Explain the big picture of Angular.",
+"homepage" : "https://docs.angularjs.org/guide",
+"freshnessDate" : 2015-06-02,
+"license" : "CC BY 3.0"
+}
+-->
 
 
 # What Is Angular?
