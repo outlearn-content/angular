@@ -165,7 +165,7 @@ the parameters in the function declaration.
 
 ### Implicit Annotation
 
-> **Careful:** If you plan to [minify](http://en.wikipedia.org/wiki/)
+> **Careful:** If you plan to <a href="http://en.wikipedia.org/wiki/Minification_(programming)"> minify</a>
 >your code, your service names will get renamed and break your app.
 
 The simplest way to get hold of the dependencies is to assume that the function parameter names
