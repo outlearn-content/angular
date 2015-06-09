@@ -54,7 +54,7 @@ on to the next block.
 Test files may also have `beforeEach` and `afterEach` blocks, which will be run before or after
 each `it` block regardless of whether the block passes or fails.
 
-<img src="img/guide/scenario_runner.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/scenario_runner.png">
 
 In addition to the above elements, tests may also contain helper functions to avoid duplicating
 code in the `it` blocks.

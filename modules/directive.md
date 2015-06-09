@@ -117,12 +117,10 @@ it('should show off bindings', function() {
 ```
 
 
-<div class="alert alert-success">
-**Best Practice:** Prefer using the dash-delimited format (e.g. `ng-bind` for `ngBind`).
-If you want to use an HTML validating tool, you can instead use the `data`-prefixed version (e.g.
-`data-ng-bind` for `ngBind`).
-The other forms shown above are accepted for legacy reasons but we advise you to avoid them.
-</div>
+> **Best Practice:** Prefer using the dash-delimited format (e.g. `ng-bind` for `ngBind`).
+>If you want to use an HTML validating tool, you can instead use the `data`-prefixed version (e.g.
+>`data-ng-bind` for `ngBind`).
+>The other forms shown above are accepted for legacy reasons but we advise you to avoid them.
 
 ### Directive types
 
@@ -139,18 +137,14 @@ from within a template:
 <span class="my-dir: exp;"></span>
 ```
 
-<div class="alert alert-success">
-**Best Practice:** Prefer using directives via tag name and attributes over comment and class names.
-Doing so generally makes it easier to determine what directives a given element matches.
-</div>
+> **Best Practice:** Prefer using directives via tag name and attributes over comment and class names.
+>Doing so generally makes it easier to determine what directives a given element matches.
 
-<div class="alert alert-success">
-**Best Practice:** Comment directives were commonly used in places where the DOM API limits the
-ability to create directives that spanned multiple elements (e.g. inside `<table>` elements).
-AngularJS 1.2 introduces `ng-repeat-start` and `ng-repeat-end`
-as a better solution to this problem. Developers are encouraged to use this over custom comment
-directives when possible.
-</div>
+> **Best Practice:** Comment directives were commonly used in places where the DOM API limits the
+>ability to create directives that spanned multiple elements (e.g. inside `<table>` elements).
+>AngularJS 1.2 introduces `ng-repeat-start` and `ng-repeat-end`
+>as a better solution to this problem. Developers are encouraged to use this over custom comment
+>directives when possible.
 
 
 
@@ -229,21 +223,17 @@ initialization work here. The function is invoked using
 $injector.invoke which makes it injectable just like a
 controller.
 
-<div class="alert alert-success">
-**Best Practice:** Prefer using the definition object over returning a function.
-</div>
+> **Best Practice:** Prefer using the definition object over returning a function.
 
 
 We'll go over a few common examples of directives, then dive deep into the different options
 and compilation process.
 
-<div class="alert alert-success">
-**Best Practice:** In order to avoid collisions with some future standard, it's best to prefix your own
-directive names. For instance, if you created a `<carousel>` directive, it would be problematic if HTML7
-introduced the same element. A two or three letter prefix (e.g. `btfCarousel`) works well. Similarly, do
-not prefix your own directives with `ng` or they might conflict with directives included in a future
-version of Angular.
-</div>
+> **Best Practice:** In order to avoid collisions with some future standard, it's best to prefix your own
+>directive names. For instance, if you created a `<carousel>` directive, it would be problematic if HTML7
+>introduced the same element. A two or three letter prefix (e.g. `btfCarousel`) works well. Similarly, do
+>not prefix your own directives with `ng` or they might conflict with directives included in a future
+>version of Angular.
 
 For the following examples, we'll use the prefix `my` (e.g. `myCustomer`).
 
@@ -293,10 +283,8 @@ below.
 In the example above we in-lined the value of the `template` option, but this will become annoying
 as the size of your template grows.
 
-<div class="alert alert-success">
-**Best Practice:** Unless your template is very small, it's typically better to break it apart into
-its own HTML file and load it with the `templateUrl` option.
-</div>
+> **Best Practice:** Unless your template is very small, it's typically better to break it apart into
+>its own HTML file and load it with the `templateUrl` option.
 
 If you are familiar with `ngInclude`, `templateUrl` works just like it. Here's the same example
 using `templateUrl` instead:
@@ -340,10 +328,8 @@ Name: {{customer.name}} Address: {{customer.address}}
 used for the directive. Angular will call the `templateUrl` function with two parameters: the
 element that the directive was called on, and an `attr` object associated with that element.
 
-<div class="alert alert-warning">
-**Note:** You do not currently have the ability to access scope variables from the `templateUrl`
-function, since the template is requested before the scope is initialized.
-</div>
+> **Note:** You do not currently have the ability to access scope variables from the `templateUrl`
+>function, since the template is requested before the scope is initialized.
 
   
 _Example file_: `script.js`
@@ -390,10 +376,8 @@ Address: {{customer.address}}
 ```
 
 
-<div class="alert alert-warning">
-**Note:** When you create a directive, it is restricted to attribute and elements only by default. In order to
-create directives that are triggered by class name, you need to use the `restrict` option.
-</div>
+> **Note:** When you create a directive, it is restricted to attribute and elements only by default. In order to
+>create directives that are triggered by class name, you need to use the `restrict` option.
 
 The `restrict` option is typically set to:
 
@@ -450,14 +434,12 @@ For more on the
 property, see the
 API docs.
 
-<div class="alert alert-info">
-**When should I use an attribute versus an element?**
-
-Use an element when you are creating a component that is in control of the template. The common case
-for this is when you are creating a Domain-Specific Language for parts of your template.
-
-Use an attribute when you are decorating an existing element with new functionality.
-</div>
+> **When should I use an attribute versus an element?**
+>
+>Use an element when you are creating a component that is in control of the template. The common case
+>for this is when you are creating a Domain-Specific Language for parts of your template.
+>
+>Use an attribute when you are decorating an existing element with new functionality.
 
 Using an element for the `myCustomer` directive is clearly the right choice because you're not
 decorating an element with some "customer" behavior; you're defining the core behavior of the
@@ -584,11 +566,9 @@ case it has just one property:
 directive's **isolate scope** property `customerInfo`.
 - Its value (`=info`) tells `$compile` to bind to the `info` attribute.
 
-<div class="alert alert-warning">
-**Note:** These `=attr` attributes in the `scope` option of directives are normalized just like
-directive names. To bind to the attribute in `<div bind-to-this="thing">`, you'd specify a binding
-of `=bindToThis`.
-</div>
+> **Note:** These `=attr` attributes in the `scope` option of directives are normalized just like
+>directive names. To bind to the attribute in `<div bind-to-this="thing">`, you'd specify a binding
+>of `=bindToThis`.
 
 For cases where the attribute name is the same as the value you want to bind to inside the
 directive's scope, you can use this shorthand syntax:
@@ -655,15 +635,11 @@ you've explicitly added to the `scope: {}` hash object. This is helpful when bui
 components because it prevents a component from changing your model state except for the models
 that you explicitly pass in.
 
-<div class="alert alert-warning">
-**Note:** Normally, a scope prototypically inherits from its parent. An isolated scope does not.
-See the "Directive Definition Object - scope" section for more information about isolate scopes.
-</div>
+> **Note:** Normally, a scope prototypically inherits from its parent. An isolated scope does not.
+>See the "Directive Definition Object - scope" section for more information about isolate scopes.
 
-<div class="alert alert-success">
-**Best Practice:** Use the `scope` option to create isolate scopes when making components that you
-want to reuse throughout your app.
-</div>
+> **Best Practice:** Use the `scope` option to create isolate scopes when making components that you
+>want to reuse throughout your app.
 
 
 ### Creating a Directive that Manipulates the DOM
@@ -752,11 +728,9 @@ Listeners registered to scopes and elements are automatically cleaned up when th
 but if you registered a listener on a service, or registered a listener on a DOM node that isn't
 being deleted, you'll have to clean it up yourself or you risk introducing a memory leak.
 
-<div class="alert alert-success">
-**Best Practice:** Directives should clean up after themselves. You can use
-`element.on('$destroy', ...)` or `scope.$on('$destroy', ...)` to run a clean-up function when the
-directive is removed.
-</div>
+> **Best Practice:** Directives should clean up after themselves. You can use
+>`element.on('$destroy', ...)` or `scope.$on('$destroy', ...)` to run a clean-up function when the
+>directive is removed.
 
 
 ### Creating a Directive that Wraps Other Elements
@@ -798,8 +772,7 @@ _Example file_: `index.html`
 _Example file_: `my-dialog.html`
 
 ```javascript
-<div class="alert" ng-transclude>
-</div>
+>
 ```
 
 
@@ -843,8 +816,7 @@ _Example file_: `index.html`
 _Example file_: `my-dialog.html`
 
 ```javascript
-<div class="alert" ng-transclude>
-</div>
+>
 ```
 
 
@@ -862,10 +834,8 @@ This behavior makes sense for a directive that wraps some content, because other
 pass in each model you wanted to use separately. If you have to pass in each model that you want to
 use, then you can't really have arbitrary contents, can you?
 
-<div class="alert alert-success">
-**Best Practice:** only use `transclude: true` when you want to create a directive that wraps
-arbitrary content.
-</div>
+> **Best Practice:** only use `transclude: true` when you want to create a directive that wraps
+>arbitrary content.
 
 Next, we want to add buttons to this dialog box, and allow someone using the directive to bind their
 own behavior to it.
@@ -915,9 +885,8 @@ _Example file_: `index.html`
 _Example file_: `my-dialog-close.html`
 
 ```javascript
-<div class="alert">
-  <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
-  <div ng-transclude></div>
+>   <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
+>  <div ng-transclude
 </div>
 ```
 
@@ -942,10 +911,8 @@ wrapper fn. For example, the hideDialog function takes a message to display when
 This is specified in the directive by calling `close({message: 'closing for now'})`. Then the local
 variable `message` will be available within the `on-close` expression.
 
-<div class="alert alert-success">
-**Best Practice:** use `&attr` in the `scope` option when you want your directive
-to expose an API for binding to behaviors.
-</div>
+> **Best Practice:** use `&attr` in the `scope` option when you want your directive
+>to expose an API for binding to behaviors.
 
 
 ### Creating a Directive that Adds Event Listeners
@@ -1153,10 +1120,8 @@ Savvy readers may be wondering what the difference is between `link` and `contro
 The basic difference is that `controller` can expose an API, and `link` functions can interact with
 controllers using `require`.
 
-<div class="alert alert-success">
-**Best Practice:** use `controller` when you want to expose an API to other directives.
-Otherwise use `link`.
-</div>
+> **Best Practice:** use `controller` when you want to expose an API to other directives.
+>Otherwise use `link`.
 
 ### Summary
 

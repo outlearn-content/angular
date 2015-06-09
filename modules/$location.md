@@ -207,7 +207,7 @@ address bar: **Hashbang mode** (the default) and the **HTML5 mode** which is bas
 both modes and the `$location` service will work with appropriate URL segments and browser APIs to
 facilitate the browser URL change and history management.
 
-<img src="img/guide/hashbang_vs_regular_url.jpg">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/hashbang_vs_regular_url.jpg">
 
 <table class="table">
 <thead>

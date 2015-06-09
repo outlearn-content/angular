@@ -156,7 +156,7 @@ Most other templating systems consume a static string template and
 combine it with data, resulting in a new string. The resulting text is then `innerHTML`ed into
 an element.
 
-<img src="img/One_Way_Data_Binding.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/One_Way_Data_Binding.png">
 
 This means that any changes to the data need to be re-merged with the template and then
 `innerHTML`ed into the DOM. Some of the issues with this approach are:
@@ -173,7 +173,7 @@ the view. And because `innerHTML` is not used, you won't accidentally clobber us
 Furthermore, Angular directives can contain not just text bindings, but behavioral constructs as
 well.
 
-<img src="img/Two_Way_Data_Binding.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/Two_Way_Data_Binding.png">
 
 The Angular approach produces a stable DOM. The DOM element instance bound to a model
 item instance does not change for the lifetime of the binding. This means that the code can get
@@ -295,10 +295,8 @@ the **compile phase** where all of the directives are identified and sorted by p
 and a **linking phase** where any work which "links" a specific instance of the
 scope and the specific instance of an `<li>` is performed.
 
-<div class="alert alert-warning">
-**Note:** *Link* means setting up listeners on the DOM and setting up `$watch` on the Scope to
-keep the two in sync.
-</div>
+> **Note:** *Link* means setting up listeners on the DOM and setting up `$watch` on the Scope to
+>keep the two in sync.
 
 `ngRepeat` works by preventing the compilation process from
 descending into the `<li>` element so it can make a clone of the original and handle inserting
