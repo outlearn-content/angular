@@ -208,7 +208,7 @@ HTML compilation happens in three phases:
 
   3. `$compile` links the template with the scope by calling the combined linking function from the previous step.
   This in turn will call the linking function of the individual directives, registering listeners on the elements
-  and setting up `$watch`s} with the {@link ng.$rootScope.Scope `scope`
+  and setting up `$watch`s with the `scope`
   as each directive is configured to do.
 
 The result of this is a live binding between the scope and the DOM. So at this point, a change in

@@ -143,8 +143,8 @@ Here is an example of manually initializing Angular:
 ```
 
 Note that we provided the name of our application module to be loaded into the injector as the second
-parameter of the {@link angular.bootstrap} function. Notice that `angular.bootstrap` will not create modules
-on the fly. You must create any custom modules before you pass them as a parameter.
+parameter of the function. Notice that `angular.bootstrap` will not create modules
+on the fly. You must create any custom {@link guide/module modules before you pass them as a parameter.
 
 You should call `angular.bootstrap()` *after* you've loaded or defined your modules.
 You cannot add controllers, services, directives, etc after an application bootstraps.

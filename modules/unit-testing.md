@@ -126,10 +126,10 @@ what they are. To use Jasmine with Karma, we use the
 
 ### angular-mocks
 
-Angular also provides the {@link ngMock} module, which provides mocking for your tests. This is used
+Angular also provides the module, which provides mocking for your tests. This is used
 to inject and mock Angular services within unit tests. In addition, it is able to extend other
 modules so they are synchronous. Having tests synchronous keeps them much cleaner and easier to work
-with. One of the most useful parts of ngMock is {@link ngMock.$httpBackend}, which lets us mock XHR
+with. One of the most useful parts of ngMock is {@link ngMock.$httpBackend, which lets us mock XHR
 requests in tests, and return sample data instead.
 
 
@@ -369,7 +369,7 @@ replaced the content and "lidless, wreathed in flame, 2 times" is present.
 >
 >The use of the underscore notation (e.g.: `_$rootScope_`) is a convention wide spread in AngularJS
 >community to keep the variable names clean in your tests. That's why the
->{@link $injector} strips out the leading and the trailing underscores when
+>strips out the leading and the trailing underscores when
 >matching the parameters. The underscore rule applies ***only*** if the name starts **and** ends with
 >exactly one underscore, otherwise no replacing happens.
 
@@ -428,7 +428,7 @@ After compilation:
 
 It is important to be aware of this when writing tests for directives that use 'element'
 transclusion.  If you place the directive on the root element of the DOM fragment that you
-pass to {@link $compile}, then the DOM node returned from the linking function will be the
+pass to {@link $compile, then the DOM node returned from the linking function will be the
 comment node and you will lose the ability to access the template and transcluded content.
 
 ```javascript

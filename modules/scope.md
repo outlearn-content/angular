@@ -316,7 +316,7 @@ the `$digest` phase. This delay is desirable, since it coalesces multiple model 
      For mutations to be properly observed, you should make them only within the {@link
      ng.$rootScope.Scope#$apply scope.$apply()}. Angular APIs do this
      implicitly, so no extra `$apply` call is needed when doing synchronous work in controllers,
-     or asynchronous work with $http}, {@link ng.$timeout $timeout
+     or asynchronous work with $http, $timeout
      or $interval services.
 
   4. **Mutation observation**

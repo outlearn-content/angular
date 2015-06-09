@@ -18,7 +18,7 @@ These are the types of Angular elements and attributes you can use:
 
 * Directive — An attribute or element that
   augments an existing DOM element or represents a reusable DOM component.
-* Markup} — The double curly brace notation `{{ }` to bind expressions
+* Markup — The double curly brace notation `{{ }}` to bind expressions
   to elements is built-in Angular markup.
 * Filter — Formats data for display.
 * Form controls — Validates user input.
@@ -46,7 +46,7 @@ in just one HTML file (usually `index.html`).
 In a more complex app, you can display multiple views within one main page using "partials" –
 segments of template located in separate HTML files. You can use the
 ngView directive to load partials based on configuration passed
-to the $route} service. The {@link tutorial/ angular tutorial shows this
+to the $route service. The angular tutorial shows this
 technique in steps seven and eight.
 
 

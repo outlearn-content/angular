@@ -15,8 +15,8 @@
 
 # Services
 
-Angular services are substitutable objects that are wired together using {@link di dependency
-injection (DI)}. You can use services to organize and share code across your app.
+Angular services are substitutable objects that are wired together using dependency
+injection (DI). You can use services to organize and share code across your app.
 
 Angular services are:
 

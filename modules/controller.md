@@ -32,12 +32,12 @@ Do not use controllers to:
 
 - Manipulate DOM — Controllers should contain only business logic.
   Putting any presentation logic into Controllers significantly affects its testability. Angular
-  has databinding} for most cases and {@link guide/directive directives to
+  has databinding for most cases and directives to
   encapsulate manual DOM manipulation.
 - Format input — Use angular form controls instead.
 - Filter output — Use angular filters instead.
-- Share code or state across controllers — Use {@link services angular
-services} instead.
+- Share code or state across controllers — Use angular
+services instead.
 - Manage the life-cycle of other components (for example, to create service instances).
 
 
@@ -132,8 +132,8 @@ Services} sections of this guide.
 
 # Associating Controllers with Angular Scope Objects
 
-You can associate Controllers with scope objects implicitly via the {@link ng.directive:ngController ngController
-directive} or $route service.
+You can associate Controllers with scope objects implicitly via the ngController
+directive or $route service.
 
 
 
@@ -316,7 +316,7 @@ examples, all of the properties could be replaced with methods that return strin
 # Testing Controllers
 
 Although there are many ways to test a Controller, one of the best conventions, shown below,
-involves injecting the $rootScope} and {@link ng.$controller $controller:
+involves injecting the $rootScope and $controller:
 
 **Controller Definition:**
 ```js

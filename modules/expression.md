@@ -225,7 +225,7 @@ controller or in a dedicated filter where it can be tested properly.
 
 ## `$event`
 
-Directives like `ngClick`} and {@link ng.directive:ngFocus `ngFocus`
+Directives like `ngClick` and `ngFocus`
 expose a `$event` object within the scope of that expression. The object is an instance of a [jQuery
 Event Object](http://api.jquery.com/category/events/event-object/) when jQuery is present or a
 similar jqLite object.

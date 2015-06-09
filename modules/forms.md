@@ -345,8 +345,8 @@ angular.module('debounceExample', [])
 ## Custom Validation
 
 Angular provides basic implementation for most common HTML5 input
-types: (text}, {@link input[number] number}, {@link input[url] url,
-email}, {@link input[date] date}, {@link input[radio] radio}, {@link input[checkbox] checkbox),
+types: (text, number, url,
+email, date, radio, checkbox),
 as well as some directives for validation (`required`, `pattern`, `minlength`, `maxlength`,
 `min`, `max`).
 
@@ -524,7 +524,7 @@ app.directive('overwriteEmail', function() {
 
 ## Implementing custom form controls (using `ngModel`)
 Angular implements all of the basic HTML form controls (input,
-select}, {@link ng.directive:textarea textarea),
+select, textarea),
 which should be sufficient for most cases. However, if you need more flexibility,
 you can write your own form control as a directive.
 
