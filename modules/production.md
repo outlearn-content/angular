@@ -37,6 +37,7 @@ Tools like [Protractor](https://github.com/angular/protractor) and
 [Batarang](https://github.com/angular/angularjs-batarang) need this information to run,
 but you can disable this in production for a significant performance boost with:
 
+
 ```js
 myApp.config(['$compileProvider', function ($compileProvider) {
   $compileProvider.debugInfoEnabled(false);
@@ -45,6 +46,7 @@ myApp.config(['$compileProvider', function ($compileProvider) {
 
 If you wish to debug an application with this information then you should open up a debug
 console in the browser then call this method directly in this console:
+
 
 ```js
 angular.reloadWithDebugInfo();
@@ -80,6 +82,7 @@ To enable strict di mode, you have two options:
 ```
 
 or
+
 
 ```js
 angular.bootstrap(document, ['myApp'], {

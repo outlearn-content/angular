@@ -159,6 +159,7 @@ occur when ngRepeat triggers them:
 
 The same approach to animation can be used using JavaScript code (**jQuery is used within to perform animations**):
 
+
 ```js
 myModule.animation('.repeated-item', function() {
   return {
@@ -296,6 +297,7 @@ For a full breakdown of the steps involved during each animation event, refer to
 
 Animations within custom directives can also be established by injecting `$animate` directly into your directive and
 making calls to it when needed.
+
 
 ```js
 myModule.directive('my-directive', ['$animate', function($animate) {

@@ -60,6 +60,7 @@ In addition to the above elements, tests may also contain helper functions to av
 code in the `it` blocks.
 
 Here is an example of a simple test:
+
 ```js
 describe('TODO list', function() {
   it('should filter results', function() {

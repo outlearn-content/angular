@@ -54,6 +54,7 @@ blocks.
 The way you define a directive, service, or filter is with a factory function.
 The factory methods are registered with modules. The recommended way of declaring factories is:
 
+
 ```js
 angular.module('myModule', [])
   .factory('serviceId', ['depService', function(depService) {
@@ -73,6 +74,7 @@ We can specify functions to run at configuration and run time for a module by ca
 and `run` methods. These functions are injectable with dependencies just like the factory functions
 above.
 
+
 ```js
 angular.module('myModule', [])
   .config(['depProvider', function(depProvider) {
@@ -88,6 +90,7 @@ angular.module('myModule', [])
 Controllers are "classes" or "constructor functions" that are responsible for providing the
 application behavior that supports the declarative markup in the template. The recommended way of
 declaring Controllers is using the array notation:
+
 
 ```js
 someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
@@ -131,6 +134,7 @@ documentation are written.
 
 For example:
 
+
 ```js
 someModule.controller('MyController', ['$scope', 'greeter', function($scope, greeter) {
   // ...
@@ -148,6 +152,7 @@ parameters in the function declaration.
 To allow the minifiers to rename the function parameters and still be able to inject the right services,
 the function needs to be annotated with the `$inject` property. The `$inject` property is an array
 of service names to inject.
+
 
 ```js
 var MyController = function($scope, greeter) {
@@ -170,6 +175,7 @@ the parameters in the function declaration.
 
 The simplest way to get hold of the dependencies is to assume that the function parameter names
 are the names of the dependencies.
+
 
 ```js
 someModule.controller('MyController', function($scope, greeter) {
@@ -215,6 +221,7 @@ Strict mode throws an error whenever a service tries to use implicit annotations
 
 Consider this module, which includes a `willBreak` service that uses implicit DI:
 
+
 ```js
 angular.module('myApp', [])
   .factory('willBreak', function($rootScope) {
@@ -231,6 +238,7 @@ ensure that all of your application components have annotations.
 
 If you're using manual bootstrapping, you can also use strict DI by providing `strictDi: true` in
 the optional config argument:
+
 
 ```js
 angular.bootstrap(document, ['myApp'], {
@@ -266,6 +274,7 @@ dependencies for test isolation.
 The third option is the most viable, since it removes the responsibility of locating the
 dependency from the component. The dependency is simply handed to the component.
 
+
 ```js
 function SomeClass(greeter) {
   this.greeter = greeter;
@@ -290,6 +299,7 @@ construction and lookup of dependencies.
 
 Here is an example of using the injector service:
 
+
 ```js
 // Provide the wiring information in a module
 var myModule = angular.module('myModule', []);
@@ -297,6 +307,7 @@ var myModule = angular.module('myModule', []);
 
 Teach the injector how to build a `greeter` service. Notice that `greeter` is dependent on the
 `$window` service. The `greeter` service is an object that contains a `greet` method.
+
 
 ```js
 myModule.factory('greeter', function($window) {
@@ -310,6 +321,7 @@ myModule.factory('greeter', function($window) {
 
 Create a new injector that can provide components defined in our `myModule` module and request our
 `greeter` service from the injector. (This is usually done automatically by angular bootstrap).
+
 
 ```js
 var injector = angular.injector(['myModule', 'ng']);
@@ -328,6 +340,7 @@ injector, as in this example:
 </div>
 ```
 
+
 ```js
 function MyController($scope, greeter) {
   $scope.sayHello = function() {
@@ -338,6 +351,7 @@ function MyController($scope, greeter) {
 
 When Angular compiles the HTML, it processes the `ng-controller` directive, which in turn
 asks the injector to create an instance of the controller and its dependencies.
+
 
 ```js
 injector.instantiate(MyController);

@@ -127,6 +127,7 @@ $locationProvider and set the parameters as follows:
   default: `""`
 
 ### Example configuration
+
 ```js
 $locationProvider.html5Mode(true).hashPrefix('!');
 ```
@@ -138,6 +139,7 @@ $locationProvider.html5Mode(true).hashPrefix('!');
 
 `$location` service provides getter methods for read-only parts of the URL (absUrl, protocol, host,
 port) and getter / setter methods for url, path, search, hash:
+
 ```js
 // get the current path
 $location.path();
@@ -148,6 +150,7 @@ $location.path('/newValue')
 
 All of the setter methods return the same `$location` object to allow chaining. For example, to
 change multiple segments in one go, chain setters like this:
+
 
 ```js
 $location.path('/newValue').search({key: value});
@@ -163,6 +166,7 @@ time the $location service is synced with the browser, the last history record s
 instead of creating a new one. This is useful when you want to implement redirection, which would
 otherwise break the back button (navigating back would retrigger the redirection). To change the
 current URL without creating a new browser history record you can call:
+
 
 ```js
   $location.path('/someNewPath');
@@ -256,6 +260,7 @@ than the hash fragment was changed.
 
 ### Example
 
+
 ```js
 it('should show example', inject(
   function($locationProvider) {
@@ -300,6 +305,7 @@ and updates the url in a way that never performs a full page reload.
 
 
 ### Example
+
 
 ```js
 it('should show example', inject(
@@ -799,6 +805,7 @@ Crawlable](http://code.google.com/web/ajaxcrawling/docs/specification.html).
 # Testing with the $location service
 
 When using `$location` service during testing, you are outside of the angular's scope life-cycle. This means it's your responsibility to call `scope.$apply()`.
+
 
 ```js
 describe('serviceUnderTest', function() {

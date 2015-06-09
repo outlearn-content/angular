@@ -110,6 +110,7 @@ scope is the single source-of-truth for all things view related.
 From a testability point of view, the separation of the controller and the view is desirable, because it allows us
 to test the behavior without being distracted by the rendering details.
 
+
 ```js
   it('should say hello', function() {
     var scopeMock = {};

@@ -215,6 +215,7 @@ a model on the compiled scope will be reflected in the DOM.
 Below is the corresponding code using the `$compile` service.
 This should help give you an idea of what Angular does internally.
 
+
 ```js
   var $compile = ...; // injected into your code
   var scope = ...;
@@ -360,6 +361,7 @@ the `onOk` and `onCancel` functions to be present in the scope. This limits the 
 widget. To solve the mapping issue we use the `scope` to create local variables which the template
 expects as follows:
 
+
 ```js
   scope: {
     title: '@',             // the title uses the data-binding from the parent scope
@@ -392,6 +394,7 @@ This may seem to be unexpected complexity, but it gives the widget user and deve
 surprise.
 
 Therefore the final directive definition looks something like this:
+
 
 ```js
 transclude: true,

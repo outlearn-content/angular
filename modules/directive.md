@@ -1123,6 +1123,7 @@ When a directive requires a controller, it receives that controller as the fourt
 If multiple controllers are required, the `require` option of the directive can take an array argument.
 The corresponding parameter being sent to the `link` function will also be an array.
 
+
 ```js
 angular.module('docsTabsExample', [])
   .directive('myPane', function() {

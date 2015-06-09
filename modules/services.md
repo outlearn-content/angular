@@ -104,6 +104,7 @@ on the service.
 Services are registered to modules via the Module API.
 Typically you use the Module factory API to register a service:
 
+
 ```js
 var myModule = angular.module('myModule', []);
 myModule.factory('serviceId', function() {
@@ -124,6 +125,7 @@ declare dependencies by specifying them in the service's factory function signat
 For more on dependencies, see the dependency injection docs.
 
 The example module below has two services, each with various dependencies:
+
 
 ```js
 var batchModule = angular.module('batchModule', []);
@@ -180,6 +182,7 @@ In the example, note that:
 You can also register services via the `$provide` service inside of a
 module's `config` function:
 
+
 ```js
 angular.module('myModule', []).config(['$provide', function($provide) {
   $provide.factory('serviceId', function() {
@@ -200,6 +203,7 @@ This technique is often used in unit tests to mock out a service's dependencies.
 
 The following is a unit test for the `notify` service from the Creating Angular Services example above. The unit test example uses a Jasmine spy (mock) instead
 of a real browser alert.
+
 
 ```js
 var mock, notify;

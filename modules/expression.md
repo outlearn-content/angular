@@ -381,6 +381,7 @@ When interpolating text or attributes:
 
 When using a directive with bidirectional binding and the parameters will not change:
 
+
 ```js
 someModule.directive('someDirective', function() {
   return {

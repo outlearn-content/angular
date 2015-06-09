@@ -88,6 +88,7 @@ grow, keeping them well structured and documented is vital, and Jasmine helps ac
 
 In Jasmine we use the `describe` function to group our tests together:
 
+
 ```js
 describe("sorting the list of users", function() {
   // individual tests go here
@@ -95,6 +96,7 @@ describe("sorting the list of users", function() {
 ```
 
 And then each individual test is defined within a call to the `it` function:
+
 
 ```js
 describe('sorting the list of users', function() {
@@ -108,6 +110,7 @@ Grouping related tests within `describe` blocks and describing each individual t
 `it` call keeps your tests self documenting.
 
 Finally, Jasmine provides matchers which let you make assertions:
+
 
 ```js
 describe('sorting the list of users', function() {
@@ -141,6 +144,7 @@ Because Angular separates logic from the view layer, it keeps controllers easy t
 look at how we might test the controller below, which provides `$scope.grade`, which sets a property
 on the scope based on the length of the password.
 
+
 ```js
 angular.module('app', [])
   .controller('PasswordController', function PasswordController($scope) {
@@ -163,6 +167,7 @@ which is provided by angular-mocks. This loads in the module it's given, so it i
 tests. We pass this into `beforeEach`, which is a function Jasmine provides that lets us run code
 before each test. Then we can use `inject` to access `$controller`, the service that is responsible
 for instantiating controllers.
+
 
 ```js
 describe('PasswordController', function() {
@@ -191,6 +196,7 @@ Notice how by nesting the `describe` calls and being descriptive when calling th
 test is very clear. It documents exactly what it is testing, and at a glance you can quickly see
 what is happening. Now let's add the test for when the password is less than three characters, which
 should see `$scope.strength` set to "weak":
+
 
 ```js
 describe('PasswordController', function() {
@@ -227,6 +233,7 @@ Now we have two tests, but notice the duplication between the tests. Both have t
 create the `$scope` variable and create the controller. As we add new tests, this duplication is
 only going to get worse. Thankfully, Jasmine provides `beforeEach`, which lets us run a function
 before each individual test. Let's see how that would tidy up our tests:
+
 
 ```js
 describe('PasswordController', function() {
@@ -276,6 +283,7 @@ Filters are functions which transform the data into a user readable
 format. They are important because they remove the formatting responsibility from the application
 logic, further simplifying the application logic.
 
+
 ```js
 myModule.filter('length', function() {
   return function(text) {
@@ -313,11 +321,13 @@ you create with directives may be used throughout your application and in many d
 
 Let's start with an angular app with no dependencies.
 
+
 ```js
 var app = angular.module('myApp', []);
 ```
 
 Now we can add a directive to our app.
+
 
 ```js
 app.directive('aGreatEye', function () {
@@ -332,6 +342,7 @@ app.directive('aGreatEye', function () {
 This directive is used as a tag `<a-great-eye></a-great-eye>`. It replaces the entire tag with the
 template `<h1>lidless, wreathed in flame, {{1 + 1}} times</h1>`. Now we are going to write a jasmine unit test to
 verify this functionality. Note that the expression `{{1 + 1}}` times will also be evaluated in the rendered content.
+
 
 ```js
 describe('Unit testing great quotes', function() {

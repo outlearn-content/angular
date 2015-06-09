@@ -54,6 +54,7 @@ is registered.
 The following example demonstrates creating a `GreetingController`, which attaches a `greeting`
 property containing the string `'Hola!'` to the `$scope`:
 
+
 ```js
 var myApp = angular.module('myApp',[]);
 
@@ -73,6 +74,7 @@ constructor function out of the global scope.
 We attach our controller to the DOM using the `ng-controller` directive. The `greeting` property can
 now be data-bound to the template:
 
+
 ```js
 <div ng-controller="GreetingController">
   {{ greeting }}
@@ -91,6 +93,7 @@ then available to be called from the template/view.
 
 The following example uses a Controller to add a method, which doubles a number, to the scope:
 
+
 ```js
 var myApp = angular.module('myApp',[]);
 
@@ -101,6 +104,7 @@ myApp.controller('DoubleController', ['$scope', function($scope) {
 
 Once the Controller has been attached to the DOM, the `double` method can be invoked in an Angular
 expression in the template:
+
 
 ```js
 <div ng-controller="DoubleController">
@@ -318,6 +322,7 @@ Although there are many ways to test a Controller, one of the best conventions, 
 involves injecting the $rootScope and $controller:
 
 **Controller Definition:**
+
 ```js
     var myApp = angular.module('myApp',[]);
 
@@ -330,6 +335,7 @@ involves injecting the $rootScope and $controller:
 ```
 
 **Controller Test:**
+
 ```js
 describe('myController function', function() {
 
@@ -357,6 +363,7 @@ describe('myController function', function() {
 
 If you need to test a nested Controller you need to create the same scope hierarchy
 in your test that exists in the DOM:
+
 
 ```js
 describe('state', function() {
