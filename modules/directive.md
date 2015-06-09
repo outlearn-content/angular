@@ -2,7 +2,7 @@
 {
 "name" : "directive",
 "version" : "0.1",
-"title" : "Scopes",
+"title" : "Directives",
 "description" : "When should you create your own directives in your AngularJS app, and how to implement them.",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,

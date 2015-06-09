@@ -32,7 +32,7 @@ Do not use controllers to:
 
 - Manipulate DOM — Controllers should contain only business logic.
   Putting any presentation logic into Controllers significantly affects its testability. Angular
-  has [databinding](https://pilot.outlearn.com/learn/ShieldSensei/angular/4) for most cases and [directives](https://docs.angularjs.org/guide/directive) to
+  has [databinding](https://pilot.outlearn.com/learn/ShieldSensei/angular/4) for most cases and [directives](https://pilot.outlearn.com/learn/ShieldSensei/angular/13) to
   encapsulate manual DOM manipulation.
 - Format input — Use [angular form controls](https://pilot.outlearn.com/learn/ShieldSensei/angular/12) instead.
 - Filter output — Use [angular filters](https://pilot.outlearn.com/learn/ShieldSensei/angular/11) instead.
