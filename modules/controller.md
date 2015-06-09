@@ -18,7 +18,7 @@
 In Angular, a Controller is a JavaScript **constructor function** that is used to augment the
 Angular Scope.
 
-When a Controller is attached to the DOM via the ng-controller
+When a Controller is attached to the DOM via the [ng-controller](https://docs.angularjs.org/api/ng/directive/ngController)
 directive, Angular will instantiate a new Controller object, using the specified Controller's
 **constructor function**. A new **child scope** will be available as an injectable parameter to the
 Controller's constructor function as `$scope`.
@@ -32,12 +32,12 @@ Do not use controllers to:
 
 - Manipulate DOM — Controllers should contain only business logic.
   Putting any presentation logic into Controllers significantly affects its testability. Angular
-  has databinding for most cases and directives to
+  has [databinding](https://pilot.outlearn.com/learn/ShieldSensei/angular/4) for most cases and [directives](https://docs.angularjs.org/guide/directive) to
   encapsulate manual DOM manipulation.
-- Format input — Use angular form controls instead.
-- Filter output — Use angular filters instead.
-- Share code or state across controllers — Use angular
-services instead.
+- Format input — Use [angular form controls](https://pilot.outlearn.com/learn/ShieldSensei/angular/12) instead.
+- Filter output — Use [angular filters](https://pilot.outlearn.com/learn/ShieldSensei/angular/11) instead.
+- Share code or state across controllers — Use [angular
+services](https://pilot.outlearn.com/learn/ShieldSensei/angular/6) instead.
 - Manage the life-cycle of other components (for example, to create service instances).
 
 
@@ -69,7 +69,7 @@ constructor function out of the global scope.
 
 > We have used an **inline injection annotation** to explicitly specify the dependency
 >of the Controller on the `$scope` service provided by Angular. See the guide on
->Dependency Injection for more information.
+>[Dependency Injection](https://pilot.outlearn.com/learn/ShieldSensei/angular/8) for more information.
 
 We attach our controller to the DOM using the `ng-controller` directive. The `greeting` property can
 now be data-bound to the template:
@@ -112,7 +112,7 @@ expression in the template:
 </div>
 ```
 
-As discussed in the Concepts section of this guide, any
+As discussed in the [Concepts](https://pilot.outlearn.com/learn/ShieldSensei/angular/3) section of this guide, any
 objects (or primitives) assigned to the scope become model properties. Any methods assigned to
 the scope are available in the template/view, and can be invoked via angular expressions
 and `ng` event handler directives (e.g. ngClick).
@@ -127,7 +127,8 @@ needed for a single view.
 
 The most common way to keep Controllers slim is by encapsulating work that doesn't belong to
 controllers into services and then using these services in Controllers via dependency injection.
-This is discussed in the Dependency Injection Services sections of this guide.
+This is discussed in the [Dependency Injection](https://pilot.outlearn.com/learn/ShieldSensei/angular/8) and
+[Services](https://pilot.outlearn.com/learn/ShieldSensei/angular/6) sections of this guide.
 
 
 
