@@ -798,8 +798,7 @@ Crawlable](http://code.google.com/web/ajaxcrawling/docs/specification.html).
 
 # Testing with the $location service
 
-When using `$location` service during testing, you are outside of the angular's {@link
-ng.$rootScope.Scope scope} life-cycle. This means it's your responsibility to call `scope.$apply()`.
+When using `$location` service during testing, you are outside of the angular's scope life-cycle. This means it's your responsibility to call `scope.$apply()`.
 
 ```js
 describe('serviceUnderTest', function() {

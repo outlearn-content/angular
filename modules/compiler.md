@@ -77,8 +77,7 @@ cloned template only needs to be compiled once, and then linked once for each cl
 
 A directive is a behavior which should be triggered when specific HTML constructs are encountered
 during the compilation process. The directives can be placed in element names, attributes, class
-names, as well as comments. Here are some equivalent examples of invoking the {@link
-ng.directive:ngBind `ng-bind`} directive.
+names, as well as comments. Here are some equivalent examples of invoking the `ng-bind` directive.
 
 ```html
   <span ng-bind="exp"></span>
@@ -87,8 +86,7 @@ ng.directive:ngBind `ng-bind`} directive.
   <!-- directive: ng-bind exp -->
 ```
 
-A directive is just a function which executes when the compiler encounters it in the DOM. See {@link
-ng.$compileProvider#directive directive API} for in-depth documentation on how
+A directive is just a function which executes when the compiler encounters it in the DOM. See directive API for in-depth documentation on how
 to write directives.
 
 Here is a directive which makes any element draggable. Notice the `draggable` attribute on the

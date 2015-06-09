@@ -653,8 +653,7 @@ that you explicitly pass in.
 
 <div class="alert alert-warning">
 **Note:** Normally, a scope prototypically inherits from its parent. An isolated scope does not.
-See the {@link $compile#directive-definition-object
-"Directive Definition Object - scope"} section for more information about isolate scopes.
+See the "Directive Definition Object - scope" section for more information about isolate scopes.
 </div>
 
 <div class="alert alert-success">

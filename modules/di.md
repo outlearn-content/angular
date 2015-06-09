@@ -284,8 +284,7 @@ code that constructs `SomeClass`.
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-module-injector.png">
 
-To manage the responsibility of dependency creation, each Angular application has an {@link
-angular.injector injector}. The injector is a
+To manage the responsibility of dependency creation, each Angular application has an injector. The injector is a
 [service locator](http://en.wikipedia.org/wiki/Service_locator_pattern) that is responsible for
 construction and lookup of dependencies.
 

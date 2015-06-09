@@ -198,8 +198,7 @@ This technique is often used in unit tests to mock out a service's dependencies.
 
 ## Unit Testing
 
-The following is a unit test for the `notify` service from the {@link services#creating-services
-Creating Angular Services} example above. The unit test example uses a Jasmine spy (mock) instead
+The following is a unit test for the `notify` service from the Creating Angular Services example above. The unit test example uses a Jasmine spy (mock) instead
 of a real browser alert.
 
 ```js

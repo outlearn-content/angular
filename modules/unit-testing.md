@@ -158,8 +158,7 @@ angular.module('app', [])
   });
 ```
 
-Because controllers are not available on the global scope, we need to use {@link
-angular.mock.inject} to inject our controller first. The first step is to use the `module` function,
+Because controllers are not available on the global scope, we need to use to inject our controller first. The first step is to use the `module` function,
 which is provided by angular-mocks. This loads in the module it's given, so it is available in your
 tests. We pass this into `beforeEach`, which is a function Jasmine provides that lets us run code
 before each test. Then we can use `inject` to access `$controller`, the service that is responsible
@@ -174,7 +173,7 @@ describe('PasswordController', function() {
   beforeEach(inject(function(_$controller_){
     // The injector unwraps the underscores (_) from around the parameter names when matching
     $controller = _$controller_;
-  }));
+  ));
 
   describe('$scope.grade', function() {
     it('sets the strength to "strong" if the password length is >8 chars', function() {

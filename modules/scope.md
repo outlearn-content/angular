@@ -35,9 +35,8 @@ watch expressions and propagate events.
   - Scopes can be nested to limit access to the properties of application components while providing
     access to shared model properties. Nested scopes are either "child scopes" or "isolate scopes".
     A "child scope" (prototypically) inherits properties from its parent scope. An "isolate scope"
-    does not. See {@link
-    guide/directive#isolating-the-scope-of-a-directive isolated
-    scopes} for more information.
+    does not. See isolated
+    scopes for more information.
 
   - Scopes provide context against which expressions are evaluated. For
     example `{{username}}` expression is meaningless, unless it is evaluated against a specific
@@ -48,8 +47,7 @@ watch expressions and propagate events.
 
 ## Scope as Data-Model
 
-Scope is the glue between application controller and the view. During the template {@link compiler
-linking} phase the directives set up
+Scope is the glue between application controller and the view. During the template linking phase the directives set up
 `$watch` expressions on the scope. The
 `$watch` allows the directives to be notified of property changes, which allows the directive to
 render the updated value to the DOM.
@@ -229,9 +227,7 @@ To examine the scope in the debugger:
 
 ## Scope Events Propagation
 
-Scopes can propagate events in similar fashion to DOM events. The event can be {@link
-ng.$rootScope.Scope#$broadcast broadcasted} to the scope children or {@link
-ng.$rootScope.Scope#$emit emitted} to scope parents.
+Scopes can propagate events in similar fashion to DOM events. The event can be broadcasted to the scope children or emitted to scope parents.
 
   
 _Example file_: `script.js`
@@ -282,15 +278,12 @@ more events.
 
 When the browser calls into JavaScript the code executes outside the Angular execution context,
 which means that Angular is unaware of model modifications. To properly process model
-modifications the execution has to enter the Angular execution context using the {@link
-ng.$rootScope.Scope#$apply `$apply`} method. Only model modifications which
+modifications the execution has to enter the Angular execution context using the `$apply` method. Only model modifications which
 execute inside the `$apply` method will be properly accounted for by Angular. For example if a
-directive listens on DOM events, such as {@link
-ng.directive:ngClick `ng-click`} it must evaluate the
+directive listens on DOM events, such as `ng-click` it must evaluate the
 expression inside the `$apply` method.
 
-After evaluating the expression, the `$apply` method performs a {@link
-ng.$rootScope.Scope#$digest `$digest`}. In the $digest phase the scope examines all
+After evaluating the expression, the `$apply` method performs a `$digest`. In the $digest phase the scope examines all
 of the `$watch` expressions and compares them with the previous value. This dirty checking is done
 asynchronously. This means that assignment such as `$scope.username="angular"` will not
 immediately cause a `$watch` to be notified, instead the `$watch` notification is delayed until
@@ -307,22 +300,19 @@ the `$digest` phase. This delay is desirable, since it coalesces multiple model 
 
   2. **Watcher registration**
 
-     During template linking directives register {@link
-     ng.$rootScope.Scope#$watch watches} on the scope. These watches will be
+     During template linking directives register watches on the scope. These watches will be
      used to propagate model values to the DOM.
 
   3. **Model mutation**
 
-     For mutations to be properly observed, you should make them only within the {@link
-     ng.$rootScope.Scope#$apply scope.$apply()}. Angular APIs do this
+     For mutations to be properly observed, you should make them only within the scope.$apply(). Angular APIs do this
      implicitly, so no extra `$apply` call is needed when doing synchronous work in controllers,
      or asynchronous work with $http, $timeout
      or $interval services.
 
   4. **Mutation observation**
 
-     At the end of `$apply`, Angular performs a {@link ng.$rootScope.Scope#$digest
-     $digest} cycle on the root scope, which then propagates throughout all child scopes. During
+     At the end of `$apply`, Angular performs a $digest cycle on the root scope, which then propagates throughout all child scopes. During
      the `$digest` cycle, all `$watch`ed expressions or functions are checked for model mutation
      and if a mutation is detected, the `$watch` listener is called.
 
@@ -336,42 +326,32 @@ the `$digest` phase. This delay is desirable, since it coalesces multiple model 
 
 ### Scopes and Directives
 
-During the compilation phase, the compiler matches {@link
-ng.$compileProvider#directive directives} against the DOM template. The directives
+During the compilation phase, the compiler matches directives against the DOM template. The directives
 usually fall into one of two categories:
 
   - Observing directives, such as
-    double-curly expressions `{{expression}}`, register listeners using the {@link
-    ng.$rootScope.Scope#$watch $watch()} method. This type of directive needs
+    double-curly expressions `{{expression}}`, register listeners using the $watch() method. This type of directive needs
     to be notified whenever the expression changes so that it can update the view.
 
-  - Listener directives, such as {@link ng.directive:ngClick
-    ng-click}, register a listener with the DOM. When the DOM listener fires, the directive
-    executes the associated expression and updates the view using the {@link
-    ng.$rootScope.Scope#$apply $apply()} method.
+  - Listener directives, such as ng-click, register a listener with the DOM. When the DOM listener fires, the directive
+    executes the associated expression and updates the view using the $apply() method.
 
-When an external event (such as a user action, timer or XHR) is received, the associated {@link
-expression expression} must be applied to the scope through the {@link
-ng.$rootScope.Scope#$apply $apply()} method so that all listeners are updated
+When an external event (such as a user action, timer or XHR) is received, the associated expression must be applied to the scope through the $apply() method so that all listeners are updated
 correctly.
 
 ### Directives that Create Scopes
 
 In most cases, directives and scopes interact
-but do not create new instances of scope. However, some directives, such as {@link
-ng.directive:ngController ng-controller} and {@link
-ng.directive:ngRepeat ng-repeat}, create new child scopes
+but do not create new instances of scope. However, some directives, such as ng-controller and ng-repeat, create new child scopes
 and attach the child scope to the corresponding DOM element. You can retrieve a scope for any DOM
 element by using an `angular.element(aDomElement).scope()` method call.
-See the {@link guide/directive#isolating-the-scope-of-a-directive
-directives guide} for more information about isolate scopes.
+See the directives guide for more information about isolate scopes.
 
 ### Controllers and Scopes
 
 Scopes and controllers interact with each other in the following situations:
 
-   - Controllers use scopes to expose controller methods to templates (see {@link
-     ng.directive:ngController ng-controller}).
+   - Controllers use scopes to expose controller methods to templates (see ng-controller).
 
    - Controllers define methods (behavior) that can mutate the model (properties on the scope).
 
@@ -394,12 +374,9 @@ access on JavaScript object.
 
 Dirty checking can be done with three strategies: By reference, by collection contents, and by value. The strategies differ in the kinds of changes they detect, and in their performance characteristics.
 
-   - Watching *by reference* ({@link
-      ng.$rootScope.Scope#$watch scope.$watch} `(watchExpression, listener)`) detects a change when the whole value returned by the watch expression switches to a new value. If the value is an array or an object, changes inside it are not detected. This is the most efficient strategy.
-   - Watching *collection contents* ({@link
-      ng.$rootScope.Scope#$watchCollection scope.$watchCollection} `(watchExpression, listener)`) detects changes that occur inside an array or an object: When items are added, removed, or reordered. The detection is shallow - it does not reach into nested collections. Watching collection contents is more expensive than watching by reference, because copies of the collection contents need to be maintained. However, the strategy attempts to minimize the amount of copying required.
-   - Watching *by value* ({@link
-      ng.$rootScope.Scope#$watch scope.$watch} `(watchExpression, listener, true)`) detects any change in an arbitrarily nested data structure. It is the most powerful change detection strategy, but also the most expensive. A full traversal of the nested data structure is needed on each digest, and a full copy of it needs to be held in memory.
+   - Watching *by reference* (scope.$watch `(watchExpression, listener)`) detects a change when the whole value returned by the watch expression switches to a new value. If the value is an array or an object, changes inside it are not detected. This is the most efficient strategy.
+   - Watching *collection contents* (scope.$watchCollection `(watchExpression, listener)`) detects changes that occur inside an array or an object: When items are added, removed, or reordered. The detection is shallow - it does not reach into nested collections. Watching collection contents is more expensive than watching by reference, because copies of the collection contents need to be maintained. However, the strategy attempts to minimize the amount of copying required.
+   - Watching *by value* (scope.$watch `(watchExpression, listener, true)`) detects any change in an arbitrarily nested data structure. It is the most powerful change detection strategy, but also the most expensive. A full traversal of the nested data structure is needed on each digest, and a full copy of it needs to be held in memory.
 
 
 <!-- @section -->
@@ -424,18 +401,12 @@ mind that in most places (controllers, services) $apply has already been called 
 directive which is handling the event. An explicit call to $apply is needed only when
 implementing custom event callbacks, or when working with third-party library callbacks.
 
-  1. Enter the Angular execution context by calling scope`.`{@link
-     ng.$rootScope.Scope#$apply $apply}`(stimulusFn)`, where `stimulusFn` is
+  1. Enter the Angular execution context by calling scope`.`$apply`(stimulusFn)`, where `stimulusFn` is
      the work you wish to do in the Angular execution context.
   2. Angular executes the `stimulusFn()`, which typically modifies application state.
   3. Angular enters the $digest loop. The
-     loop is made up of two smaller loops which process {@link
-     ng.$rootScope.Scope#$evalAsync $evalAsync} queue and the {@link
-     ng.$rootScope.Scope#$watch $watch} list. The {@link
-     ng.$rootScope.Scope#$digest $digest} loop keeps iterating until the model
-     stabilizes, which means that the {@link ng.$rootScope.Scope#$evalAsync
-     $evalAsync} queue is empty and the {@link ng.$rootScope.Scope#$watch
-     $watch} list does not detect any changes.
+     loop is made up of two smaller loops which process $evalAsync queue and the $watch list. The $digest loop keeps iterating until the model
+     stabilizes, which means that the $evalAsync queue is empty and the $watch list does not detect any changes.
   4. The $evalAsync queue is used to
      schedule work which needs to occur outside of current stack frame, but before the browser's
      view render. This is usually done with `setTimeout(0)`, but the `setTimeout(0)` approach
@@ -453,17 +424,14 @@ Here is the explanation of how the `Hello world` example achieves the data-bindi
 user enters text into the text field.
 
   1. During the compilation phase:
-     1. the ng-model and {@link
-        ng.directive:input input} {@link guide/directive
-        directive} set up a `keydown` listener on the `<input>` control.
+     1. the ng-model and input directive set up a `keydown` listener on the `<input>` control.
      2. the interpolation
         sets up a $watch to be notified of
         `name` changes.
   2. During the runtime phase:
      1. Pressing an '`X`' key causes the browser to emit a `keydown` event on the input control.
      2. The input directive
-        captures the change to the input's value and calls {@link
-        ng.$rootScope.Scope#$apply $apply}`("name = 'X';")` to update the
+        captures the change to the input's value and calls $apply`("name = 'X';")` to update the
         application model inside the Angular execution context.
      3. Angular applies the `name = 'X';` to the model.
      4. The $digest loop begins

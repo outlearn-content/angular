@@ -123,8 +123,7 @@ needed for a single view.
 
 The most common way to keep Controllers slim is by encapsulating work that doesn't belong to
 controllers into services and then using these services in Controllers via dependency injection.
-This is discussed in the Dependency Injection {@link services
-Services} sections of this guide.
+This is discussed in the Dependency Injection Services sections of this guide.
 
 
 
