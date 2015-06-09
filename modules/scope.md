@@ -35,8 +35,8 @@ watch expressions and propagate events.
   - Scopes can be nested to limit access to the properties of application components while providing
     access to shared model properties. Nested scopes are either "child scopes" or "isolate scopes".
     A "child scope" (prototypically) inherits properties from its parent scope. An "isolate scope"
-    does not. See isolated
-    scopes for more information.
+    does not. See [isolated
+    scopes](https://pilot.outlearn.com/learn/ShieldSensei/angular/13) for more information.
 
   - Scopes provide context against which expressions are evaluated. For
     example `{{username}}` expression is meaningless, unless it is evaluated against a specific

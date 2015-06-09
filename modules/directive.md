@@ -16,8 +16,8 @@
 # Creating Custom Directives
 
 > **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
->If you're just getting started, we recommend the tutorial first.
->If you're looking for the **directives API**, we recently moved it to `$compile`.
+>If you're just getting started, we recommend the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) first.
+>If you're looking for the **directives API**, we recently moved it to [`$compile`](https://docs.angularjs.org/api/ng/service/$compile).
 
 
 This document explains when you'd want to create your own directives in your AngularJS app, and
@@ -1168,4 +1168,3 @@ available in the compiler guide.
 
 The `$compile` API page has a comprehensive list of directive options for
 reference.
-

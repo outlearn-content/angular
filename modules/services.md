@@ -126,7 +126,7 @@ will create this instance when called.
 Services can have their own dependencies. Just like declaring dependencies in a controller, you
 declare dependencies by specifying them in the service's factory function signature.
 
-For more on dependencies, see the dependency injection docs.
+For more on dependencies, see the [dependency injection](https://pilot.outlearn.com/learn/ShieldSensei/angular/8) docs.
 
 The example module below has two services, each with various dependencies:
 
