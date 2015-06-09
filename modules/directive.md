@@ -106,12 +106,16 @@ angular.module('docsBindExample', [])
   ]);
 ```
 
-  <file name="protractor.js" type="protractor">
-    it('should show off bindings', function() {
-      expect(element(by.css('div[ng-controller="Controller"] span[ng-bind]')).getText())
-          .toBe('Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)');
-    });
-  </file>
+  
+_Example file_: `protractor.js`
+
+```javascript
+it('should show off bindings', function() {
+  expect(element(by.css('div[ng-controller="Controller"] span[ng-bind]')).getText())
+      .toBe('Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)');
+});
+```
+
 
 <div class="alert alert-success">
 **Best Practice:** Prefer using the dash-delimited format (e.g. `ng-bind` for `ngBind`).

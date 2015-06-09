@@ -71,11 +71,15 @@ _Example file_: `index.html`
 ```
 
 
-  <file name="protractor.js" type="protractor">
-    it('should calculate expression in binding', function() {
-      expect(element(by.binding('1+2')).getText()).toEqual('1+2=3');
-    });
-  </file>
+  
+_Example file_: `protractor.js`
+
+```javascript
+it('should calculate expression in binding', function() {
+  expect(element(by.binding('1+2')).getText()).toEqual('1+2=3');
+});
+```
+
 
 You can try evaluating different expressions here:
 
@@ -116,14 +120,18 @@ angular.module('expressionExample', [])
 ```
 
 
-  <file name="protractor.js" type="protractor">
-    it('should allow user expression testing', function() {
-      element(by.css('.expressions button')).click();
-      var lis = element(by.css('.expressions ul')).all(by.repeater('expr in exprs'));
-      expect(lis.count()).toBe(1);
-      expect(lis.get(0).getText()).toEqual('[ X ] 3*10|currency => $30.00');
-    });
-  </file>
+  
+_Example file_: `protractor.js`
+
+```javascript
+it('should allow user expression testing', function() {
+  element(by.css('.expressions button')).click();
+  var lis = element(by.css('.expressions ul')).all(by.repeater('expr in exprs'));
+  expect(lis.count()).toBe(1);
+  expect(lis.get(0).getText()).toEqual('[ X ] 3*10|currency => $30.00');
+});
+```
+
 
 
 
@@ -167,21 +175,25 @@ angular.module('expressionExample', [])
 ```
 
 
-  <file name="protractor.js" type="protractor">
-    it('should calculate expression in binding', function() {
-      if (browser.params.browser == 'safari') {
-        // Safari can't handle dialogs.
-        return;
-      }
-      element(by.css('[ng-click="greet()"]')).click();
+  
+_Example file_: `protractor.js`
 
-      var alertDialog = browser.switchTo().alert();
+```javascript
+it('should calculate expression in binding', function() {
+  if (browser.params.browser == 'safari') {
+    // Safari can't handle dialogs.
+    return;
+  }
+  element(by.css('[ng-click="greet()"]')).click();
 
-      expect(alertDialog.getText()).toEqual('Hello World');
+  var alertDialog = browser.switchTo().alert();
 
-      alertDialog.accept();
-    });
-  </file>
+  expect(alertDialog.getText()).toEqual('Hello World');
+
+  alertDialog.accept();
+});
+```
+
 
 
 <!-- @section -->
@@ -312,29 +324,33 @@ angular.module('oneTimeBidingExampleApp', []).
   }]);
 ```
 
-  <file name="protractor.js" type="protractor">
-    it('should freeze binding after its value has stabilized', function() {
-      var oneTimeBiding = element(by.id('one-time-binding-example'));
-      var normalBinding = element(by.id('normal-binding-example'));
+  
+_Example file_: `protractor.js`
 
-      expect(oneTimeBiding.getText()).toEqual('One time binding:');
-      expect(normalBinding.getText()).toEqual('Normal binding:');
-      element(by.buttonText('Click Me')).click();
+```javascript
+it('should freeze binding after its value has stabilized', function() {
+  var oneTimeBiding = element(by.id('one-time-binding-example'));
+  var normalBinding = element(by.id('normal-binding-example'));
 
-      expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
-      expect(normalBinding.getText()).toEqual('Normal binding: Igor');
-      element(by.buttonText('Click Me')).click();
+  expect(oneTimeBiding.getText()).toEqual('One time binding:');
+  expect(normalBinding.getText()).toEqual('Normal binding:');
+  element(by.buttonText('Click Me')).click();
 
-      expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
-      expect(normalBinding.getText()).toEqual('Normal binding: Misko');
+  expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
+  expect(normalBinding.getText()).toEqual('Normal binding: Igor');
+  element(by.buttonText('Click Me')).click();
 
-      element(by.buttonText('Click Me')).click();
-      element(by.buttonText('Click Me')).click();
+  expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
+  expect(normalBinding.getText()).toEqual('Normal binding: Misko');
 
-      expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
-      expect(normalBinding.getText()).toEqual('Normal binding: Lucas');
-    });
-  </file>
+  element(by.buttonText('Click Me')).click();
+  element(by.buttonText('Click Me')).click();
+
+  expect(oneTimeBiding.getText()).toEqual('One time binding: Igor');
+  expect(normalBinding.getText()).toEqual('Normal binding: Lucas');
+});
+```
+
 
 
 ### Why this feature

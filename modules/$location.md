@@ -527,52 +527,56 @@ angular.module('address-bar', [])
 ```
 
 
-  <file name="protractor.js" type="protractor">
+  
+_Example file_: `protractor.js`
 
-    var addressBar = element(by.css("#addressBar")),
-        url = 'http://www.example.com/base/path?a=b#h';
+```javascript
 
-
-    it("should show fake browser info on load", function(){
-      expect(addressBar.getAttribute('value')).toBe(url);
-
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/path');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('h');
-
-    });
-
-    it("should change $location accordingly", function(){
-      var navigation = element.all(by.css("#navigation a"));
-
-      navigation.get(0).click();
-
-      expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/first?a=b");
-
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/first');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('');
+var addressBar = element(by.css("#addressBar")),
+    url = 'http://www.example.com/base/path?a=b#h';
 
 
-      navigation.get(1).click();
+it("should show fake browser info on load", function(){
+  expect(addressBar.getAttribute('value')).toBe(url);
 
-      expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/sec/ond?flag#hash");
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/path');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('h');
 
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/sec/ond');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"flag":true}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('hash');
-    });
+});
 
-  </file>
+it("should change $location accordingly", function(){
+  var navigation = element.all(by.css("#navigation a"));
+
+  navigation.get(0).click();
+
+  expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/first?a=b");
+
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/first');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('');
+
+
+  navigation.get(1).click();
+
+  expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/sec/ond?flag#hash");
+
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/sec/ond');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"flag":true}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('hash');
+});
+
+```
+
 
 
 ####Browser in HTML5 Fallback mode (Hashbang mode)
@@ -694,51 +698,55 @@ angular.module('address-bar', [])
 ```
 
 
-  <file name="protractor.js" type="protractor">
+  
+_Example file_: `protractor.js`
 
-    var addressBar = element(by.css("#addressBar")),
-         url = 'http://www.example.com/base/index.html#!/path?a=b#h';
+```javascript
 
-    it("should show fake browser info on load", function(){
-      expect(addressBar.getAttribute('value')).toBe(url);
+var addressBar = element(by.css("#addressBar")),
+     url = 'http://www.example.com/base/index.html#!/path?a=b#h';
 
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/path');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('h');
+it("should show fake browser info on load", function(){
+  expect(addressBar.getAttribute('value')).toBe(url);
 
-    });
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/path');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('h');
 
-    it("should change $location accordingly", function(){
-      var navigation = element.all(by.css("#navigation a"));
+});
 
-      navigation.get(0).click();
+it("should change $location accordingly", function(){
+  var navigation = element.all(by.css("#navigation a"));
 
-      expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/index.html#!/first?a=b");
+  navigation.get(0).click();
 
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/first');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('');
+  expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/index.html#!/first?a=b");
+
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/first');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"a":"b"}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('');
 
 
-      navigation.get(1).click();
+  navigation.get(1).click();
 
-      expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/index.html#!/sec/ond?flag#hash");
+  expect(addressBar.getAttribute('value')).toBe("http://www.example.com/base/index.html#!/sec/ond?flag#hash");
 
-      expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
-      expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
-      expect(element(by.binding('$location.port()')).getText()).toBe('80');
-      expect(element(by.binding('$location.path()')).getText()).toBe('/sec/ond');
-      expect(element(by.binding('$location.search()')).getText()).toBe('{"flag":true}');
-      expect(element(by.binding('$location.hash()')).getText()).toBe('hash');
+  expect(element(by.binding('$location.protocol()')).getText()).toBe('http');
+  expect(element(by.binding('$location.host()')).getText()).toBe('www.example.com');
+  expect(element(by.binding('$location.port()')).getText()).toBe('80');
+  expect(element(by.binding('$location.path()')).getText()).toBe('/sec/ond');
+  expect(element(by.binding('$location.search()')).getText()).toBe('{"flag":true}');
+  expect(element(by.binding('$location.hash()')).getText()).toBe('hash');
 
-    });
-  </file>
+});
+```
+
 
 
 

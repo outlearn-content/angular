@@ -78,12 +78,16 @@ angular.
 ```
 
 
-  <file name="protractor.js" type="protractor">
-    it('should test service', function() {
-      expect(element(by.id('simple')).element(by.model('message')).getAttribute('value'))
-          .toEqual('test');
-    });
-  </file>
+  
+_Example file_: `protractor.js`
+
+```javascript
+it('should test service', function() {
+  expect(element(by.id('simple')).element(by.model('message')).getAttribute('value'))
+      .toEqual('test');
+});
+```
+
 
 
 
