@@ -258,12 +258,12 @@ it('should clear messages after alert', function() {
 
 ## Related Topics
 
-* Dependency Injection in AngularJS
+* [Dependency Injection in AngularJS](https://pilot.outlearn.com/learn/supermegacorp/angular/8)
 
 
 <!-- @section -->
 
 ## Related API
 
-* Angular Service API
-* Injector API
+* [Angular Service API](https://docs.angularjs.org/api/ng/service)
+* [Injector API](https://docs.angularjs.org/api/ng/function/angular.injector)

@@ -45,7 +45,7 @@ components as dependencies. Note that you cannot inject "providers" into `run` b
 components as dependencies. Note that you cannot inject "service" or "value" components into
 configuration.
 
-See Modules for more details about `run` and `config`
+See [Modules](https://docs.angularjs.org/guide/module#module-loading-dependencies) for more details about `run` and `config`
 blocks.
 
 

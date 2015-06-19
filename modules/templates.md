@@ -10,6 +10,11 @@
 }
 -->
 
+
+<!-- @section -->
+
+## Templates
+
 In Angular, templates are written with HTML that contains Angular-specific elements and attributes.
 Angular combines the template with information from the model and controller to render the dynamic
 view that a user sees in the browser.
@@ -46,7 +51,7 @@ in just one HTML file (usually `index.html`).
 In a more complex app, you can display multiple views within one main page using "partials" –
 segments of template located in separate HTML files. You can use the
 ngView directive to load partials based on configuration passed
-to the $route service. The angular tutorial shows this
+to the $route service. The [angular tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) shows this
 technique in steps seven and eight.
 
 
@@ -55,12 +60,12 @@ technique in steps seven and eight.
 
 ## Related Topics
 
-* Filters
-* Forms
+* [Filters](https://pilot.outlearn.com/learn/supermegacorp/angular/11)
+* [Forms](https://pilot.outlearn.com/learn/supermegacorp/angular/12)
 
 
 <!-- @section -->
 
 ## Related API
 
-* API Reference
+* [API Reference](https://docs.angularjs.org/api)

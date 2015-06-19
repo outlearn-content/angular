@@ -135,7 +135,7 @@ to test the behavior without being distracted by the rendering details.
 Each Angular application has exactly one root scope, but
 may have several child scopes.
 
-The application can have multiple scopes, because some directives create
+The application can have multiple scopes, because some [directives](https://pilot.outlearn.com/learn/supermegacorp/angular/13) create
 new child scopes (refer to directive documentation to see which directives create new scopes).
 When new scopes are created, they are added as children of their parent scope. This creates a tree
 structure which parallels the DOM where they're attached.
@@ -346,20 +346,21 @@ In most cases, directives and scopes interact
 but do not create new instances of scope. However, some directives, such as ng-controller and ng-repeat, create new child scopes
 and attach the child scope to the corresponding DOM element. You can retrieve a scope for any DOM
 element by using an `angular.element(aDomElement).scope()` method call.
-See the directives guide for more information about isolate scopes.
+See the
+[directives guide](https://pilot.outlearn.com/learn/supermegacorp/angular/13) for more information about isolate scopes.
 
 ### Controllers and Scopes
 
 Scopes and controllers interact with each other in the following situations:
 
-   - Controllers use scopes to expose controller methods to templates (see ng-controller).
+   - Controllers use scopes to expose controller methods to templates (see [ng-controller](https://docs.angularjs.org/api/ng/directive/ngController)).
 
    - Controllers define methods (behavior) that can mutate the model (properties on the scope).
 
    - Controllers may register watches on
      the model. These watches execute immediately after the controller behavior executes.
 
-See the ng-controller for more
+See the [ng-controller](https://docs.angularjs.org/api/ng/directive/ngController) for more
 information.
 
 
