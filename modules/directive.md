@@ -432,7 +432,7 @@ Name: {{customer.name}} Address: {{customer.address}}
 For more on the
 `restrict`
 property, see the
-API docs.
+[API docs](https://docs.angularjs.org/api/ng/service/$compile#directive-definition-object).
 
 > **When should I use an attribute versus an element?**
 >
@@ -1132,7 +1132,7 @@ Here we've seen the main use cases for directives. Each of these samples acts as
 point for creating your own directives.
 
 You might also be interested in an in-depth explanation of the compilation process that's
-available in the compiler guide.
+available in the [compiler guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/15).
 
 The `$compile` API page has a comprehensive list of directive options for
 reference.

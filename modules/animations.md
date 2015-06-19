@@ -66,7 +66,7 @@ _Example file_: `animations.css`
 
 ## Installation
 
-See the API docs for `ngAnimate` for instructions on installing the module.
+See the [API docs for `ngAnimate`](https://docs.angularjs.org/api/ngAnimate) for instructions on installing the module.
 
 You may also want to setup a separate CSS file for defining CSS-based animations.
 
@@ -288,7 +288,7 @@ The table below explains in detail which animation events are triggered
 | ngClass or &#123;&#123;class&#125;&#125;    | add and remove                           |
 | ngShow & ngHide                              | add and remove (the ng-hide class value) |
 
-For a full breakdown of the steps involved during each animation event, refer to the API docs.
+For a full breakdown of the steps involved during each animation event, refer to the [API docs](https://docs.angularjs.org/api/ng/service/$animate).
 
 
 <!-- @section -->
@@ -318,6 +318,6 @@ myModule.directive('my-directive', ['$animate', function($animate) {
 
 ## More about animations
 
-For a full breakdown of each method available on `$animate`, see the API documentation.
+For a full breakdown of each method available on `$animate`, see the [API docs](https://docs.angularjs.org/api/ng/service/$animate).
 
-To see a complete demo, see the animation step within the AngularJS phonecat tutorial.
+To see a complete demo, see the [animation step within the AngularJS phonecat tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial).
