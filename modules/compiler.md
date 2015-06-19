@@ -17,8 +17,8 @@
 
 > **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
 >
->If you're just getting started, we recommend the tutorial first.
->If you just want to create custom directives, we recommend the directives guide.
+>If you're just getting started, we recommend the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) first.
+>If you just want to create custom directives, we recommend the [directives guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/13).
 >If you want a deeper look into Angular's compilation process, you're in the right place.
 
 
@@ -86,7 +86,7 @@ names, as well as comments. Here are some equivalent examples of invoking the `n
   <!-- directive: ng-bind exp -->
 ```
 
-A directive is just a function which executes when the compiler encounters it in the DOM. See directive API for in-depth documentation on how
+A directive is just a function which executes when the compiler encounters it in the DOM. See [directive API](https://docs.angularjs.org/api/ng/provider/$compileProvider#directive) for in-depth documentation on how
 to write directives.
 
 Here is a directive which makes any element draggable. Notice the `draggable` attribute on the
@@ -194,16 +194,14 @@ HTML compilation happens in three phases:
 
   1. `$compile` traverses the DOM and matches directives.
 
-  If the compiler finds that an element matches a directive, then the directive is added to the list of
-  directives that match the DOM element. A single element may match multiple directives.
-
+    If the compiler finds that an element matches a directive, then the directive is added to the list of
+    directives that match the DOM element. A single element may match multiple directives.
   2. Once all directives matching a DOM element have been identified, the compiler sorts the directives
   by their `priority`.
 
-  Each directive's `compile` functions are executed. Each `compile` function has a chance to
-  modify the DOM. Each `compile` function returns a `link` function. These functions are composed into
-  a "combined" link function, which invokes each directive's returned `link` function.
-
+    Each directive's `compile` functions are executed. Each `compile` function has a chance to
+    modify the DOM. Each `compile` function returns a `link` function. These functions are composed into
+    a "combined" link function, which invokes each directive's returned `link` function.
   3. `$compile` links the template with the scope by calling the combined linking function from the previous step.
   This in turn will call the linking function of the individual directives, registering listeners on the elements
   and setting up `$watch`s with the `scope`
@@ -405,4 +403,3 @@ scope: {
 restrict: 'E',
 replace: true
 ```
-
