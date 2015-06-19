@@ -772,7 +772,8 @@ _Example file_: `index.html`
 _Example file_: `my-dialog.html`
 
 ```javascript
->
+<div class="alert" ng-transclude>
+</div>
 ```
 
 
@@ -816,7 +817,8 @@ _Example file_: `index.html`
 _Example file_: `my-dialog.html`
 
 ```javascript
->
+<div class="alert" ng-transclude>
+</div>
 ```
 
 
@@ -885,8 +887,9 @@ _Example file_: `index.html`
 _Example file_: `my-dialog-close.html`
 
 ```javascript
->   <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
->  <div ng-transclude
+<div class="alert">
+  <a href class="close" ng-click="close({message: 'closing for now'})">&times;</a>
+  <div ng-transclude></div>
 </div>
 ```
 
