@@ -403,13 +403,13 @@ To wrap it up, let's summarize the most important points:
   piece of code that needs global configuration.
 - All special purpose objects except for the Controller are defined via Factory recipes.
 
-Features / Recipe type | Factory | Service | Value | Constant | Provider
--- | -- | -- | -- | -- | --
-can have dependencies | yes | yes | no | no | yes
-uses type friendly injection | no | yes | yes* | yes* | no
-object available in config phase | no | no | no | yes | yes**
-can create functions | yes | yes | yes | yes | yes
-can create primitives | yes | no | yes | yes | yes
+|Features / Recipe type | Factory | Service | Value | Constant | Provider|
+|-- | -- | -- | -- | -- | --|
+|can have dependencies | yes | yes | no | no | yes|
+|uses type friendly injection | no | yes | yes* | yes* | no|
+|object available in config phase | no | no | no | yes | yes**|
+|can create functions | yes | yes | yes | yes | yes|
+|can create primitives | yes | no | yes | yes | yes|
 
 
 \* at the cost of eager initialization by using `new` operator directly
