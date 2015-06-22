@@ -113,7 +113,7 @@ The filter function should be a [pure function](http://en.wikipedia.org/wiki/Pur
 means that it should be stateless and idempotent. Angular relies on these properties and executes
 the filter only when the inputs to the function change.
 
-> **Note:** Filter names must be valid angular identifiers, such as `uppercase` or `orderBy`.
+> **Note:** Filter names must be valid angular expression identifiers, such as `uppercase` or `orderBy`.
 >Names with special characters, such as hyphens and dots, are not allowed.  If you wish to namespace
 >your filters, then you can use capitalization (`myappSubsectionFilterx`) or underscores
 >(`myapp_subsection_filterx`).
@@ -127,7 +127,7 @@ _Example file_: `index.html`
 ```javascript
 <div ng-controller="MyController">
   <input ng-model="greeting" type="text"><br>
-  No filter: {{greeting}<br>
+  No filter: {{greeting}}<br>
   Reverse: {{greeting|reverse}}<br>
   Reverse + uppercase: {{greeting|reverse:true}}<br>
 </div>

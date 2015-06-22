@@ -142,8 +142,8 @@ Here is an example of manually initializing Angular:
 ```
 
 Note that we provided the name of our application module to be loaded into the injector as the second
-parameter of the function. Notice that `angular.bootstrap` will not create modules
-on the fly. You must create any custom {@link guide/module modules before you pass them as a parameter.
+parameter of the angular.bootstrap function. Notice that `angular.bootstrap` will not create modules
+on the fly. You must create any custom modules before you pass them as a parameter.
 
 You should call `angular.bootstrap()` *after* you've loaded or defined your modules.
 You cannot add controllers, services, directives, etc after an application bootstraps.
@@ -155,7 +155,7 @@ This is the sequence that your code should follow:
   1. After the page and all of the code is loaded, find the root element of your AngularJS
   application, which is typically the root of the document.
 
-  2. Call to {@link compiler compile the element into an
+  2. Call angular.bootstrap to compile the element into an
   executable, bi-directionally bound application.
 
 
@@ -170,7 +170,7 @@ into the DI registry which can replace or augment DI services for
 the purpose of instrumentation or mocking out heavy dependencies.
 
 If `window.name` contains prefix `NG_DEFER_BOOTSTRAP!` when
-{@link angular.bootstrap} is called, the bootstrap process will be paused
+angular.bootstrap is called, the bootstrap process will be paused
 until `angular.resumeBootstrap()` is called.
 
 `angular.resumeBootstrap()` takes an optional array of modules that

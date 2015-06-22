@@ -80,7 +80,7 @@ The **normalization** process is as follows:
 1. Strip `x-` and `data-` from the front of the element/attributes.
 2. Convert the `:`, `-`, or `_`-delimited name to `camelCase`.
 
-For example, the following forms are all equivalent and match the directive:
+For example, the following forms are all equivalent and match the ngBind directive:
 
   
 _Example file_: `index.html`
@@ -103,7 +103,7 @@ _Example file_: `script.js`
 angular.module('docsBindExample', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name = 'Max Karl Ernst Ludwig Planck (April 23, 1858 – October 4, 1947)';
-  ]);
+  }]);
 ```
 
   
