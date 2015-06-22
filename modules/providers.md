@@ -403,63 +403,16 @@ To wrap it up, let's summarize the most important points:
   piece of code that needs global configuration.
 - All special purpose objects except for the Controller are defined via Factory recipes.
 
-<table class="table table-bordered code-table">
-<thead>
-<tr>
-  <th>Features / Recipe type</th>
-  <th>Factory</th>
-  <th>Service</th>
-  <th>Value</th>
-  <th>Constant</th>
-  <th>Provider</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>can have dependencies</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-  <td class="error">no</td>
-  <td class="error">no</td>
-  <td class="success">yes</td>
-</tr>
-<tr>
-  <td>uses type friendly injection</td>
-  <td class="error">no</td>
-  <td class="success">yes</td>
-  <td class="success">yes\*</td>
-  <td class="success">yes\*</td>
-  <td class="error">no</td>
-</tr>
-<tr>
-  <td>object available in config phase</td>
-  <td class="error">no</td>
-  <td class="error">no</td>
-  <td class="error">no</td>
-  <td class="success">yes</td>
-  <td class="success">yes\*\*</td>
-</tr>
-<tr>
-  <td>can create functions</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-</tr>
-<tr>
-  <td>can create primitives</td>
-  <td class="success">yes</td>
-  <td class="error">no</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-  <td class="success">yes</td>
-</tr>
-</tbody>
-</table>
+Features / Recipe type | Factory | Service | Value | Constant | Provider
+-- | -- | -- | -- | -- | --
+can have dependencies | yes | yes | no | no | yes
+uses type friendly injection | no | yes | yes* | yes* | no
+object available in config phase | no | no | no | yes | yes**
+can create functions | yes | yes | yes | yes | yes
+can create primitives | yes | no | yes | yes | yes
+
 
 \* at the cost of eager initialization by using `new` operator directly
 
 \*\* the service object is not available during the config phase, but the provider instance is
 (see the `unicornLauncherProvider` example above).
-
