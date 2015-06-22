@@ -92,4 +92,4 @@ angular.bootstrap(document, ['myApp'], {
 ```
 
 For more information, see the
-DI Guide.
+[DI Guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/8).
