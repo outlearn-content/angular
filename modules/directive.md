@@ -56,11 +56,13 @@ determines when to use a given directive.
 
 In the following example, we say that the `<input>` element **matches** the `ngModel` directive.
 
+
 ```html
 <input ng-model="foo">
 ```
 
 The following also **matches** `ngModel`:
+
 
 ```html
 <input data-ng-model="foo">
@@ -130,6 +132,7 @@ All of the Angular-provided directives match attribute name, tag name, comments,
 The following demonstrates the various ways a directive (`myDir` in this case) can be referenced
 from within a template:
 
+
 ```html
 <my-dir></my-dir>
 <span my-dir="exp"></span>
@@ -156,6 +159,7 @@ expressions. These expressions are registered as watches
 and will update as part of normal digest cycle. An
 example of interpolation is shown below:
 
+
 ```html
 <a ng-href="img/{{username}}.jpg">Hello {{username}}!</a>
 ```
@@ -166,6 +170,7 @@ example of interpolation is shown below:
 Web browsers are sometimes picky about what values they consider valid for attributes.
 
 For example, considering this template:
+
 
 ```html
 <svg>
@@ -188,6 +193,7 @@ results in `undefined`, the attribute is removed and not added to the element.
 
 For example, we could fix the example above by instead writing:
 
+
 ```html
 <svg>
   <circle ng-attr-cx="{{cx}}"></circle>
@@ -197,6 +203,7 @@ For example, we could fix the example above by instead writing:
 If one wants to modify a camelcased attribute (SVG elements have valid camelcased attributes), such as `viewBox` on the `svg` element, one can use underscores to denote that the attribute to bind to is naturally camelcased.
 
 For example, to bind to `viewBox`, we can write:
+
 
 ```html
 <svg ng-attr-view_box="{{viewBox}}">

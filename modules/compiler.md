@@ -79,6 +79,7 @@ A directive is a behavior which should be triggered when specific HTML construct
 during the compilation process. The directives can be placed in element names, attributes, class
 names, as well as comments. Here are some equivalent examples of invoking the `ng-bind` directive.
 
+
 ```html
   <span ng-bind="exp"></span>
   <span class="ng-bind: exp;"></span>
@@ -254,6 +255,7 @@ from the scope.
 
 To understand, let's look at a real-world example with `ngRepeat`:
 
+
 ```html
 Hello {{user.name}}, you have these actions:
 <ul>
@@ -318,6 +320,7 @@ One of the most common use cases for directives is to create reusable components
 
 Below is a pseudo code showing how a simplified dialog component may work.
 
+
 ```html
 <div>
   <button ng-click="show=true">show</button>
@@ -336,6 +339,7 @@ data bound to `username`, and it will also have a body which we would like to tr
 into the dialog.
 
 Here is an example of what the template definition for the `dialog` widget may look like.
+
 
 ```html
 <div ng-show="visible">

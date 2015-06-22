@@ -207,6 +207,7 @@ Because of these caveats, we recommend avoiding this style of annotation.
 
 You can add an `ng-strict-di` directive on the same element as `ng-app` to opt into strict DI mode:
 
+
 ```html
 <!doctype html>
 <html ng-app="myApp" ng-strict-di>
@@ -333,6 +334,7 @@ to be passed throughout the application. Passing the injector breaks the
 [Law of Demeter](http://en.wikipedia.org/wiki/Law_of_Demeter). To remedy this, we use a declarative
 notation in our HTML templates, to hand the responsibility of creating components over to the
 injector, as in this example:
+
 
 ```html
 <div ng-controller="MyController">

@@ -797,6 +797,7 @@ hashPrefix.
 To allow indexing of your AJAX application, you have to add special meta tag in the head section of
 your document:
 
+
 ```html
 <meta name="fragment" content="!" />
 ```

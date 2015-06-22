@@ -380,9 +380,7 @@ We inject the $compile service and $rootScope before each jasmine test. The $com
 to render the aGreatEye directive. After rendering the directive we ensure that the directive has
 replaced the content and "lidless, wreathed in flame, 2 times" is present.
 
-> **Underscore notation**:
->
->The use of the underscore notation (e.g.: `_$rootScope_`) is a convention wide spread in AngularJS
+> **Underscore notation**: The use of the underscore notation (e.g.: `_$rootScope_`) is a convention wide spread in AngularJS
 >community to keep the variable names clean in your tests. That's why the
 >$injector strips out the leading and the trailing underscores when
 >matching the parameters. The underscore rule applies ***only*** if the name starts **and** ends with
@@ -397,6 +395,7 @@ element, to which it can then insert the transcluded content into its template.
 
 
 Before compilation:
+
 ```html
 <div translude-directive>
   Some transcluded content
@@ -404,11 +403,13 @@ Before compilation:
 ```
 
 After transclusion extraction:
+
 ```html
 <div transclude-directive></div>
 ```
 
 After compilation:
+
 ```html
 <div transclude-directive>
   Some Template
@@ -421,6 +422,7 @@ directive's entire element from the DOM and replace it with a comment node. The 
 inserts the directive's template "after" this comment node, as a sibling.
 
 Before compilation
+
 ```html
 <div element-transclude>
   Some Content
@@ -428,11 +430,13 @@ Before compilation
 ```
 
 After transclusion extraction
+
 ```html
 <!-- elementTransclude -->
 ```
 
 After compilation:
+
 ```html
 <!-- elementTransclude -->
 <div element-transclude>

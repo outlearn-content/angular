@@ -28,6 +28,7 @@ This example shows the recommended path for integrating Angular with what we cal
 initialization.
 
 
+
 ```html
 <!doctype html>
 <html xmlns:ng="http://angularjs.org" ng-app>
@@ -78,6 +79,7 @@ If the `ng-app` directive is found then Angular will:
     portion of the DOM as an Angular application.
 
 
+
 ```html
 <!doctype html>
 <html ng-app="optionalModuleName">
@@ -90,6 +92,7 @@ If the `ng-app` directive is found then Angular will:
 
 As a best practice, consider adding an `ng-strict-di` directive on the same element as
 `ng-app`:
+
 
 
 ```html
@@ -117,6 +120,7 @@ bootstrapping method instead. Examples of when you'd need to do this include usi
 or the need to perform an operation before Angular compiles a page.
 
 Here is an example of manually initializing Angular:
+
 
 ```html
 <!doctype html>

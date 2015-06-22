@@ -82,6 +82,7 @@ myApp.controller('DemoController', ['clientId', function DemoController(clientId
 }]);
 ```
 
+
 ```html
 <html ng-app="myApp">
   <body ng-controller="DemoController as demo">
@@ -318,6 +319,7 @@ myApp.controller('DemoController', ["clientId", "planetName", function DemoContr
 }]);
 ```
 
+
 ```html
 <html ng-app="myApp">
   <body ng-controller="DemoController as demo">
@@ -359,6 +361,7 @@ myApp.directive('myPlanet', ['planetName', function myPlanetDirectiveFactory(pla
 ```
 
 We can then use the component like this:
+
 
 ```html
 <html ng-app="myApp">

@@ -75,6 +75,7 @@ strict di mode)
 
 To enable strict di mode, you have two options:
 
+
 ```html
 <div ng-app="myApp" ng-strict-di>
   <!-- your app here -->

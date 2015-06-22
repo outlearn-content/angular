@@ -31,6 +31,7 @@ These are the types of Angular elements and attributes you can use:
 The following code snippet shows a template with directives and
 curly-brace expression bindings:
 
+
 ```html
 <html ng-app>
  <!-- Body tag augmented with ngController directive  -->

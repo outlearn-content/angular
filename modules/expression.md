@@ -391,6 +391,7 @@ Here are three example cases.
 
 When interpolating text or attributes:
 
+
 ```html
   <div name="attr: {{::color}}">text: {{::name}}</div>
 ```
@@ -410,12 +411,14 @@ someModule.directive('someDirective', function() {
 });
 ```
 
+
 ```html
   <div some-directive name="::myName" color="My color is {{::myColor}}"></div>
 ```
 
 
 When using a directive that takes an expression:
+
 
 ```html
 <ul>
