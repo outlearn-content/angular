@@ -13,7 +13,7 @@
 
 <!-- @section -->
 
-# What does it do?
+## What does it do?
 
 The `$location` service parses the URL in the browser address bar (based on [`window.location`](https://developer.mozilla.org/en/window.location)) and makes the URL available to
 your application. Changes to the URL in the address bar are reflected into the `$location` service and
@@ -31,10 +31,7 @@ changes to `$location` are reflected into the browser address bar.
 - Represents the URL object as a set of methods (protocol, host, port, path, search, hash).
 
 
-
-<!-- @section -->
-
-## Comparing `$location` to `window.location`
+### Comparing `$location` to `window.location`
 
 <table class="table">
 <thead>
@@ -81,24 +78,18 @@ changes to `$location` are reflected into the browser address bar.
 </tbody>
 </table>
 
-
-<!-- @section -->
-
-## When should I use `$location`?
+### When should I use `$location`?
 Any time your application needs to react to a change in the current URL or if you want to change
 the current URL in the browser.
 
-
-<!-- @section -->
-
-## What does it not do?
+### What does it not do?
 It does not cause a full page reload when the browser URL is changed. To reload the page after
 changing the URL, use the lower-level API, `$window.location.href`.
 
 
 <!-- @section -->
 
-# General overview of the API
+## General overview of the API
 
 The `$location` service can behave differently, depending on the configuration that was provided to
 it when it was instantiated. The default configuration is suitable for many applications, for
@@ -107,10 +98,7 @@ others customizing the configuration can enable new features.
 Once the `$location` service is instantiated, you can interact with it via jQuery-style getter and
 setter methods that allow you to get or change the current URL in the browser.
 
-
-<!-- @section -->
-
-## `$location` service configuration
+### `$location` service configuration
 
 To configure the `$location` service, retrieve the
 $locationProvider and set the parameters as follows:
@@ -126,16 +114,13 @@ $locationProvider and set the parameters as follows:
   prefix used for Hashbang URLs (used in Hashbang mode or in legacy browser in Html5 mode)<br />
   default: `""`
 
-### Example configuration
+#### Example configuration
 
 ```js
 $locationProvider.html5Mode(true).hashPrefix('!');
 ```
 
-
-<!-- @section -->
-
-## Getter and setter methods
+### Getter and setter methods
 
 `$location` service provides getter methods for read-only parts of the URL (absUrl, protocol, host,
 port) and getter / setter methods for url, path, search, hash:
@@ -156,10 +141,7 @@ change multiple segments in one go, chain setters like this:
 $location.path('/newValue').search({key: value});
 ```
 
-
-<!-- @section -->
-
-## Replace method
+### Replace method
 
 There is a special `replace` method which can be used to tell the $location service that the next
 time the $location service is synced with the browser, the last history record should be replaced
@@ -183,7 +165,7 @@ rather than an addition to the browser history. Once the browser is updated, the
 resets the flag set by `replace()` method and future mutations will create new history records,
 unless `replace()` is called again.
 
-### Setters and character encoding
+#### Setters and character encoding
 You can pass special characters to `$location` service and it will encode them according to rules
 specified in [RFC 3986](http://www.ietf.org/rfc/rfc3986.txt). When you access the methods:
 
@@ -199,7 +181,7 @@ encoded.
 
 <!-- @section -->
 
-# Hashbang and HTML5 Modes
+## Hashbang and HTML5 Modes
 
 `$location` service has two configuration modes which control the format of the URL in the browser
 address bar: **Hashbang mode** (the default) and the **HTML5 mode** which is based on using the
@@ -247,10 +229,7 @@ facilitate the browser URL change and history management.
 </tbody>
 </table>
 
-
-<!-- @section -->
-
-## Hashbang mode (default mode)
+### Hashbang mode (default mode)
 
 In this mode, `$location` uses Hashbang URLs in all browsers.
 Angular also does not intercept and rewrite links in this mode. I.e. links work
@@ -258,7 +237,7 @@ as expected and also perform full page reloads when other parts of the url
 than the hash fragment was changed.
 
 
-### Example
+#### Example
 
 
 ```js
@@ -285,10 +264,7 @@ it('should show example', inject(
 ));
 ```
 
-
-<!-- @section -->
-
-## HTML5 mode
+### HTML5 mode
 
 In HTML5 mode, the `$location` service getters and setters interact with the browser URL address
 through the HTML5 history API. This allows for use of regular URL path and search segments,
@@ -304,7 +280,7 @@ Note that in this mode, Angular intercepts all links (subject to the "Html link 
 and updates the url in a way that never performs a full page reload.
 
 
-### Example
+#### Example
 
 
 ```js
@@ -344,14 +320,14 @@ it('should show example', inject(
 ));
 ```
 
-### Fallback for legacy browsers
+#### Fallback for legacy browsers
 
 For browsers that support the HTML5 history API, `$location` uses the HTML5 history API to write
 path and search. If the history API is not supported by a browser, `$location` supplies a Hasbang
 URL. This frees you from having to worry about whether the browser viewing your app supports the
 history API  or not; the `$location` service makes this transparent to you.
 
-### Html link rewriting
+#### Html link rewriting
 
 When you use HTML5 history API mode, you will not need special hashbang links. All you have to do
 is specify regular URL links, such as: `<a href="/some?foo=bar">link</a>`
@@ -373,7 +349,7 @@ reload to the original link.
   Example: `<a href="/not-my-base/link">link</a>`
 
 
-### Relative links
+#### Relative links
 
 Be sure to check all relative links, images, scripts etc. Angular requires you to specify the url
 base in the head of your main html file (`<base href="/my-base">`) unless `html5Mode.requireBase` is
@@ -385,14 +361,14 @@ There is one exception: Links that only contain a hash fragment (e.g. `<a href="
 will only change `$location.hash()` and not modify the url otherwise. This is useful for scrolling
 to anchors on the same page without needing to know on which page the user currently is.
 
-### Server side
+#### Server side
 
 Using this mode requires URL rewriting on server side, basically you have to rewrite all your links
 to entry point of your application (e.g. index.html). Requiring a `<base>` tag is also important for
 this case, as it allows Angular to differentiate between the part of the url that is the application
 base and the path that should be handled by the application.
 
-### Sending links among different browsers
+#### Sending links among different browsers
 
 Because of rewriting capability in HTML5 mode, your users will be able to open regular url links in
 legacy browsers and hashbang links in modern browser:
@@ -400,7 +376,7 @@ legacy browsers and hashbang links in modern browser:
 - Modern browser will rewrite hashbang URLs to regular URLs.
 - Older browsers will redirect regular URLs to hashbang URLs.
 
-### Example
+#### Example
 
 Here you can see two `$location` instances, both in **Html5 mode**, but on different browsers, so
 that you can see the differences. These `$location` services are connected to a fake browsers. Each
@@ -412,7 +388,7 @@ redirect to regular / hashbang url, as this conversion happens only during parsi
 
 In these examples we use `<base href="/base/index.html" />`
 
-#### Browser in HTML5 mode
+##### Browser in HTML5 mode
   
 _Example file_: `index.html`
 
@@ -579,7 +555,7 @@ it("should change $location accordingly", function(){
 
 
 
-####Browser in HTML5 Fallback mode (Hashbang mode)
+##### Browser in HTML5 Fallback mode (Hashbang mode)
   
 _Example file_: `index.html`
 
@@ -752,21 +728,15 @@ it("should change $location accordingly", function(){
 
 <!-- @section -->
 
-# Caveats
+## Caveats
 
-
-<!-- @section -->
-
-## Page reload navigation
+### Page reload navigation
 
 The `$location` service allows you to change only the URL; it does not allow you to reload the
 page. When you need to change the URL and reload the page or navigate to a different page, please
 use a lower level API, $window.location.href.
 
-
-<!-- @section -->
-
-## Using $location outside of the scope life-cycle
+### Using $location outside of the scope life-cycle
 
 `$location` knows about Angular's scope life-cycle. When a URL changes in
 the browser it updates the `$location` and calls `$apply` so that all
@@ -778,10 +748,7 @@ $observers.
 When you want to change the `$location` from outside Angular (for example, through a DOM Event or
 during testing) - you must call `$apply` to propagate the changes.
 
-
-<!-- @section -->
-
-## $location.path() and ! or / prefixes
+### $location.path() and ! or / prefixes
 
 A path should always begin with forward slash (`/`); the `$location.path()` setter will add the
 forward slash if it is missing.
@@ -789,10 +756,7 @@ forward slash if it is missing.
 Note that the `!` prefix in the hashbang mode is not part of `$location.path()`; it is actually
 hashPrefix.
 
-
-<!-- @section -->
-
-## Crawling your app
+### Crawling your app
 
 To allow indexing of your AJAX application, you have to add special meta tag in the head section of
 your document:
@@ -811,7 +775,7 @@ Crawlable](http://code.google.com/web/ajaxcrawling/docs/specification.html).
 
 <!-- @section -->
 
-# Testing with the $location service
+## Testing with the $location service
 
 When using `$location` service during testing, you are outside of the angular's scope life-cycle. This means it's your responsibility to call `scope.$apply()`.
 
@@ -838,17 +802,14 @@ describe('serviceUnderTest', function() {
 
 <!-- @section -->
 
-# Migrating from earlier AngularJS releases
+## Migrating from earlier AngularJS releases
 
 In earlier releases of Angular, `$location` used `hashPath` or `hashSearch` to process path and
 search methods. With this release, the `$location` service processes path and search methods and
 then uses the information it obtains to compose hashbang URLs (such as
 `http://server.com/#!/path?search=a`), when necessary.
 
-
-<!-- @section -->
-
-## Changes to your code
+### Changes to your code
 
 <table class="table">
   <thead>
@@ -919,10 +880,7 @@ then uses the information it obtains to compose hashbang URLs (such as
   </tbody>
 </table>
 
-
-<!-- @section -->
-
-## Two-way binding to $location
+### Two-way binding to $location
 
 Because `$location` uses getters/setters, you can use `ng-model-options="{ getterSetter: true }"`
 to bind it to `ngModel`:
@@ -952,9 +910,6 @@ angular.module('locationExample', [])
 
 <!-- @section -->
 
-# Related API
+## Related API
 
-* `$location` API
-
-
-
+* [$location API](https://docs.angularjs.org/api/ng/service/$location)
