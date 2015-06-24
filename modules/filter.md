@@ -10,6 +10,11 @@
 }
 -->
 
+
+<!-- @section -->
+
+## Overview
+
 A filter formats the value of an expression for display to the user. They can be used in view templates,
 controllers or services and it is easy to define your own filter.
 
