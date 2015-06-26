@@ -18,7 +18,7 @@
 > **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
 >
 >If you're just getting started, we recommend the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) first.
->If you just want to create custom directives, we recommend the [directives guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/13).
+>If you just want to create custom directives, we recommend the [directives guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/14).
 >If you want a deeper look into Angular's compilation process, you're in the right place.
 
 

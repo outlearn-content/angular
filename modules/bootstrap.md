@@ -106,7 +106,7 @@ As a best practice, consider adding an `ng-strict-di` directive on the same elem
 ```
 
 This will ensure that all services in your application are properly annotated.
-See the [dependency injection strict mode](https://pilot.outlearn.com/learn/ShieldSensei/angular/8) docs
+See the [dependency injection strict mode](https://pilot.outlearn.com/learn/ShieldSensei/angular/9) docs
 for more.
 
 

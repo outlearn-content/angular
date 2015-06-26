@@ -1139,7 +1139,7 @@ Here we've seen the main use cases for directives. Each of these samples acts as
 point for creating your own directives.
 
 You might also be interested in an in-depth explanation of the compilation process that's
-available in the [compiler guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/15).
+available in the [compiler guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/16).
 
 The `$compile` API page has a comprehensive list of directive options for
 reference.
