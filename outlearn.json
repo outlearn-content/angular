@@ -21,10 +21,5 @@
   ],
 
   "assets" : [
-    {
-      "name" : "catalog_screen",
-      "contentType" : "image/png",
-      "location" : "assets/catalog_screen.png"
-    }
   ]
 }
