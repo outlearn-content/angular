@@ -404,6 +404,7 @@ To ensure that the phone images are displayed correctly when the page is first l
 the detail page CSS styles:
 
 __`app/css/app.css`__
+
 ```css
 .phone-images {
   background-color: white;

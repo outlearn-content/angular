@@ -131,9 +131,9 @@ following bindings to `index.html`:
 *  We can also create a model with an input element, and combine it with a filtered binding. Add
   the following to index.html:
 
-  ```html
-  <input ng-model="userInput"> Uppercased: {{ userInput | uppercase }}
-  ```
+    ```html
+    <input ng-model="userInput"> Uppercased: {{ userInput | uppercase }}
+    ```
 <!-- @task, "hasDeliverable" : false, "text" : "Combine an input element with a filtered binding."-->
 
 # Summary

@@ -145,15 +145,19 @@ Your unit tests should now be passing.
 
 * Let's add a new controller method to `PhoneDetailCtrl`:
 
-          $scope.hello = function(name) {
-              alert('Hello ' + (name || 'world') + '!');
-          }
+    ```html
+    $scope.hello = function(name) {
+        alert('Hello ' + (name || 'world') + '!');
+    }
+    ```
 
-  and add:
+    and add:
 
-          <button ng-click="hello('Elmo')">Hello</button>
+    ```html
+    <button ng-click="hello('Elmo')">Hello</button>
+    ```
 
-  to the `phone-detail.html` template.
+    to the `phone-detail.html` template.
 
 <!-- @task, "hasDeliverable" : false, "text" : "Add the controller method and button to the template."-->
 

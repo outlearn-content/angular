@@ -111,19 +111,19 @@ as strings, which will not get minified. There are two ways to provide these inj
   Each string in the array is the name of the service to inject for the corresponding parameter.
   In our example we would write:
 
-  ```js
-      function PhoneListCtrl($scope, $http) {...}
-      PhoneListCtrl.$inject = ['$scope', '$http'];
-      phonecatApp.controller('PhoneListCtrl', PhoneListCtrl);
-  ```
+    ```js
+        function PhoneListCtrl($scope, $http) {...}
+        PhoneListCtrl.$inject = ['$scope', '$http'];
+        phonecatApp.controller('PhoneListCtrl', PhoneListCtrl);
+    ```
 
 * Use an inline annotation where, instead of just providing the function, you provide an array.
   This array contains a list of the service names, followed by the function itself.
 
-  ```js
-      function PhoneListCtrl($scope, $http) {...}
-      phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', PhoneListCtrl]);
-  ```
+    ```js
+        function PhoneListCtrl($scope, $http) {...}
+        phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', PhoneListCtrl]);
+    ```
 
 Both of these methods work with any function that can be injected by Angular, so it's up to your
 project's style guide to decide which one you use.

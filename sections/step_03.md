@@ -15,7 +15,6 @@ user types into the search box.
 
 We made no changes to the controller.
 
-
 ## Template
 
 __`app/index.html`:__
@@ -143,61 +142,67 @@ Let's see how we can get the current value of the `query` model to appear in the
 
 * Add an end-to-end test into the `describe` block, `test/e2e/scenarios.js` should look like this:
 
-  ```js
-    describe('PhoneCat App', function() {
+    ```js
+      describe('PhoneCat App', function() {
 
-      describe('Phone list view', function() {
+        describe('Phone list view', function() {
 
-        beforeEach(function() {
-          browser.get('app/index.html');
-        });
+          beforeEach(function() {
+            browser.get('app/index.html');
+          });
 
-        var phoneList = element.all(by.repeater('phone in phones'));
-        var query = element(by.model('query'));
+          var phoneList = element.all(by.repeater('phone in phones'));
+          var query = element(by.model('query'));
 
-        it('should filter the phone list as a user types into the search box', function() {
-          expect(phoneList.count()).toBe(3);
+          it('should filter the phone list as a user types into the search box', function() {
+            expect(phoneList.count()).toBe(3);
 
-          query.sendKeys('nexus');
-          expect(phoneList.count()).toBe(1);
+            query.sendKeys('nexus');
+            expect(phoneList.count()).toBe(1);
 
-          query.clear();
-          query.sendKeys('motorola');
-          expect(phoneList.count()).toBe(2);
-        });
+            query.clear();
+            query.sendKeys('motorola');
+            expect(phoneList.count()).toBe(2);
+          });
 
-        it('should display the current filter value in the title bar', function() {
-          query.clear();
-          expect(browser.getTitle()).toMatch(/Google Phone Gallery:\s*$/);
+          it('should display the current filter value in the title bar', function() {
+            query.clear();
+            expect(browser.getTitle()).toMatch(/Google Phone Gallery:\s*$/);
 
-          query.sendKeys('nexus');
-          expect(browser.getTitle()).toMatch(/Google Phone Gallery: nexus$/);
+            query.sendKeys('nexus');
+            expect(browser.getTitle()).toMatch(/Google Phone Gallery: nexus$/);
+          });
         });
       });
-    });
-  ```
+    ```
 
-  Run protractor (`npm run protractor`) to see this test fail.
+    Run protractor (`npm run protractor`) to see this test fail.
 
 <!-- @task, "hasDeliverable" : false, "text" : "Add an end-to-end test."-->
 
 * You might think you could just add the `{{query}}` to the title tag element as follows:
 
-        <title>Google Phone Gallery: {{query}}</title>
+    ```html
+    <title>Google Phone Gallery: {{query}}</title>
+    ```
 
-  However, when you reload the page, you won't see the expected result. This is because the "query"
-  model lives in the scope, defined by the `ng-controller="PhoneListCtrl"` directive, on the body
-  element:
+    However, when you reload the page, you won't see the expected result. This is because the "query"
+    model lives in the scope, defined by the `ng-controller="PhoneListCtrl"` directive, on the body
+    element:
 
-          <body ng-controller="PhoneListCtrl">
+    ```html
+    <body ng-controller="PhoneListCtrl">
+    ```
 
-  If you want to bind to the query model from the `<title>` element, you must __move__ the
-  `ngController` declaration to the HTML element because it is the common parent of both the body
-  and title elements:
+    If you want to bind to the query model from the `<title>` element, you must __move__ the
+    `ngController` declaration to the HTML element because it is the common parent of both the body
+    and title elements:
 
-          <html ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+    ```html
+    <html ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+    ```
 
-  Be sure to __remove__ the `ng-controller` declaration from the body element.
+    Be sure to __remove__ the `ng-controller` declaration from the body element.
 
 <!-- @task, "hasDeliverable" : false, "text" : "Make the query show up in the title."-->
 
@@ -211,7 +216,9 @@ solution would be to use the ngBind or
 ngBindTemplate directives, which are invisible to the user
 while the page is loading:
 
-        <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
+    ```html
+    <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
+    ```
 
 <!-- @task, "hasDeliverable" : false, "text" : "Use a binding where double curlies are invisible to the user."-->
 
