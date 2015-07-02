@@ -36,7 +36,7 @@ In this step you will add some basic information about two cell phones to an HTM
 
 * Try adding more static HTML to `index.html`. For example:
 
-          <p>Total number of phones: 2</p>
+        <p>Total number of phones: 2</p>
 
 <!-- @task, "hasDeliverable" : false, "text" : "Add some static HTML to index.html."-->
 

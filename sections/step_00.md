@@ -63,7 +63,7 @@ __`app/index.html`:__
 
 **`ng-app` directive:**
 
-          <html ng-app>
+    <html ng-app>
 
   The `ng-app` attribute represents an Angular directive named `ngApp` (Angular uses
   `spinal-case` for its custom attributes and `camelCase` for the corresponding directives
@@ -75,7 +75,7 @@ __`app/index.html`:__
 
 **AngularJS script tag:**
 
-          <script src="bower_components/angular/angular.js">
+    <script src="bower_components/angular/angular.js">
 
   This code downloads the `angular.js` script which registers a callback that will be executed by the
 browser when the containing HTML page is fully downloaded. When the callback is executed, Angular
@@ -85,12 +85,12 @@ being the element on which the `ngApp` directive was defined.
 
 **Double-curly binding with an expression:**
 
-          Nothing here {{'yet' + '!'}}
+    Nothing here {{'yet' + '!'}}
 
   This line demonstrates two core features of Angular's templating capabilities:
 
-    * a binding, denoted by double-curlies `{{ }}`
-    * a simple expression `'yet' + '!'` used in this binding.
+* a binding, denoted by double-curlies `{{ }}`
+* a simple expression `'yet' + '!'` used in this binding.
 
   The binding tells Angular that it should evaluate an expression and insert the result into the
   DOM in place of the binding. Rather than a one-time insert, as we'll see in the next steps, a

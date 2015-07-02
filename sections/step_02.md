@@ -213,44 +213,41 @@ To run the tests, and then watch the files for changes: `npm test`.
 
 * Add another binding to `index.html`. For example:
 
-  ```html
-  <p>Total number of phones: {{phones.length}}</p>
-  ```
+    ```html
+    <p>Total number of phones: {{phones.length}}</p>
+    ```
 <!-- @task, "hasDeliverable" : false, "text" : "Add another binding to index.html."-->
 
 * Create a new model property in the controller and bind to it from the template. For example:
+        $scope.name = "World";
 
-          $scope.name = "World";
-
-  Then add a new binding to `index.html`:
-
-          <p>Hello, {{name}}!</p>
-
-  Refresh your browser and verify that it says "Hello, World!".
+    Then add a new binding to `index.html`:
+        <p>Hello, {{name}}!</p>
+    Refresh your browser and verify that it says "Hello, World!".
 
 <!-- @task, "hasDeliverable" : false, "text" : "Create a binding and verify you can see it."-->
 
 * Update the unit test for the controller in `./test/unit/controllersSpec.js` to reflect the previous change. For example by adding:
 
-          expect(scope.name).toBe('World');
+        expect(scope.name).toBe('World');
 
 <!-- @task, "hasDeliverable" : false, "text" : "Test your new addition."-->
 
 * Create a repeater in `index.html` that constructs a simple table:
 
-          <table>
-            <tr><th>row number</th></tr>
-            <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td></tr>
-          </table>
+        <table>
+          <tr><th>row number</th></tr>
+          <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td></tr>
+        </table>
 
-  Now, make the list 1-based by incrementing `i` by one in the binding:
+    Now, make the list 1-based by incrementing `i` by one in the binding:
 
-          <table>
-            <tr><th>row number</th></tr>
-            <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
-          </table>
+        <table>
+          <tr><th>row number</th></tr>
+          <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+        </table>
 
-  Extra points: try and make an 8x8 table using an additional `ng-repeat`.
+    Extra points: try and make an 8x8 table using an additional `ng-repeat`.
 
 <!-- @task, "hasDeliverable" : false, "text" : "Create a repeater."-->
 
