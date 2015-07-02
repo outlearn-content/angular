@@ -1,9 +1,11 @@
+
+
 A great way to get introduced to AngularJS is to work through this tutorial, which walks you through
 the construction of an AngularJS web app. The app you will build is a catalog that displays a list
 of Android devices, lets you filter the list to see only devices that interest you, and then view
 details for any device.
 
-<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/catalog_screen.png" width="488" height="413" alt="demo application running in the browser">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/catalog_screen.png">
 
 Follow the tutorial to see how Angular makes browsers smarter — without the use of native
 extensions or plug-ins:
@@ -70,9 +72,8 @@ git clone --depth=14 https://github.com/angular/angular-phonecat.git
 
 This command creates the `angular-phonecat` directory in your current directory.
 
-<div class="alert alert-info">The `--depth=14` option just tells Git to pull down only the last 14 commits.  This makes the
-download much smaller and faster.
-</div>
+> The `--depth=14` option just tells Git to pull down only the last 14 commits.  This makes the
+>download much smaller and faster.
 
 Change your current directory to `angular-phonecat`.
 
@@ -108,12 +109,11 @@ npm --version
 ```
 
 
-<div class="alert alert-info">If you need to run different versions of node.js
-  in your local environment, consider installing
-  <a href="https://github.com/creationix/nvm" title="Node Version Manager Github Repo link">
-    Node Version Manager (nvm)
-  </a>.
-</div>
+> If you need to run different versions of node.js
+>  in your local environment, consider installing
+>  <a href="https://github.com/creationix/nvm" title="Node Version Manager Github Repo link">
+>    Node Version Manager (nvm)
+>  </a>.
 
 Once you have Node.js installed on your machine you can download the tool dependencies by running:
 
@@ -131,11 +131,9 @@ This command will download the following tools, into the `node_modules` director
 Running `npm install` will also automatically use bower to download the Angular framework into the
 `app/bower_components` directory.
 
-<div class="alert alert-info">
-  Note the angular-phonecat project is setup to install and run these utilities via npm scripts.
-  This means that you do not have to have any of these utilities installed globally on your system
-  to follow the tutorial.  See **Installing Helper Tools** below for more information.
-</div>
+>   Note the angular-phonecat project is setup to install and run these utilities via npm scripts.
+>  This means that you do not have to have any of these utilities installed globally on your system
+>  to follow the tutorial.  See **Installing Helper Tools** below for more information.
 
 The project is preconfigured with a number of npm helper scripts to make it easy to run the common
 tasks that you will need while developing:
@@ -188,10 +186,8 @@ You can now browse to the application at:
 http://localhost:8000/app/index.html
 ```
 
-<div class="alert alert-info">
-To serve the web app on a different ip address or port, edit the "start" script within package.json.
-You can `-a` to set the address and `-p` to set the port.
-</div>
+> To serve the web app on a different ip address or port, edit the "start" script within package.json.
+>You can `-a` to set the address and `-p` to set the port.
 
 ### Running Unit Tests
 
