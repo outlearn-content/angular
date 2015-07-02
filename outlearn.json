@@ -5,69 +5,27 @@
   ],
 
   "modules" : [
-    {
-      "olm" : "./modules/introduction.md"
-    },
-    {
-      "olm" : "./modules/concepts.md"
-    },
-    {
-      "olm" : "./modules/databinding.md"
-    },
-    {
-      "olm" : "./modules/controller.md"
-    },
-    {
-      "olm" : "./modules/services.md"
-    },
-    {
-      "olm" : "./modules/scope.md"
-    },
-    {
-      "olm" : "./modules/di.md"
-    },
-    {
-      "olm" : "./modules/templates.md"
-    },
-    {
-      "olm" : "./modules/expression.md"
-    },
-    {
-      "olm" : "./modules/filter.md"
-    },
-    {
-      "olm" : "./modules/forms.md"
-    },
-    {
-      "olm" : "./modules/directive.md"
-    },
-    {
-      "olm" : "./modules/animations.md"
-    },
-    {
-      "olm" : "./modules/compiler.md"
-    },
-    {
-      "olm" : "./modules/providers.md"
-    },
-    {
-      "olm" : "./modules/bootstrap.md"
-    },
-    {
-      "olm" : "./modules/unit-testing.md"
-    },
-    {
-      "olm" : "./modules/e2e-testing.md"
-    },
-    {
-      "olm" : "./modules/$location.md"
-    },
-    {
-      "olm" : "./modules/css-styling.md"
-    },
-    {
-      "olm" : "./modules/production.md"
-    },
+    {"olm" : "./modules/introduction.md"},
+    {"olm" : "./modules/concepts.md"},
+    {"olm" : "./modules/databinding.md"},
+    {"olm" : "./modules/controller.md"},
+    {"olm" : "./modules/services.md"},
+    {"olm" : "./modules/scope.md"},
+    {"olm" : "./modules/di.md"},
+    {"olm" : "./modules/templates.md"},
+    {"olm" : "./modules/expression.md"},
+    {"olm" : "./modules/filter.md"},
+    {"olm" : "./modules/forms.md"},
+    {"olm" : "./modules/directive.md"},
+    {"olm" : "./modules/animations.md"},
+    {"olm" : "./modules/compiler.md"},
+    {"olm" : "./modules/providers.md"},
+    {"olm" : "./modules/bootstrap.md"},
+    {"olm" : "./modules/unit-testing.md"},
+    {"olm" : "./modules/e2e-testing.md"},
+    {"olm" : "./modules/$location.md"},
+    {"olm" : "./modules/css-styling.md"},
+    {"olm" : "./modules/production.md"},
     {
       "name" : "angular-tutorial",
       "version" : "0.1",
@@ -77,18 +35,9 @@
       "freshnessDate" : 2015-06-03,
       "license" : "CC BY",
       "sections" : [
-        {
-          "title": "Welcome",
-          "content": "sections/index.md"
-        },
-        {
-          "title": "0 - Bootstrapping",
-          "content": "sections/step_00.md"
-        },
-        {
-          "title": "1 - Static Template",
-          "content": "sections/step_01.md"
-        },
+        {"title": "Welcome", "content": "sections/index.md"},
+        {"title": "0 - Bootstrapping", "content": "sections/step_00.md"},
+        {"title": "1 - Static Template", "content": "sections/step_01.md"},
         {
           "title": "2 - Angular Templates",
           "content": "sections/step_02.md"
