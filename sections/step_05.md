@@ -1,9 +1,9 @@
 
 
+
 Enough of building an app with three phones in a hard-coded dataset! Let's fetch a larger dataset
-from our server using one of Angular's built-in services called {@link
-ng.$http $http}. We will use Angular's {@link guide/di dependency
-injection (DI)} to provide the service to the `PhoneListCtrl` controller.
+from our server using one of Angular's built-in services called $http. We will use Angular's dependency
+injection (DI) to provide the service to the `PhoneListCtrl` controller.
 
 * There is now a list of 20 phones, loaded from the server.
 
@@ -14,6 +14,7 @@ The `app/phones/phones.json` file in your project is a dataset that contains a l
 stored in the JSON format.
 
 Following is a sample of the file:
+
 
 ```js
 [
@@ -42,6 +43,7 @@ and control) and loosely coupled (dependencies between components are not resolv
 components themselves, but by the DI subsystem).
 
 __`app/js/controllers.js:`__
+
 
 ```js
 var phonecatApp = angular.module('phonecatApp', []);
@@ -79,7 +81,7 @@ Note that the names of arguments are significant, because the injector uses thes
 dependencies.
 
 
-<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_05.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/tutorial_05.png">
 
 
 ### `$` Prefix Naming Convention
@@ -129,6 +131,7 @@ project's style guide to decide which one you use.
 When using the second method, it is common to provide the constructor function inline as an
 anonymous function when registering the controller:
 
+
 ```js
     phonecatApp.controller('PhoneListCtrl', ['$scope', '$http', function($scope, $http) {...}]);
 ```
@@ -137,6 +140,7 @@ From this point onward, we're going to use the inline method in the tutorial. Wi
 let's add the annotations to our `PhoneListCtrl`:
 
 __`app/js/controllers.js:`__
+
 
 ```js
 var phonecatApp = angular.module('phonecatApp', []);
@@ -161,6 +165,7 @@ constructor with some kind of fake `$http` implementation. However, Angular prov
 service that we can use in unit tests.  We configure "fake" responses to server requests by calling
 methods on a service called `$httpBackend`:
 
+
 ```js
 describe('PhoneCat controllers', function() {
 
@@ -184,7 +189,7 @@ describe('PhoneCat controllers', function() {
 ```
 
 Note: Because we loaded Jasmine and `angular-mocks.js` in our test environment, we got two helper
-methods module} and {@link angular.mock.inject inject that we'll
+methods module and inject that we'll
 use to access and configure the injector.
 
 We created the controller in the test environment, as follows:
@@ -218,6 +223,7 @@ the `$httpBackend.flush` method.
 Now we will make assertions to verify that the `phones` model doesn't exist on `scope` before
 the response is received:
 
+
 ```js
     it('should create "phones" model with 2 phones fetched from xhr', function() {
       expect(scope.phones).toBeUndefined();
@@ -236,6 +242,7 @@ a full explanation of why this is necessary.
 * We make the assertions, verifying that the phone model now exists on the scope.
 
 Finally, we verify that the default value of `orderProp` is set correctly:
+
 
 ```js
     it('should set the default value of orderProp model', function() {

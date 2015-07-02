@@ -1,5 +1,6 @@
 
 
+
 In this step, you will add a feature to let your users control the order of the items in the phone
 list. The dynamic ordering is implemented by creating a new model property, wiring it together with
 the repeater, and letting the data binding magic do the rest of the work.
@@ -13,6 +14,7 @@ the repeater, and letting the data binding magic do the rest of the work.
 ## Template
 
 __`app/index.html`:__
+
 
 ```html
   Search: <input ng-model="query">
@@ -36,7 +38,7 @@ We made the following changes to the `index.html` template:
 * First, we added a `<select>` html element named `orderProp`, so that our users can pick from the
 two provided sorting options.
 
-<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_04.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/tutorial_04.png">
 
 * We then chained the `filter` filter with `orderBy`
 filter to further process the input into the repeater. `orderBy` is a filter that takes an input
@@ -55,6 +57,7 @@ necessary!
 ## Controller
 
 __`app/js/controllers.js`:__
+
 
 ```js
 var phonecatApp = angular.module('phonecatApp', []);
@@ -99,6 +102,7 @@ the unit test first.
 
 __`test/unit/controllersSpec.js`:__
 
+
 ```js
 describe('PhoneCat controllers', function() {
 
@@ -138,6 +142,7 @@ You should now see the following output in the Karma tab:
 Let's turn our attention to the end-to-end test.
 
 __`test/e2e/scenarios.js`:__
+
 
 ```js
 ...

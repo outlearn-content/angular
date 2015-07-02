@@ -1,5 +1,6 @@
 
 
+
 Now it's time to make the web page dynamic — with AngularJS. We'll also add a test that verifies the
 code for the controller we are going to add.
 
@@ -21,6 +22,7 @@ view.
 The view component is constructed by Angular from this template:
 
 __`app/index.html`:__
+
 
 ```html
 <html ng-app="phonecatApp">
@@ -58,12 +60,10 @@ __controller__ to the &lt;body&gt; tag.  At this point:
 bindings, which are referring to our application model, which is set up in our `PhoneListCtrl`
 controller.
 
-<div class="alert alert-info">
-Note: We have specified an Angular Module to load using `ng-app="phonecatApp"`,
-where `phonecatApp` is the name of our module.  This module will contain the `PhoneListCtrl`.
-</div>
+> Note: We have specified an Angular Module to load using `ng-app="phonecatApp"`,
+>where `phonecatApp` is the name of our module.  This module will contain the `PhoneListCtrl`.
 
-<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_02.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/tutorial_02.png">
 
 ## Model and Controller
 
@@ -72,6 +72,7 @@ the `PhoneListCtrl` __controller__. The __controller__ is simply a constructor f
 `$scope` parameter:
 
 __`app/js/controllers.js`:__
+
 
 ```js
 
@@ -125,6 +126,7 @@ The "Angular way" of separating controller from the view, makes it easy to test 
 developed. If our controller is available on the global namespace then we could simply instantiate it
 with a mock `scope` object:
 
+
 ```js
 describe('PhoneListCtrl', function(){
 
@@ -153,6 +155,7 @@ In this case Angular provides a service, `$controller`, which will retrieve your
 Here is the same test using `$controller`:
 
 __`test/unit/controllersSpec.js`:__
+
 
 ```js
 describe('PhoneListCtrl', function(){
@@ -203,10 +206,8 @@ To run the tests, and then watch the files for changes: `npm test`.
 * To rerun the tests, just change any of the source or test .js files. Karma will notice the change
   and will rerun the tests for you. Now isn't that sweet?
 
-<div class="alert alert-info">
-Make sure you don't minimize the browser that Karma opened. On some OS, memory assigned to a minimized
-browser is limited, which results in your karma tests running extremely slow.
-</div>
+> Make sure you don't minimize the browser that Karma opened. On some OS, memory assigned to a minimized
+>browser is limited, which results in your karma tests running extremely slow.
 
 # Experiments
 

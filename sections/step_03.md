@@ -1,5 +1,6 @@
 
 
+
 We did a lot of work in laying a foundation for the app in the last step, so now we'll do something
 simple; we will add full text search (yes, it will be simple!). We will also write an end-to-end
 test, because a good end-to-end test is a good friend. It stays with your app, keeps an eye on it,
@@ -18,6 +19,7 @@ We made no changes to the controller.
 ## Template
 
 __`app/index.html`:__
+
 
 ```html
   <div class="container-fluid">
@@ -58,7 +60,7 @@ available as a filter input in the list repeater (`phone in phones | filter:`__`
 changes to the data model cause the repeater's input to change, the repeater efficiently updates
 the DOM to reflect the current state of the model.
 
-<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_03.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/tutorial_03.png">
 
 * Use of the `filter` filter: The filter function uses the
 `query` value to create a new array that contains only those records that match the `query`.
@@ -77,6 +79,7 @@ The search feature was fully implemented via templates and data-binding, so we'l
 end-to-end test, to verify that the feature works.
 
 __`test/e2e/scenarios.js`:__
+
 
 ```js
 describe('PhoneCat App', function() {
@@ -120,13 +123,11 @@ Try it with `npm run protractor`. End-to-end tests are slow, so unlike with unit
 will exit after the test run and will not automatically rerun the test suite on every file change.
 To rerun the test suite, execute `npm run protractor` again.
 
-<div class="alert alert-info">
-  Note: You must ensure your application is being served via a web-server to test with protractor.
-  You can do this using `npm start`.
-  You also need to ensure you've installed the protractor and updated webdriver prior to running the
-  `npm run protractor`. You can do this by issuing `npm install` and `npm run update-webdriver` into
-  your terminal.
-</div>
+>   Note: You must ensure your application is being served via a web-server to test with protractor.
+>  You can do this using `npm start`.
+>  You also need to ensure you've installed the protractor and updated webdriver prior to running the
+>  `npm run protractor`. You can do this by issuing `npm install` and `npm run update-webdriver` into
+>  your terminal.
 
 
 # Experiments

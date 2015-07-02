@@ -1,5 +1,6 @@
 
 
+
 In order to illustrate how Angular enhances standard HTML, you will create a purely *static* HTML
 page and then examine how we can turn this HTML code into a template that Angular will use to
 dynamically display the same result with any set of data.
@@ -11,6 +12,7 @@ In this step you will add some basic information about two cell phones to an HTM
 
 
 **`app/index.html`:**
+
 
 ```html
   <ul>
@@ -39,7 +41,6 @@ In this step you will add some basic information about two cell phones to an HTM
 
 # Summary
 
-This addition to your app uses static HTML to display the list. Now, let's go to {@link step_02
-step 2} to learn how to use AngularJS to dynamically generate the same list.
+This addition to your app uses static HTML to display the list. Now, let's go to step 2 to learn how to use AngularJS to dynamically generate the same list.
 
 

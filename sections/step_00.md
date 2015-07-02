@@ -1,5 +1,6 @@
 
 
+
 You are now ready to build the AngularJS phonecat app. In this step, you will become familiar
 with the most important source code files, learn how to start the development servers bundled with
 angular-seed, and run the application in the browser.
@@ -36,6 +37,7 @@ The HTML page that displays "Nothing here yet!" was constructed with the HTML co
 The code contains some key Angular elements that we will need as we progress.
 
 __`app/index.html`:__
+
 
 ```html
 <!doctype html>
@@ -127,7 +129,7 @@ in the view by updating all of the affected bindings.
 The structure of our application is currently very simple. The template contains just one directive
 and one static binding, and our model is empty. That will soon change!
 
-<img class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_00.png">
+<img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/tutorial/tutorial_00.png">
 
 
 ## What are all these files in my working directory?
