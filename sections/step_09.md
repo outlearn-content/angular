@@ -1,4 +1,5 @@
 
+
 In this step you will learn how to create your own custom display filter.
 
 * In the previous step, the details page displayed either "true" or "false" to indicate whether
@@ -13,6 +14,7 @@ In order to create a new filter, you are going to create a `phonecatFilters` mod
 your custom filter with this module:
 
 __`app/js/filters.js`:__
+
 
 ```js
 angular.module('phonecatFilters', []).filter('checkmark', function() {
@@ -30,6 +32,7 @@ our main `phonecatApp` module.
 
 __`app/js/app.js`:__
 
+
 ```js
 ...
 angular.module('phonecatApp', ['ngRoute','phonecatControllers','phonecatFilters']);
@@ -43,6 +46,7 @@ Since the filter code lives in the `app/js/filters.js` file, we need to include 
 layout template.
 
 __`app/index.html`:__
+
 
 ```html
 ...
@@ -61,6 +65,7 @@ Let's employ the filter in the phone details template:
 
 __`app/partials/phone-detail.html`:__
 
+
 ```html
 ...
     <dl>
@@ -78,6 +83,7 @@ __`app/partials/phone-detail.html`:__
 Filters, like any other component, should be tested and these tests are very easy to write.
 
 __`test/unit/filtersSpec.js`:__
+
 
 ```js
 describe('filter', function() {

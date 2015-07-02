@@ -1,5 +1,6 @@
 
 
+
 In this step, you will add a clickable phone image swapper to the phone details page.
 
 * The phone details view displays one large image of the current phone and several smaller thumbnail
@@ -10,6 +11,7 @@ clicking on the desired thumbnail image. Let's have a look at how we can do this
 ## Controller
 
 __`app/js/controllers.js`:__
+
 
 ```js
 ...
@@ -38,6 +40,7 @@ We also created a `setImage` event handler function that will change the value o
 
 __`app/partials/phone-detail.html`:__
 
+
 ```html
 <img ng-src="{{mainImageUrl}}" class="phone">
 
@@ -58,10 +61,7 @@ handler with thumbnail images. When a user clicks on one of the thumbnail images
 use the `setImage` event handler function to change the value of the `mainImageUrl` property to the
 URL of the thumbnail image.
 
-<div style="display: none">
-TODO!
-<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_10-11_final.png">
-</div>
+
 
 ## Test
 
@@ -70,6 +70,7 @@ to the first phone image by default. The second test clicks on several thumbnail
 verifies that the main image changed appropriately.
 
 __`test/e2e/scenarios.js`:__
+
 
 ```js
 ...
@@ -100,6 +101,7 @@ model property to the `PhoneDetailCtrl` controller. Below, we create the functio
 which returns the appropriate json with the `images` attribute in order to get the test to pass.
 
 __`test/unit/controllersSpec.js`:__
+
 
 ```js
 ...

@@ -1,5 +1,6 @@
 
 
+
 In this step, you will change the way our app fetches data.
 
 * We define a custom service that represents a RESTful client. Using this client we
@@ -42,17 +43,13 @@ and install this dependency. We can do this by running:
 npm install
 ```
 
-<div class="alert alert-warning">
-  **Warning:** If a new version of Angular has been released since you last ran `npm install`, then you may have a
-  problem with the `bower install` due to a conflict between the versions of angular.js that need to
-  be installed.  If you get this then simply delete your `app/bower_components` folder before running
-  `npm install`.
-</div>
+>   **Warning:** If a new version of Angular has been released since you last ran `npm install`, then you may have a
+>  problem with the `bower install` due to a conflict between the versions of angular.js that need to
+>  be installed.  If you get this then simply delete your `app/bower_components` folder before running
+>  `npm install`.
 
-<div class="alert alert-info">
-  **Note:** If you have bower installed globally then you can run `bower install` but for this project we have
-  preconfigured `npm install` to run bower for us.
-</div>
+>   **Note:** If you have bower installed globally then you can run `bower install` but for this project we have
+>  preconfigured `npm install` to run bower for us.
 
 
 ## Template
@@ -62,6 +59,7 @@ in our layout template. Additionally, we also need to load the `angular-resource
 contains the ngResource module:
 
 __`app/index.html`.__
+
 
 ```html
 ...
@@ -75,6 +73,7 @@ __`app/index.html`.__
 We create our own service to provide access to the phone data on the server:
 
 __`app/js/services.js`.__
+
 
 ```js
 var phonecatServices = angular.module('phonecatServices', ['ngResource']);
@@ -98,6 +97,7 @@ application, instead of the lower-level $http service.
 
 __`app/js/app.js`.__
 
+
 ```js
 ...
 angular.module('phonecatApp', ['ngRoute', 'phonecatControllers','phonecatFilters', 'phonecatServices']).
@@ -116,6 +116,7 @@ use than `$http` for interacting with data sources exposed as RESTful resources.
 now to understand what the code in our controllers is doing.
 
 __`app/js/controllers.js`.__
+
 
 ```js
 var phonecatControllers = angular.module('phonecatControllers', []);
@@ -169,6 +170,7 @@ update the Karma config file with angular-resource so the new tests will pass.
 
 __`test/karma.conf.js`:__
 
+
 ```js
     files : [
       'app/bower_components/angular/angular.js',
@@ -192,6 +194,7 @@ the `toEqualData` matcher compares two objects, it takes only object properties 
 ignores methods.
 
 __`test/unit/controllersSpec.js`:__
+
 
 
 ```js

@@ -1,5 +1,6 @@
 
 
+
 In this final step, we will enhance our phonecat web application by attaching CSS and JavaScript
 animations on top of the template code we created before.
 
@@ -52,17 +53,13 @@ We must ask bower to download and install this dependency. We can do this by run
 npm install
 ```
 
-<div class="alert alert-warning">
-  **Warning:** If a new version of Angular has been released since you last ran `npm install`, then you may have a
-  problem with the `bower install` due to a conflict between the versions of angular.js that need to
-  be installed.  If you get this then simply delete your `app/bower_components` folder before running
-  `npm install`.
-</div>
+>   **Warning:** If a new version of Angular has been released since you last ran `npm install`, then you may have a
+>  problem with the `bower install` due to a conflict between the versions of angular.js that need to
+>  be installed.  If you get this then simply delete your `app/bower_components` folder before running
+>  `npm install`.
 
-<div class="alert alert-info">
-  **Note:** If you have bower installed globally then you can run `bower install` but for this project we have
-  preconfigured `npm install` to run bower for us.
-</div>
+>   **Note:** If you have bower installed globally then you can run `bower install` but for this project we have
+>  preconfigured `npm install` to run bower for us.
 
 
 ## How Animations work with `ngAnimate`
@@ -81,6 +78,7 @@ aware.
 Here's what needs to be changed in the index file:
 
 __`app/index.html`.__
+
 
 ```html
 ...
@@ -103,12 +101,10 @@ __`app/index.html`.__
 ...
 ```
 
-<div class="alert alert-error">
-  **Important:** Be sure to use jQuery version 2.1 or newer when using Angular 1.3; jQuery 1.x is
-  not officially supported.
-  Be sure to load jQuery before all AngularJS scripts, otherwise AngularJS won't detect jQuery and
-  animations will not work as expected.
-</div>
+>   **Important:** Be sure to use jQuery version 2.1 or newer when using Angular 1.3; jQuery 1.x is
+>  not officially supported.
+>  Be sure to load jQuery before all AngularJS scripts, otherwise AngularJS won't detect jQuery and
+>  animations will not work as expected.
 
 Animations can now be created within the CSS code (`animations.css`) as well as the JavaScript code (`animations.js`).
 But before we start, let's create a new module which uses the ngAnimate module as a dependency just like we did before
@@ -117,6 +113,7 @@ with `ngResource`.
 ## Module & Animations
 
 __`app/js/animations.js`.__
+
 
 ```js
 angular.module('phonecatAnimations', ['ngAnimate']);
@@ -128,6 +125,7 @@ angular.module('phonecatAnimations', ['ngAnimate']);
 And now let's attach this module to our application module...
 
 __`app/js/app.js`.__
+
 
 ```js
 // ...
@@ -151,6 +149,7 @@ We'll start off by adding CSS transition animations to our `ngRepeat` directive 
 First let's add an extra CSS class to our repeated element so that we can hook into it with our CSS animation code.
 
 __`app/partials/phone-list.html`.__
+
 
 ```html
 <!--
@@ -253,6 +252,7 @@ In order to do this, we'll have to make some small changes to the HTML code so t
 animations between view changes.
 
 __`app/index.html`.__
+
 
 ```html
 <div class="view-container">
@@ -367,6 +367,7 @@ have changed the way we display our large image:
 
 __`app/partials/phone-detail.html`.__
 
+
 ```html
 <!-- We're only changing the top of the file -->
 <div class="phone-images">
@@ -437,6 +438,7 @@ Although we could do that, let's take the opportunity to learn how to create Jav
 animations with the `animation()` module method.
 
 __`app/js/animations.js`.__
+
 
 ```js
 var phonecatAnimations = angular.module('phonecatAnimations', ['ngAnimate']);
@@ -523,8 +525,7 @@ do any cleanup necessary for when the animation finishes.
 
 # Summary
 
-There you have it!  We have created a web app in a relatively short amount of time. In the {@link
-the_end closing notes} we'll cover where to go from here.
+There you have it!  We have created a web app in a relatively short amount of time. In the closing notes we'll cover where to go from here.
 
 
 [bower]: http://bower.io/

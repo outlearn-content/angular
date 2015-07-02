@@ -1,5 +1,6 @@
 
 
+
 In this step, you will implement the phone details view, which is displayed when a user clicks on a
 phone in the phone list.
 
@@ -17,6 +18,7 @@ In addition to `phones.json`, the `app/phones/` directory also contains one JSON
 phone:
 
 __`app/phones/nexus-s.json`:__ (sample snippet)
+
 
 ```js
 {
@@ -51,6 +53,7 @@ the same way as the phone list controller.
 
 __`app/js/controllers.js`:__
 
+
 ```js
 var phonecatControllers = angular.module('phonecatControllers',[]);
 
@@ -74,6 +77,7 @@ our model into the view.
 
 
 __`app/partials/phone-detail.html`:__
+
 
 ```html
 <img ng-src="{{phone.images[0]}}" class="phone">
@@ -104,10 +108,6 @@ __`app/partials/phone-detail.html`:__
 </ul>
 ```
 
-<div style="display: none">
-TODO!
-<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_08-09_final.png">
-</div>
 
 ## Test
 
@@ -115,6 +115,7 @@ We wrote a new unit test that is similar to the one we wrote for the `PhoneListC
 step 5.
 
 __`test/unit/controllersSpec.js`:__
+
 
 ```js
 
@@ -154,6 +155,7 @@ We also added a new end-to-end test that navigates to the Nexus S detail page an
 heading on the page is "Nexus S".
 
 __`test/e2e/scenarios.js`:__
+
 
 ```js
 ...
