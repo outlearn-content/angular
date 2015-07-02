@@ -15,21 +15,7 @@
       "freshnessDate" : 2015-06-03,
       "license" : "CC BY",
       "sections" : [
-        {"title": "Welcome", "content": "sections/index.md"},
-        {"title": "0 - Bootstrapping", "content": "sections/step_00.md"},
-        {"title": "1 - Static Template", "content": "sections/step_01.md"},
-        {"title": "2 - Angular Templates", "content": "sections/step_02.md"},
-        {"title": "3 - Filtering Repeaters", "content": "sections/step_03.md"},
-        {"title": "4 - Two-way Data Binding", "content": "sections/step_04.md"},
-        {"title": "5 - XHRs & Dependency Injection", "content": "sections/step_05.md"},
-        {"title": "6 - Templating Links & Images", "content": "sections/step_06.md"},
-        {"title": "7 - Routing & Multiple Views", "content": "sections/step_07.md"},
-        {"title": "8 - More Templating", "content": "sections/step_08.md"},
-        {"title": "9 - Filters", "content": "sections/step_09.md"},
-        {"title": "10 - Event Handlers", "content": "sections/step_10.md"},
-        {"title": "11 - REST and Custom Services", "content": "sections/step_11.md"},
-        {"title": "12 - Applying Animations", "content": "sections/step_12.md"},
-        {"title": "The End", "content": "sections/the_end.md"}
+        {"title": "Welcome", "content": "sections/index.md"}
       ]
     }
   ],
