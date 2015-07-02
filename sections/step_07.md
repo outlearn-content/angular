@@ -1,5 +1,6 @@
 
 
+
 In this step, you will learn how to create a layout template and how to build an app that has
 multiple views by adding routing, using an Angular module called 'ngRoute'.
 
@@ -16,6 +17,7 @@ is distributed separately from the core Angular framework.
 
 We are using Bower to install client-side dependencies.  This step updates the
 `bower.json` configuration file to include the new dependency:
+
 
 ```json
 {
@@ -69,7 +71,7 @@ utilize the browser's history (back and forward navigation) and bookmarks.
 
 ### A Note About DI, Injector and Providers
 
-As you noticed}, {@link guide/di dependency injection (DI) is at the core of
+As you noticed, dependency injection (DI) is at the core of
 AngularJS, so it's important for you to understand a thing or two about how it works.
 
 When the application bootstraps, Angular creates an injector that will be used to find and inject all
@@ -88,10 +90,8 @@ Providers are objects that provide (create) instances of services and expose con
 that can be used to control the creation and runtime behavior of a service. In case of the `$route`
 service, the `$routeProvider` exposes APIs that allow you to define routes for your application.
 
-<div class="alert alert-warning">
-**Note:** Providers can only be injected into `config` functions. Thus you could not inject
-`$routeProvider` into `PhoneListCtrl`.
-</div>
+> **Note:** Providers can only be injected into `config` functions. Thus you could not inject
+>`$routeProvider` into `PhoneListCtrl`.
 
 Angular modules solve the problem of removing global state from the application and provide a way
 of configuring the injector. As opposed to AMD or require.js modules, Angular modules don't try to
@@ -103,16 +103,14 @@ To deepen your understanding of DI on Angular, see
 
 ## Template
 
-The `$route` service is usually used in conjunction with the {@link ngRoute.directive:ngView
-ngView} directive. The role of the `ngView` directive is to include the view template for the current
+The `$route` service is usually used in conjunction with the ngView directive. The role of the `ngView` directive is to include the view template for the current
 route into the layout template. This makes it a perfect fit for our `index.html` template.
 
-<div class="alert alert-info">
-**Note:** Starting with AngularJS version 1.2, `ngRoute` is in its own module and must be loaded by
-loading the additional `angular-route.js` file, which we download via Bower above.
-</div>
+> **Note:** Starting with AngularJS version 1.2, `ngRoute` is in its own module and must be loaded by
+>loading the additional `angular-route.js` file, which we download via Bower above.
 
 __`app/index.html`:__
+
 
 ```html
 <!doctype html>
@@ -144,6 +142,7 @@ line containing a div with the `ng-view` attribute. The code that we removed was
 
 __`app/partials/phone-list.html`:__
 
+
 ```html
 <div class="container-fluid">
   <div class="row">
@@ -174,14 +173,11 @@ __`app/partials/phone-list.html`:__
 </div>
 ```
 
-<div style="display:none">
-TODO!
-<img  class="diagram" src="https://raw.githubusercontent.com/outlearn-content/angular-tutorial/master/assets/tutorial_07_final.png">
-</div>
 
 We also added a placeholder template for the phone details view:
 
 __`app/partials/phone-detail.html`:__
+
 
 ```html
 TBD: detail view for <span>{{phoneId}}</span>
@@ -202,6 +198,7 @@ to add the modules as dependencies of our app. By listing these two modules as d
 
 __`app/js/app.js`:__
 
+
 ```js
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
@@ -213,6 +210,7 @@ var phonecatApp = angular.module('phonecatApp', [
 
 Notice the second argument passed to `angular.module`, `['ngRoute', 'phonecatControllers']`. This
 array lists the modules that `phonecatApp` depends on.
+
 
 
 ```js
@@ -268,6 +266,7 @@ URL. All variables defined with the `:` notation are extracted into the
 
 __`app/js/controllers.js`:__
 
+
 ```js
 var phonecatControllers = angular.module('phonecatControllers', []);
 
@@ -300,6 +299,7 @@ Because our example app is relatively small, we'll just add all of our controlle
 
 To automatically verify that everything is wired properly, we wrote end-to-end tests that navigate
 to various URLs and verify that the correct view was rendered.
+
 
 ```js
 ...
@@ -351,8 +351,7 @@ inheritance and model property shadowing do some wonders.
 
 # Summary
 
-With the routing set up and the phone list view implemented, we're ready to go to {@link step_08
-step 8} to implement the phone details view.
+With the routing set up and the phone list view implemented, we're ready to go to step 8 to implement the phone details view.
 
 
 

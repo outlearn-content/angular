@@ -1,5 +1,6 @@
 
 
+
 In this step, you will add thumbnail images for the phones in the phone list, and links that, for
 now, will go nowhere. In subsequent steps you will use the links to display additional information
 about the phones in the catalog.
@@ -13,6 +14,7 @@ Note that the `phones.json` file contains unique IDs and image URLs for each of 
 URLs point to the `app/img/phones/` directory.
 
 __`app/phones/phones.json`__ (sample snippet):
+
 
 ```js
 [
@@ -32,6 +34,7 @@ __`app/phones/phones.json`__ (sample snippet):
 
 __`app/index.html`:__
 
+
 ```html
 ...
         <ul class="phones">
@@ -49,8 +52,7 @@ now-familiar double-curly brace binding in the `href` attribute values. In step 
 `{{phone.name}}` binding as the element content. In this step the `{{phone.id}}` binding is used in
 the element attribute.
 
-We also added phone images next to each record using an image tag with the {@link
-ng.directive:ngSrc ngSrc} directive. That directive prevents the
+We also added phone images next to each record using an image tag with the ngSrc directive. That directive prevents the
 browser from treating the Angular `{{ expression }}` markup literally, and initiating a request to
 invalid URL `http://localhost:8000/app/{{phone.imageUrl}}`, which it would have done if we had only
 specified an attribute binding in a regular `src` attribute (`<img src="{{phone.imageUrl}}">`).
@@ -60,6 +62,7 @@ Using the `ngSrc` directive prevents the browser from making an http request to 
 ## Test
 
 __`test/e2e/scenarios.js`__:
+
 
 ```js
 ...
