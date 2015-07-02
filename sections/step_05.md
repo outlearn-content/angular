@@ -235,8 +235,8 @@ the response is received:
 ```
 
 * We flush the request queue in the browser by calling `$httpBackend.flush()`. This causes the
-promise returned by the `$http` service to be resolved with the trained response. See 
-'Flushing HTTP requests' in the mock $httpBackend documentation for 
+promise returned by the `$http` service to be resolved with the trained response. See
+'Flushing HTTP requests' in the mock $httpBackend documentation for
 a full explanation of why this is necessary.
 
 * We make the assertions, verifying that the phone model now exists on the scope.
@@ -258,14 +258,17 @@ You should now see the following output in the Karma tab:
 
 # Experiments
 
-* At the bottom of `index.html`, add a `<pre>{{phones | filter:query | orderBy:orderProp | json}}</pre>` 
-binding to see the list of phones displayed in json format.  
+* At the bottom of `index.html`, add a `<pre>{{phones | filter:query | orderBy:orderProp | json}}</pre>`
+binding to see the list of phones displayed in json format.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Display a list of phones in JSON."-->
 
 * In the `PhoneListCtrl` controller, pre-process the http response by limiting the number of phones
 to the first 5 in the list. Use the following code in the `$http` callback:
 
          $scope.phones = data.splice(0, 5);
 
+<!-- @task, "hasDeliverable" : false, "text" : "Pre-process the http response by limiting the number of phones to the first 5 in the list."-->
 
 # Summary
 

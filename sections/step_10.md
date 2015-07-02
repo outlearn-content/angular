@@ -155,15 +155,7 @@ Your unit tests should now be passing.
 
   to the `phone-detail.html` template.
 
-<div style="display: none">
-TODO!
-  The controller methods are inherited between controllers/scopes, so you can use the same snippet
-in the `phone-list.html` template as well.
-
-* Move the `hello` method from `PhoneCatCtrl` to `PhoneListCtrl` and you'll see that the button
-declared in `index.html` will stop working, while the one declared in the `phone-list.html`
-template remains operational.
-</div>
+<!-- @task, "hasDeliverable" : false, "text" : "Add the controller method and button to the template."-->
 
 
 # Summary

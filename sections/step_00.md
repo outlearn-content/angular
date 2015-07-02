@@ -155,7 +155,7 @@ For the purposes of this tutorial, we modified the angular-seed with the followi
 
           <p>1 + 2 = {{ 1 + 2 }}</p>
 
-
+<!-- @task, "hasDeliverable" : false, "text" : "Add a new expression with some math."-->
 
 # Summary
 

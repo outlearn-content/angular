@@ -136,6 +136,8 @@ To rerun the test suite, execute `npm run protractor` again.
 Display the current value of the `query` model by adding a `{{query}}` binding into the
 `index.html` template, and see how it changes when you type in the input box.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Display the current query."-->
+
 ### Display Query in Title
 Let's see how we can get the current value of the `query` model to appear in the HTML page title.
 
@@ -145,29 +147,29 @@ Let's see how we can get the current value of the `query` model to appear in the
     describe('PhoneCat App', function() {
 
       describe('Phone list view', function() {
-    
+
         beforeEach(function() {
           browser.get('app/index.html');
         });
-    
+
         var phoneList = element.all(by.repeater('phone in phones'));
         var query = element(by.model('query'));
-    
+
         it('should filter the phone list as a user types into the search box', function() {
           expect(phoneList.count()).toBe(3);
-    
+
           query.sendKeys('nexus');
           expect(phoneList.count()).toBe(1);
-    
+
           query.clear();
           query.sendKeys('motorola');
           expect(phoneList.count()).toBe(2);
         });
-    
+
         it('should display the current filter value in the title bar', function() {
           query.clear();
           expect(browser.getTitle()).toMatch(/Google Phone Gallery:\s*$/);
-    
+
           query.sendKeys('nexus');
           expect(browser.getTitle()).toMatch(/Google Phone Gallery: nexus$/);
         });
@@ -177,6 +179,7 @@ Let's see how we can get the current value of the `query` model to appear in the
 
   Run protractor (`npm run protractor`) to see this test fail.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Add an end-to-end test."-->
 
 * You might think you could just add the `{{query}}` to the title tag element as follows:
 
@@ -196,7 +199,11 @@ Let's see how we can get the current value of the `query` model to appear in the
 
   Be sure to __remove__ the `ng-controller` declaration from the body element.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Make the query show up in the title."-->
+
 * Re-run `npm run protractor` to see the test now pass.
+
+<!-- @task, "hasDeliverable" : false, "text" : "Check that your test passes."-->
 
 * While using double curlies works fine within the title element, you might have noticed that
 for a split second they are actually displayed to the user while the page is loading. A better
@@ -206,11 +213,11 @@ while the page is loading:
 
         <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
 
+<!-- @task, "hasDeliverable" : false, "text" : "Use a binding where double curlies are invisible to the user."-->
 
 # Summary
 
 We have now added full text search and included a test to verify that search works! Now let's go on
 to step 4 to learn how to add sorting capability to the phone app.
-
 
 

@@ -340,13 +340,7 @@ when you are in the phone list view. This is because the `orderProp` model is vi
 scope managed by `PhoneListCtrl`, which is associated with the `<div ng-view>` element. If you add
 the same binding into the `phone-list.html` template, the binding will work as expected.
 
-<div style="display: none">
-* In `PhoneCatCtrl`, create a new model called "`hero`" with `this.hero = 'Zoro'`. In
-`PhoneListCtrl`, let's shadow it with `this.hero = 'Batman'`. In `PhoneDetailCtrl`, we'll use
-`this.hero = "Captain Proton"`. Then add the `<p>hero = {{hero}}</p>` to all three of our templates
-(`index.html`, `phone-list.html`, and `phone-detail.html`). Open the app and you'll see scope
-inheritance and model property shadowing do some wonders.
-</div>
+<!-- @task, "hasDeliverable" : false, "text" : "Try to add an `{{orderProp}}` binding to `index.html`."-->
 
 
 # Summary

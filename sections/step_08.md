@@ -182,6 +182,7 @@ You can now rerun `npm run protractor` to see the tests run.
 * Using the [Protractor API](http://angular.github.io/protractor/#/api),
 write a test that verifies that we display 4 thumbnail images on the Nexus S details page.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Write a test that verifies that we display 4 thumbnail images."-->
 
 # Summary
 

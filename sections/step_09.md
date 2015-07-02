@@ -126,13 +126,15 @@ following bindings to `index.html`:
   * `{{ 1304375948024 | date }}`
   * `{{ 1304375948024 | date:"MM/dd/yyyy @ h:mma" }}`
 
+<!-- @task, "hasDeliverable" : false, "text" : "Add bindings to `index.html` to experiment with built-in Angular filters."-->
+
 *  We can also create a model with an input element, and combine it with a filtered binding. Add
   the following to index.html:
 
   ```html
   <input ng-model="userInput"> Uppercased: {{ userInput | uppercase }}
   ```
-
+<!-- @task, "hasDeliverable" : false, "text" : "Combine an input element with a filtered binding."-->
 
 # Summary
 

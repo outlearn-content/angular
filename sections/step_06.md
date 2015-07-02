@@ -94,6 +94,7 @@ making an extraneous request to `/app/%7B%7Bphone.imageUrl%7D%7D` (or
 it hits the `img` tag, which is before Angular has a chance to evaluate the expression and inject
 the valid address.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Verify that the browser will fire a request for that invalid image address."-->
 
 # Summary
 

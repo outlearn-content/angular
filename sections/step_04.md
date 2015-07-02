@@ -183,10 +183,16 @@ You can now rerun `npm run protractor` to see the tests run.
 you'll see that Angular will temporarily add a new blank ("unknown") option to the drop-down list and the
 ordering will default to unordered/natural order.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Remove the statement that sets the `orderProp` value."-->
+
 * Add an `{{orderProp}}` binding into the `index.html` template to display its current value as
 text.
 
+<!-- @task, "hasDeliverable" : false, "text" : "Add an `{{orderProp}}` binding into the `index.html` template."-->
+
 * Reverse the sort order by adding a `-` symbol before the sorting value: `<option value="-age">Oldest</option>`
+
+<!-- @task, "hasDeliverable" : false, "text" : "Reverse the sort order."-->
 
 # Summary
 
