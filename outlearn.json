@@ -5,27 +5,7 @@
   ],
 
   "modules" : [
-    {"olm" : "./modules/introduction.md"},
-    {"olm" : "./modules/concepts.md"},
-    {"olm" : "./modules/databinding.md"},
-    {"olm" : "./modules/controller.md"},
-    {"olm" : "./modules/services.md"},
-    {"olm" : "./modules/scope.md"},
-    {"olm" : "./modules/di.md"},
-    {"olm" : "./modules/templates.md"},
-    {"olm" : "./modules/expression.md"},
-    {"olm" : "./modules/filter.md"},
-    {"olm" : "./modules/forms.md"},
-    {"olm" : "./modules/directive.md"},
-    {"olm" : "./modules/animations.md"},
-    {"olm" : "./modules/compiler.md"},
-    {"olm" : "./modules/providers.md"},
-    {"olm" : "./modules/bootstrap.md"},
-    {"olm" : "./modules/unit-testing.md"},
-    {"olm" : "./modules/e2e-testing.md"},
-    {"olm" : "./modules/$location.md"},
-    {"olm" : "./modules/css-styling.md"},
-    {"olm" : "./modules/production.md"},
+
     {
       "name" : "angular-tutorial",
       "version" : "0.1",
