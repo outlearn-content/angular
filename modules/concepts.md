@@ -67,6 +67,8 @@ _Example file_: `index.html`
 
 [Try out the code example](http://plnkr.co/edit/mXyBs0B0qo9IqXtSa9Dp?p=preview) in Plunker.
 
+<!-- @task, "text" : "Run the code example in Plunker and try changing the variable names."-->
+
 Let's walk through the example and describe what's going on.
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-databinding1.png">
@@ -173,6 +175,8 @@ _Example file_: `index.html`
 
 
 [Try out the code example](http://plnkr.co/edit/x3WGQzBUeFJmZNQ3tCsU?p=preview) in Plunker.
+
+<!-- @task, "text" : "Run the code example in Plunker and try adding an additional currency."-->
 
 What changed?
 
@@ -288,6 +292,8 @@ _Example file_: `index.html`
 
 
 [Try out the code example](http://plnkr.co/edit/WOS1c0a4bgmDlT6elJgi?p=preview) in Plunker.
+
+<!-- @task, "text" : "Run the code example in Plunker."-->
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-module-service.png">
 
@@ -431,6 +437,8 @@ _Example file_: `index.html`
 
 
 [Try out the code example](http://plnkr.co/edit/69mdqTGS5k8xAhvvHpdM?p=preview) in Plunker.
+
+<!-- @task, "text" : "Run the code example in Plunker."-->
 
 What changed?
 Our `currencyConverter` service of the `finance` module now uses the `$http`, a
