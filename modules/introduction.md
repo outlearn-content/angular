@@ -46,7 +46,17 @@ browser new syntax through a construct we call *directives*. Examples include:
   * Attaching new behavior to DOM elements, such as DOM event handling.
   * Grouping of HTML into reusable components.
 
+<!-- @multipleChoice -->
 
+Angular teaches the browser new syntax in order to
+
+- [ ] Help developers use new libraries more easily
+- [X] Support creation of modern applications
+- [ ] Follow best practices established by earlier frameworks
+
+
+
+<!-- @end -->
 
 
 <!-- @section -->
@@ -56,7 +66,7 @@ browser new syntax through a construct we call *directives*. Examples include:
 Angular is not a single piece in the overall puzzle of building the client-side of a web
 application. It handles all of the DOM and AJAX glue code you once wrote by hand and puts it in a
 well-defined structure. This makes Angular opinionated about how a CRUD (Create, Read, Update, Delete)
-application should be built. But while it is opinionated, it also tries to make sure that its opinion 
+application should be built. But while it is opinionated, it also tries to make sure that its opinion
 is just a starting point you can easily change. Angular comes with the following out-of-the-box:
 
   * Everything you need to build a CRUD app in a cohesive set: Data-binding, basic templating
@@ -125,4 +135,3 @@ Angular frees you from the following pains:
     [Guice](https://github.com/google/guice)-like dependency-injection style. This allows you
     to get started developing features quickly. As a bonus, you get full control over the
     initialization process in automated tests.
-
