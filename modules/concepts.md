@@ -16,7 +16,7 @@
 # Conceptual Overview
 
 This section briefly touches on all of the important parts of AngularJS using a simple example.
-For a more in-depth explanation, see the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial/).
+For a more in-depth explanation, see the [tutorial](https://pilot.outlearn.com/learn/ShieldSensei/angular-crash-course/7).
 
 | Concept          | Description                     |
 |------------------|------------------------------------------|
@@ -64,6 +64,8 @@ _Example file_: `index.html`
 </div>
 ```
 
+
+[Try out the code example](http://plnkr.co/edit/mXyBs0B0qo9IqXtSa9Dp?p=preview) in Plunker.
 
 Let's walk through the example and describe what's going on.
 
@@ -169,6 +171,8 @@ _Example file_: `index.html`
 </div>
 ```
 
+
+[Try out the code example](http://plnkr.co/edit/x3WGQzBUeFJmZNQ3tCsU?p=preview) in Plunker.
 
 What changed?
 
@@ -282,6 +286,8 @@ _Example file_: `index.html`
 </div>
 ```
 
+
+[Try out the code example](http://plnkr.co/edit/WOS1c0a4bgmDlT6elJgi?p=preview) in Plunker.
 
 <img src="https://raw.githubusercontent.com/outlearn-content/angular/master/img/guide/concepts-module-service.png">
 
@@ -423,6 +429,8 @@ _Example file_: `index.html`
 </div>
 ```
 
+
+[Try out the code example](http://plnkr.co/edit/69mdqTGS5k8xAhvvHpdM?p=preview) in Plunker.
 
 What changed?
 Our `currencyConverter` service of the `finance` module now uses the `$http`, a
