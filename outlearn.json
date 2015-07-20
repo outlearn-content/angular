@@ -62,7 +62,6 @@
     {"olm" : "./modules/bootstrap.md"},
     {"olm" : "./modules/unit-testing.md"},
     {"olm" : "./modules/e2e-testing.md"},
-    {"olm" : "./modules/$location.md"},
     {"olm" : "./modules/css-styling.md"},
     {"olm" : "./modules/i18n.md"},
     {"olm" : "./modules/security.md"},
