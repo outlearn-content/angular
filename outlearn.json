@@ -9,7 +9,6 @@
       "coverImage" : "https://raw.githubusercontent.com/outlearn-content/angular/master/img/rope.jpg",
       "privacy" : "public",
       "pages" : [
-        {"module" : "index"},
         {"module" : "introduction"},
         {"module" : "concepts"},
         {"module" : "databinding"},
