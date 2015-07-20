@@ -2,7 +2,7 @@
 {
 "name" : "index",
 "version" : "0.1",
-"title" : "Developer Guide",
+"title" : "Guide to AngularJS Documentation",
 "description" : "All you ever wanted to know about angular",
 "canonicalSource" : "https://docs.angularjs.org/guide",
 "homepage" : "https://docs.angularjs.org/guide",

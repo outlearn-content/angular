@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Running in Production",
 "description" : "There are a few things you might consider when running your AngularJS application in production.",
+"canonicalSource" : "https://docs.angularjs.org/guide/production",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"
