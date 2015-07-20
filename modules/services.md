@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Services",
 "description" : "Angular services are substitutable objects that are wired together using dependency injection.",
+"canonicalSource" : "https://docs.angularjs.org/guide/services",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

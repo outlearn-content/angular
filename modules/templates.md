@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Templates",
 "description" : "Angular combines the template with information from the model and controller to render the dynamic view that a user sees in the browser.",
+"canonicalSource" : "https://docs.angularjs.org/guide/templates",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "E2E Testing",
 "description" : "Help you verify the health of your Angular application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/e2e-testing",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Dependency Injection",
 "description" : "Software design pattern that deals with how components get hold of their dependencies.",
+"canonicalSource" : "https://docs.angularjs.org/guide/di",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

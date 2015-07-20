@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Filters",
 "description" : "A filter formats the value of an expression for display to the user.",
+"canonicalSource" : "https://docs.angularjs.org/guide/filter",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

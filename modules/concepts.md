@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Conceptual Overview",
 "description" : "Brief overview of all the important parts of AngularJS.",
+"canonicalSource" : "https://docs.angularjs.org/guide/concepts",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Unit Testing",
 "description" : "These guidelines help you avoid creating an untestable application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/unit-testing",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

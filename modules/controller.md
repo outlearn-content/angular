@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Controllers",
 "description" : "Controller is a JavaScript constructor function that is used to augment the Angular Scope.",
+"canonicalSource" : "https://docs.angularjs.org/guide/controller",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

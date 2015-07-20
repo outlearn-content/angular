@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Expressions",
 "description" : "Angular expressions are JavaScript-like code snippets that are usually placed in bindings.",
+"canonicalSource" : "https://docs.angularjs.org/guide/expression",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Using $location",
 "description" : "The $location service parses the URL in the browser address bar and makes the URL available to your application.",
+"canonicalSource" : "https://docs.angularjs.org/guide/$location",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

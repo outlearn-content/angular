@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Data Binding",
 "description" : "How to synchronize data between model and view components.",
+"canonicalSource" : "https://docs.angularjs.org/guide/databinding",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

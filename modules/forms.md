@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Forms",
 "description" : "A Form is a collection of controls for the purpose of grouping related controls together.",
+"canonicalSource" : "https://docs.angularjs.org/guide/forms",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

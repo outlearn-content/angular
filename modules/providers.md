@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Providers",
 "description" : "Provider recipe is the most comprehensive as well as most verbose of the recipe types.",
+"canonicalSource" : "https://docs.angularjs.org/guide/providers",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

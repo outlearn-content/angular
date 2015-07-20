@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "HTML Compiler",
 "description" : "HTML compiler allows the developer to teach the browser new HTML syntax.",
+"canonicalSource" : "https://docs.angularjs.org/guide/compiler",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

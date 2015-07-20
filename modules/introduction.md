@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Introduction",
 "description" : "Explain the big picture of Angular.",
+"canonicalSource" : "https://docs.angularjs.org/guide/introduction",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

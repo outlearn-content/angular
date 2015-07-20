@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Scopes",
 "description" : "Scope is an object that refers to the application model.",
+"canonicalSource" : "https://docs.angularjs.org/guide/scope",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

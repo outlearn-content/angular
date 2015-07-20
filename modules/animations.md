@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Animations",
 "description" : "Animation hooks trigger animations during the life cycle of various directives.",
+"canonicalSource" : "https://docs.angularjs.org/guide/animations",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

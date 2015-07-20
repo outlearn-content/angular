@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Bootstrap",
 "description" : "Explains the Angular initialization process.",
+"canonicalSource" : "https://docs.angularjs.org/guide/bootstrap",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"

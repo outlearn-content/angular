@@ -4,6 +4,7 @@
 "version" : "0.1",
 "title" : "Working With CSS",
 "description" : "List of CSS classes set by Angular.",
+"canonicalSource" : "https://docs.angularjs.org/guide/css-styling",
 "homepage" : "https://docs.angularjs.org/guide",
 "freshnessDate" : 2015-06-02,
 "license" : "CC BY 3.0"
