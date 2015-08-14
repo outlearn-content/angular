@@ -25,7 +25,7 @@ Angular sets these CSS classes. It is up to your application to provide useful s
 
 * `ng-scope`
   - **Usage:** angular applies this class to any element for which a new scope
-    is defined. (see [scope](https://pilot.outlearn.com/learn/ShieldSensei/angular/8) guide for more information about scopes)
+    is defined. (see [scope](https://docs.angularjs.org/guide/scope) guide for more information about scopes)
 
 * `ng-isolate-scope`
   - **Usage:** angular applies this class to any element for which a new
@@ -33,7 +33,7 @@ Angular sets these CSS classes. It is up to your application to provide useful s
 
 * `ng-binding`
   - **Usage:** angular applies this class to any element that is attached to a data binding, via `ng-bind` or
-    `{{}}` curly braces, for example. (see [databinding](https://pilot.outlearn.com/learn/ShieldSensei/angular/5) guide)
+    `{{}}` curly braces, for example. (see [databinding](https://docs.angularjs.org/guide/databinding) guide)
 
 * `ng-invalid`, `ng-valid`
   - **Usage:** angular applies this class to a form control widget element if that element's input does
@@ -55,5 +55,5 @@ Angular sets these CSS classes. It is up to your application to provide useful s
 
 ## Related Topics
 
-* [Angular Templates](https://pilot.outlearn.com/learn/ShieldSensei/angular/10)
-* [Angular Forms](https://pilot.outlearn.com/learn/ShieldSensei/angular/13)
+* [Angular Templates](https://docs.angularjs.org/guide/templates)
+* [Angular Forms](https://docs.angularjs.org/guide/forms)

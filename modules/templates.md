@@ -53,7 +53,7 @@ in just one HTML file (usually `index.html`).
 In a more complex app, you can display multiple views within one main page using "partials" –
 segments of template located in separate HTML files. You can use the
 ngView directive to load partials based on configuration passed
-to the $route service. The [angular tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) shows this
+to the $route service. The [angular tutorial](https://docs.angularjs.org/tutorial) shows this
 technique in steps seven and eight.
 
 
@@ -62,8 +62,8 @@ technique in steps seven and eight.
 
 ## Related Topics
 
-* [Filters](https://pilot.outlearn.com/learn/supermegacorp/angular/11)
-* [Forms](https://pilot.outlearn.com/learn/supermegacorp/angular/12)
+* [Filters](https://docs.angularjs.org/guide/filter)
+* [Forms](https://docs.angularjs.org/guide/forms)
 
 
 <!-- @section -->

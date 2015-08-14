@@ -33,12 +33,12 @@ Do not use controllers to:
 
 - Manipulate DOM — Controllers should contain only business logic.
   Putting any presentation logic into Controllers significantly affects its testability. Angular
-  has [databinding](https://pilot.outlearn.com/learn/ShieldSensei/angular/5) for most cases and [directives](https://pilot.outlearn.com/learn/ShieldSensei/angular/14) to
+  has [databinding](https://docs.angularjs.org/guide/databinding) for most cases and [directives](https://docs.angularjs.org/guide/directive) to
   encapsulate manual DOM manipulation.
-- Format input — Use [angular form controls](https://pilot.outlearn.com/learn/ShieldSensei/angular/13) instead.
-- Filter output — Use [angular filters](https://pilot.outlearn.com/learn/ShieldSensei/angular/12) instead.
+- Format input — Use [angular form controls](https://docs.angularjs.org/guide/forms) instead.
+- Filter output — Use [angular filters](https://docs.angularjs.org/guide/filter) instead.
 - Share code or state across controllers — Use [angular
-services](https://pilot.outlearn.com/learn/ShieldSensei/angular/7) instead.
+services](https://docs.angularjs.org/guide/services) instead.
 - Manage the life-cycle of other components (for example, to create service instances).
 
 
@@ -70,7 +70,7 @@ constructor function out of the global scope.
 
 > We have used an **inline injection annotation** to explicitly specify the dependency
 >of the Controller on the `$scope` service provided by Angular. See the guide on
->[Dependency Injection](https://pilot.outlearn.com/learn/ShieldSensei/angular/9) for more information.
+>[Dependency Injection](https://docs.angularjs.org/guide/di) for more information.
 
 We attach our controller to the DOM using the `ng-controller` directive. The `greeting` property can
 now be data-bound to the template:
@@ -113,7 +113,7 @@ expression in the template:
 </div>
 ```
 
-As discussed in the [Concepts](https://pilot.outlearn.com/learn/ShieldSensei/angular/4) section of this guide, any
+As discussed in the [Concepts](https://docs.angularjs.org/guide/concepts) section of this guide, any
 objects (or primitives) assigned to the scope become model properties. Any methods assigned to
 the scope are available in the template/view, and can be invoked via angular expressions
 and `ng` event handler directives (e.g. ngClick).
@@ -128,8 +128,8 @@ needed for a single view.
 
 The most common way to keep Controllers slim is by encapsulating work that doesn't belong to
 controllers into services and then using these services in Controllers via dependency injection.
-This is discussed in the [Dependency Injection](https://pilot.outlearn.com/learn/ShieldSensei/angular/9) and
-[Services](https://pilot.outlearn.com/learn/ShieldSensei/angular/7) sections of this guide.
+This is discussed in the [Dependency Injection](https://docs.angularjs.org/guide/di) and
+[Services](https://docs.angularjs.org/guide/services) sections of this guide.
 
 
 

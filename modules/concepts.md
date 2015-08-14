@@ -17,7 +17,7 @@
 # Conceptual Overview
 
 This section briefly touches on all of the important parts of AngularJS using a simple example.
-For a more in-depth explanation, see the [tutorial](https://pilot.outlearn.com/learn/ShieldSensei/angular-crash-course/7).
+For a more in-depth explanation, see the [tutorial](https://docs.angularjs.org/tutorial).
 
 | Concept          | Description                     |
 |------------------|------------------------------------------|

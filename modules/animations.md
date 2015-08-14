@@ -322,4 +322,4 @@ myModule.directive('my-directive', ['$animate', function($animate) {
 
 For a full breakdown of each method available on `$animate`, see the [API docs](https://docs.angularjs.org/api/ng/service/$animate).
 
-To see a complete demo, see the [animation step within the AngularJS phonecat tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial).
+To see a complete demo, see the [animation step within the AngularJS phonecat tutorial](https://docs.angularjs.org/tutorial).

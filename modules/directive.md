@@ -17,7 +17,7 @@
 # Creating Custom Directives
 
 > **Note:** this guide is targeted towards developers who are already familiar with AngularJS basics.
->If you're just getting started, we recommend the [tutorial](https://pilot.outlearn.com/module/angularjs/angular-tutorial) first.
+>If you're just getting started, we recommend the [tutorial](https://docs.angularjs.org/tutorial) first.
 >If you're looking for the **directives API**, we recently moved it to [`$compile`](https://docs.angularjs.org/api/ng/service/$compile).
 
 
@@ -1140,7 +1140,7 @@ Here we've seen the main use cases for directives. Each of these samples acts as
 point for creating your own directives.
 
 You might also be interested in an in-depth explanation of the compilation process that's
-available in the [compiler guide](https://pilot.outlearn.com/learn/ShieldSensei/angular/16).
+available in the [compiler guide](https://docs.angularjs.org/guide/compiler).
 
 The `$compile` API page has a comprehensive list of directive options for
 reference.
