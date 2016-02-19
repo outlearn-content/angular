@@ -5,7 +5,7 @@
     {
       "name" : "dev-guide",
       "title" : "Angular Developer Guide",
-      "description" : "Learn how to developed awesome web apps with angular",
+      "description" : "Learn how to develop awesome web apps with angular",
       "coverImage" : "https://raw.githubusercontent.com/outlearn-content/angular/master/img/rope.jpg",
       "privacy" : "public",
       "pages" : [
